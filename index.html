@@ -1572,10 +1572,21 @@
 
             .stat-card {
                 padding: 2rem 1.5rem;
+                min-height: 200px;
             }
 
             .stat-number {
                 font-size: 3rem;
+                min-height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .stat-number::after {
+                position: relative;
+                right: 0;
+                margin-left: 5px;
             }
 
             .stat-label {
@@ -1869,6 +1880,20 @@
             Loading Profile Data... █████████████ 100%
         </div>
     </div>
+    
+    <!-- CRITICAL: Inline script to hide loader immediately -->
+    <script>
+        setTimeout(function() {
+            var loader = document.getElementById('loader');
+            if (loader) {
+                loader.style.opacity = '0';
+                loader.style.visibility = 'hidden';
+                setTimeout(function() {
+                    loader.style.display = 'none';
+                }, 500);
+            }
+        }, 1500);
+    </script>
 
     <!-- Animated Background -->
     <div class="grid-background"></div>
@@ -1938,7 +1963,66 @@
                     <div class="stat-number" data-target="50">0</div>
                     <div class="stat-label">Technologies</div>
                 </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👁️</div>
+                    <div class="stat-number" id="visitorCount">0</div>
+                    <div class="stat-label">Visitors</div>
+                </div>
             </div>
+            <script>
+                // Visitor Counter using API
+                fetch('https://api.countapi.xyz/hit/hakkache.github.io/visits')
+                    .then(response => response.json())
+                    .then(data => {
+                        const visitorElement = document.getElementById('visitorCount');
+                        if (visitorElement && data.value) {
+                            visitorElement.setAttribute('data-target', data.value);
+                            // Animate to visitor count
+                            var target = data.value;
+                            var duration = 2000;
+                            var step = target / (duration / 16);
+                            var current = 0;
+                            function updateVisitor() {
+                                current += step;
+                                if (current < target) {
+                                    visitorElement.textContent = Math.floor(current);
+                                    requestAnimationFrame(updateVisitor);
+                                } else {
+                                    visitorElement.textContent = target;
+                                }
+                            }
+                            updateVisitor();
+                        }
+                    })
+                    .catch(err => {
+                        console.log('Visitor counter error:', err);
+                        document.getElementById('visitorCount').textContent = '---';
+                    });
+                
+                // Immediately trigger counter animation
+                setTimeout(function() {
+                    var statNumbers = document.querySelectorAll('.stat-number');
+                    statNumbers.forEach(function(element) {
+                        var target = parseInt(element.getAttribute('data-target'));
+                        if (!target || isNaN(target)) return;
+                        
+                        var duration = 2000;
+                        var step = target / (duration / 16);
+                        var current = 0;
+                        
+                        function updateCounter() {
+                            current += step;
+                            if (current < target) {
+                                element.textContent = Math.floor(current) + '+';
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                element.textContent = target + '+';
+                            }
+                        }
+                        updateCounter();
+                    });
+                }, 500);
+            </script>
         </div>
     </section>
 
@@ -2314,6 +2398,34 @@
     </footer>
 
     <script>
+        // CRITICAL: Ensure loader always hides
+        (function() {
+            function forceHideLoader() {
+                const loader = document.getElementById('loader');
+                if (loader) {
+                    loader.classList.add('hidden');
+                    loader.style.opacity = '0';
+                    loader.style.visibility = 'hidden';
+                    setTimeout(() => {
+                        loader.style.display = 'none';
+                    }, 500);
+                }
+            }
+
+            // Try to hide loader as soon as DOM is ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', () => {
+                    setTimeout(forceHideLoader, 1000);
+                });
+            } else {
+                // DOM already loaded
+                setTimeout(forceHideLoader, 1000);
+            }
+
+            // Absolute failsafe - hide after 2 seconds no matter what
+            setTimeout(forceHideLoader, 2000);
+        })();
+
         // Create Floating Particles
         function createParticles() {
             const particleCount = 30;
@@ -2347,40 +2459,73 @@
             }
         }
 
-        // Page Loader
-        window.addEventListener('load', () => {
-            createParticles();
-            setTimeout(() => {
-                document.getElementById('loader').classList.add('hidden');
-                
-                // Show achievement notification after loading
-                setTimeout(() => {
-                    const achievement = document.getElementById('achievement');
-                    achievement.style.right = '20px';
-                    
-                    // Hide after 4 seconds
+        // Initialize page after DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                // Reduce particles on mobile for better performance
+                const isMobile = window.innerWidth <= 768;
+                if (!isMobile) {
                     setTimeout(() => {
-                        achievement.style.right = '-400px';
-                    }, 4000);
-                }, 500);
-            }, 1500);
+                        try {
+                            createParticles();
+                        } catch (e) {
+                            console.log('Particles skipped');
+                        }
+                    }, 500);
+                }
+                
+                // Show achievement notification after loading (desktop only)
+                if (!isMobile) {
+                    setTimeout(() => {
+                        const achievement = document.getElementById('achievement');
+                        if (achievement) {
+                            achievement.style.right = '20px';
+                            
+                            // Hide after 4 seconds
+                            setTimeout(() => {
+                                achievement.style.right = '-400px';
+                            }, 4000);
+                        }
+                    }, 2000);
+                }
+                
+                // Trigger stat counter manually on mobile after load
+                if (isMobile) {
+                    setTimeout(() => {
+                        const statsSection = document.querySelector('.stats-grid');
+                        if (statsSection) {
+                            const statNumbers = statsSection.querySelectorAll('.stat-number');
+                            statNumbers.forEach(num => {
+                                if (!num.classList.contains('animated')) {
+                                    num.classList.add('animated');
+                                    animateCounter(num);
+                                }
+                            });
+                        }
+                    }, 1500);
+                }
+            } catch (error) {
+                console.log('Initialization error:', error);
+            }
         });
 
         // Download Resume PDF functionality
-        document.getElementById('downloadCV').addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Open the PDF from GitHub
-            const pdfUrl = 'https://github.com/hakkache/my_resume/raw/main/HAKKACHE%20MOHAMED_RESU%20(1)%20(1).pdf';
-            
-            // Create a temporary link element to trigger download
-            const link = document.createElement('a');
-            link.href = pdfUrl;
-            link.download = 'Mohamed_Hakkache_Resume.pdf';
-            link.target = '_blank';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+        document.addEventListener('DOMContentLoaded', () => {
+            const downloadBtn = document.getElementById('downloadCV');
+            if (downloadBtn) {
+                downloadBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Use GitHub's direct download URL
+                    const downloadUrl = 'https://github.com/hakkache/my_resume/raw/main/HAKKACHE%20MOHAMED_RESU%20(1)%20(1).pdf';
+                    
+                    // Simple direct link approach
+                    const a = document.createElement('a');
+                    a.href = downloadUrl;
+                    a.download = 'Mohamed_Hakkache_Resume.pdf';
+                    a.click();
+                });
+            }
         });
 
         // Typing Animation
@@ -2456,11 +2601,17 @@
         }
 
         const dataPoints = [];
-        for (let i = 0; i < 80; i++) {
+        const particleCount = window.innerWidth <= 768 ? 30 : 80; // Reduce particles on mobile
+        for (let i = 0; i < particleCount; i++) {
             dataPoints.push(new DataPoint());
         }
 
         function animateCanvas() {
+            // Skip canvas animation on very small screens for performance
+            if (window.innerWidth <= 480) {
+                return;
+            }
+            
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
             dataPoints.forEach((point, index) => {
@@ -2489,30 +2640,66 @@
 
         animateCanvas();
 
+        let resizeTimeout;
         window.addEventListener('resize', () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
+            
+            // Debounce resize event for better performance
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                // Re-trigger stat counters if they become visible after resize
+                const statsSection = document.querySelector('.stats-grid');
+                if (statsSection) {
+                    const rect = statsSection.getBoundingClientRect();
+                    if (rect.top < window.innerHeight && rect.bottom > 0) {
+                        const statNumbers = statsSection.querySelectorAll('.stat-number');
+                        statNumbers.forEach(num => {
+                            if (!num.classList.contains('animated')) {
+                                num.classList.add('animated');
+                                animateCounter(num);
+                            }
+                        });
+                    }
+                }
+            }, 300);
         });
 
-        // Smooth Scroll
+        // Smooth Scroll with mobile optimization
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                e.preventDefault();<br/>                const targetId = this.getAttribute('href');
+                const target = document.querySelector(targetId);
                 if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Adjust offset for mobile nav height
+                    const navHeight = document.querySelector('nav').offsetHeight;
+                    const targetPosition = target.offsetTop - navHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open (for future hamburger menu)
+                    if (window.innerWidth <= 768) {
+                        // Add active class for visual feedback
+                        document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
+                        this.classList.add('active');
+                    }
                 }
             });
         });
 
         // Counter Animation for Stats
         const observerOptions = {
-            threshold: 0.5,
-            rootMargin: '0px'
+            threshold: 0.1,
+            rootMargin: '50px'
         };
 
         const animateCounter = (element) => {
             const target = parseInt(element.getAttribute('data-target'));
+            if (!target || isNaN(target)) return;
+            
             const duration = 2000;
             const step = target / (duration / 16);
             let current = 0;
@@ -2547,6 +2734,17 @@
         const statsSection = document.querySelector('.stats-grid');
         if (statsSection) {
             statsObserver.observe(statsSection.parentElement);
+            
+            // Fallback for mobile - trigger after a delay if not already triggered
+            setTimeout(() => {
+                const statNumbers = statsSection.querySelectorAll('.stat-number');
+                statNumbers.forEach(num => {
+                    if (!num.classList.contains('animated')) {
+                        num.classList.add('animated');
+                        animateCounter(num);
+                    }
+                });
+            }, 3000);
         }
 
         // Intersection Observer for Fade-in Animations
@@ -2557,13 +2755,20 @@
                     entry.target.style.transform = 'translateY(0)';
                 }
             });
-        }, { threshold: 0.1 });
+        }, { threshold: 0.05, rootMargin: '50px' });
 
         document.querySelectorAll('.timeline-item, .skill-box, .cert-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s, transform 0.6s';
-            fadeObserver.observe(el);
+            // Only apply fade effect on larger screens
+            if (window.innerWidth > 768) {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s, transform 0.6s';
+                fadeObserver.observe(el);
+            } else {
+                // On mobile, show immediately
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            }
         });
 
         // Active Nav Link & Navbar Scroll Effect
