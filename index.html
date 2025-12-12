@@ -1970,34 +1970,46 @@
                 </div>
             </div>
             <script>
-                // Visitor Counter using API
-                fetch('https://api.countapi.xyz/hit/hakkache.github.io/visits')
+                // Visitor Counter using localStorage for tracking
+                (function() {
+                    const visitorElement = document.getElementById('visitorCount');
+                    if (!visitorElement) return;
+                    
+                    // Use API Counter (alternative service)
+                    fetch('https://api.counterapi.dev/v1/hakkache-portfolio/visits/up', {
+                        method: 'GET'
+                    })
                     .then(response => response.json())
                     .then(data => {
-                        const visitorElement = document.getElementById('visitorCount');
-                        if (visitorElement && data.value) {
-                            visitorElement.setAttribute('data-target', data.value);
-                            // Animate to visitor count
-                            var target = data.value;
-                            var duration = 2000;
-                            var step = target / (duration / 16);
-                            var current = 0;
-                            function updateVisitor() {
-                                current += step;
-                                if (current < target) {
-                                    visitorElement.textContent = Math.floor(current);
-                                    requestAnimationFrame(updateVisitor);
-                                } else {
-                                    visitorElement.textContent = target;
-                                }
+                        const count = data.count || 0;
+                        visitorElement.setAttribute('data-target', count);
+                        
+                        // Animate visitor count
+                        let current = 0;
+                        const target = count;
+                        const duration = 2000;
+                        const step = target / (duration / 16);
+                        
+                        function updateVisitor() {
+                            current += step;
+                            if (current < target) {
+                                visitorElement.textContent = Math.floor(current);
+                                requestAnimationFrame(updateVisitor);
+                            } else {
+                                visitorElement.textContent = target;
                             }
-                            updateVisitor();
                         }
+                        updateVisitor();
                     })
                     .catch(err => {
-                        console.log('Visitor counter error:', err);
-                        document.getElementById('visitorCount').textContent = '---';
+                        console.log('Visitor counter:', err);
+                        // Fallback to local count
+                        let visits = localStorage.getItem('portfolio-visits') || 0;
+                        visits = parseInt(visits) + 1;
+                        localStorage.setItem('portfolio-visits', visits);
+                        visitorElement.textContent = visits;
                     });
+                })();
                 
                 // Immediately trigger counter animation
                 setTimeout(function() {
@@ -2516,14 +2528,11 @@
                 downloadBtn.addEventListener('click', function(e) {
                     e.preventDefault();
                     
-                    // Use GitHub's direct download URL
-                    const downloadUrl = 'https://github.com/hakkache/my_resume/raw/main/HAKKACHE%20MOHAMED_RESU%20(1)%20(1).pdf';
+                    // Direct download link that works on GitHub Pages
+                    const pdfUrl = 'https://github.com/hakkache/my_resume/raw/refs/heads/main/HAKKACHE%20MOHAMED_RESU%20(1)%20(1).pdf';
                     
-                    // Simple direct link approach
-                    const a = document.createElement('a');
-                    a.href = downloadUrl;
-                    a.download = 'Mohamed_Hakkache_Resume.pdf';
-                    a.click();
+                    // Open in new window - browser handles download
+                    window.open(pdfUrl, '_blank');
                 });
             }
         });
