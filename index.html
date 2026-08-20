@@ -9,7 +9,7 @@
 <meta name="keywords" content="Lead Data Engineer, Databricks, Delta Lake, Unity Catalog, Azure Data Engineer, GCP Data Engineer, Microsoft Fabric, Apache Iceberg, Trino, PySpark, dbt, Airflow, Data Lakehouse, ETL, Morocco, Tangier">
 <meta name="author" content="Mohamed Hakkache">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#0A0E13">
+<meta name="theme-color" content="#04060C">
 <link rel="canonical" href="https://hakkache.github.io/hakkache-Med/">
 
 <meta property="og:type" content="website">
@@ -25,11 +25,11 @@
 <meta name="twitter:description" content="8+ years building data platforms. Databricks, Azure, GCP. Creator of OpenLakehouse.">
 <meta name="twitter:image" content="https://github.com/hakkache.png">
 
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230A0E13'/><text x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='%2335D6C0' text-anchor='middle'>MH</text></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2304060C'/><text x='50' y='68' font-size='50' font-family='monospace' font-weight='bold' fill='%2322E1FF' text-anchor='middle'>MH</text></svg>">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;500;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 
 <script type="application/ld+json">
@@ -44,15 +44,8 @@
   "email": "Hakkache.mohamed@gmail.com",
   "telephone": "+212673189608",
   "address": { "@type": "PostalAddress", "addressLocality": "Tangier", "addressCountry": "MA" },
-  "sameAs": [
-    "https://www.linkedin.com/in/hakkache-mohamed/",
-    "https://github.com/hakkache"
-  ],
-  "alumniOf": {
-    "@type": "EducationalOrganization",
-    "name": "School of Textiles and Clothing Industries (ESITH)",
-    "location": "Casablanca, Morocco"
-  },
+  "sameAs": ["https://www.linkedin.com/in/hakkache-mohamed/", "https://github.com/hakkache"],
+  "alumniOf": { "@type": "EducationalOrganization", "name": "School of Textiles and Clothing Industries (ESITH)", "location": "Casablanca, Morocco" },
   "knowsAbout": ["Data Engineering","Databricks","Delta Lake","Unity Catalog","Apache Spark","PySpark","Apache Iceberg","Trino","dbt","Apache Airflow","Microsoft Azure","Microsoft Fabric","Google Cloud Platform","BigQuery","Amazon Web Services","Data Lakehouse","ETL","Data Governance","Power BI","Retrieval-Augmented Generation"]
 }
 </script>
@@ -60,10 +53,17 @@
 <body>
 
 <a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress"></div>
+
+<div class="aurora" aria-hidden="true">
+  <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+</div>
+<div class="lattice" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
 
 <nav id="nav">
   <div class="nav-inner">
-    <a class="brand" href="index.html"><span class="dot"></span>hakkache.dev</a>
+    <a class="brand" href="index.html"><span class="orb"></span>hakkache.dev</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#stack">Stack</a></li>
@@ -77,108 +77,139 @@
 
 <main id="main">
 
-<!-- ============ HERO ============ -->
+<!-- ================= HERO ================= -->
 <section class="hero">
   <div class="wrap">
-    <div class="status-pill">
-      <span class="live"></span>
-      Lead Data Engineer at Allianz &middot; open to new roles
-    </div>
+    <div class="hero-grid">
 
-    <h1>Mohamed <span class="surname">Hakkache</span></h1>
-    <p class="hero-role" id="role" aria-live="polite"></p>
+      <div>
+        <div class="status-pill">
+          <span class="live"></span> Lead Data Engineer at Allianz &middot; open to new roles
+        </div>
 
-    <p class="hero-lede">
-      I build the systems that move data from wherever it's trapped to wherever
-      decisions get made. Right now that means lifting a <strong>40-year-old mainframe and SAS
-      insurance portfolio onto a Databricks lakehouse</strong> — with lineage, quality gates
-      and CI/CD that hold up in production.
-    </p>
+        <h1>Mohamed<span class="line2 grad-text">Hakkache</span></h1>
+        <p class="hero-role" id="role" aria-live="polite"></p>
 
-    <div class="hero-actions">
-      <a href="projects.html" class="btn">View projects</a>
-      <a href="#contact" class="btn btn-ghost">Get in touch</a>
-      <a href="https://github.com/hakkache/my_resume/raw/refs/heads/main/HAKKACHE%20MOHAMED_RESU%20(1)%20(1).pdf" target="_blank" rel="noopener" class="btn btn-ghost">Download resume</a>
+        <p class="hero-lede">
+          I build the systems that move data from wherever it's trapped to wherever decisions
+          get made. Right now that means lifting a <strong>decades-old mainframe and SAS
+          insurance portfolio onto a Databricks lakehouse</strong> — with lineage, quality gates
+          and CI/CD that hold up in production.
+        </p>
+
+        <div class="hero-actions">
+          <a href="projects.html" class="btn">Explore projects</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+          <a href="https://github.com/hakkache/my_resume/raw/refs/heads/main/HAKKACHE%20MOHAMED_RESU%20(1)%20(1).pdf" target="_blank" rel="noopener" class="btn btn-ghost">Resume ↓</a>
+        </div>
+      </div>
+
+      <!-- signature: a medallion pipeline console -->
+      <div class="beam">
+        <div class="glass console" id="console">
+          <div class="console-bar">
+            <span class="dot"></span><span class="dot"></span><span class="dot g"></span>
+            <span class="title">pipeline · career_run</span>
+          </div>
+
+          <div class="stage">
+            <div class="stage-head"><span class="stage-name">SOURCE</span><span class="stage-val">mainframe · sas · erp</span></div>
+            <div class="stage-track"><div class="stage-fill f-bronze" data-w="100%"></div></div>
+          </div>
+          <div class="stage">
+            <div class="stage-head"><span class="stage-name">BRONZE</span><span class="stage-val">raw ingest</span></div>
+            <div class="stage-track"><div class="stage-fill f-bronze" data-w="100%"></div></div>
+          </div>
+          <div class="stage">
+            <div class="stage-head"><span class="stage-name">SILVER</span><span class="stage-val">cleaned · conformed</span></div>
+            <div class="stage-track"><div class="stage-fill f-silver" data-w="92%"></div></div>
+          </div>
+          <div class="stage">
+            <div class="stage-head"><span class="stage-name">GOLD</span><span class="stage-val">business-ready</span></div>
+            <div class="stage-track"><div class="stage-fill f-gold" data-w="84%"></div></div>
+          </div>
+          <div class="stage">
+            <div class="stage-head"><span class="stage-name">SERVE</span><span class="stage-val">dashboards · models</span></div>
+            <div class="stage-track"><div class="stage-fill f-cyan" data-w="76%"></div></div>
+          </div>
+
+          <div class="console-foot">
+            <span>lineage: unity catalog</span>
+            <span class="ok">● all checks passed</span>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <div class="stat-band">
-      <div class="stat">
-        <div class="stat-num" data-target="8" data-suffix="+">0</div>
-        <div class="stat-label">Years in data</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num" data-target="100" data-suffix="+">0</div>
-        <div class="stat-label">Certifications</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num" data-target="3">0</div>
-        <div class="stat-label">Clouds in production</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num" data-target="5">0</div>
-        <div class="stat-label">Countries worked with</div>
-      </div>
+      <div class="glass stat"><div class="stat-num" data-target="8" data-suffix="+">0</div><div class="stat-label">Years in data</div></div>
+      <div class="glass stat"><div class="stat-num" data-target="100" data-suffix="+">0</div><div class="stat-label">Certifications</div></div>
+      <div class="glass stat"><div class="stat-num" data-target="3">0</div><div class="stat-label">Clouds in production</div></div>
+      <div class="glass stat"><div class="stat-num" data-target="5">0</div><div class="stat-label">Countries worked with</div></div>
     </div>
   </div>
 </section>
 
-<div class="divider"></div>
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="mq-track">
+    <span>DATABRICKS</span><span>DELTA LAKE</span><span>UNITY CATALOG</span><span>PYSPARK</span><span>APACHE ICEBERG</span><span>TRINO</span><span>BIGQUERY</span><span>MICROSOFT FABRIC</span><span>AZURE SYNAPSE</span><span>DBT</span><span>AIRFLOW</span><span>KAFKA</span><span>SNOWFLAKE</span><span>POWER BI</span><span>KUBERNETES</span>
+    <span>DATABRICKS</span><span>DELTA LAKE</span><span>UNITY CATALOG</span><span>PYSPARK</span><span>APACHE ICEBERG</span><span>TRINO</span><span>BIGQUERY</span><span>MICROSOFT FABRIC</span><span>AZURE SYNAPSE</span><span>DBT</span><span>AIRFLOW</span><span>KAFKA</span><span>SNOWFLAKE</span><span>POWER BI</span><span>KUBERNETES</span>
+  </div>
+</div>
 
-<!-- ============ ABOUT ============ -->
+<!-- ================= ABOUT ================= -->
 <section id="about">
   <div class="wrap reveal">
     <p class="eyebrow">About</p>
-    <h2 class="section-title">Engineering, then data — in that order</h2>
+    <h2 class="section-title">Engineering first, <span class="grad-text">then data</span></h2>
     <p class="section-lede">
-      I trained as an industrial engineer, which is why I think about pipelines the way I was
-      taught to think about production lines: throughput, failure modes, and the cost of a
-      defect discovered late.
+      I trained as an industrial engineer, which is why I think about pipelines the way I was taught
+      to think about production lines: throughput, failure modes, and the cost of a defect found late.
     </p>
 
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:2rem; max-width:900px;">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:2rem; max-width:940px;">
       <p style="color:var(--text-2);">
-        Eight years in, I've moved from analyzing production data on a factory floor to leading
-        the migration of insurance portfolio processing off a mainframe. The through-line is the
-        same: find where information gets stuck, and unstick it permanently rather than
-        with a report.
+        Eight years in, I've gone from analyzing production data on a factory floor to leading the
+        migration of insurance portfolio processing off a mainframe. The through-line is the same:
+        find where information gets stuck, and unstick it permanently rather than with a report.
       </p>
       <p style="color:var(--text-2);">
-        Lately I spend a lot of time on <strong style="color:var(--text);">AI inside the pipeline</strong> — not
-        chatbots bolted on top, but LLM-assisted enrichment, generated test scenarios, and
-        synthetic data for validating pipelines before real data exists. I build in the open;
-        <a href="projects.html">OpenLakehouse</a> is where most of that ends up.
+        Lately much of my attention goes to <strong style="color:var(--text);">AI inside the pipeline</strong> —
+        not chatbots bolted on top, but LLM-assisted enrichment, generated test scenarios, and synthetic
+        data for validating pipelines before real data exists. I build in the open;
+        <a href="projects.html">OpenLakehouse</a> is where most of it ends up.
       </p>
     </div>
   </div>
 </section>
 
-<!-- ============ STACK ============ -->
+<!-- ================= STACK ================= -->
 <section id="stack">
   <div class="wrap reveal">
     <p class="eyebrow">Stack</p>
     <h2 class="section-title">What I work with</h2>
     <p class="section-lede">
-      Grouped the way a pipeline actually runs, rather than by vendor — because the interesting
-      question is never "do you know Azure", it's "where does the data stop moving".
+      Grouped the way a pipeline actually runs rather than by vendor — because the interesting question
+      is never "do you know Azure", it's "where does the data stop moving".
     </p>
 
     <div class="layers">
-      <div class="layer">
-        <div class="layer-name"><span class="bar" style="background:var(--bronze)"></span>
-          <span>Ingest<small>Landing raw data</small></span>
-        </div>
+
+      <div class="glass layer">
+        <div class="layer-name"><span class="bar" style="background:linear-gradient(180deg,#B4713C,#E0913F)"></span>
+          <span>Ingest<small>Landing raw data</small></span></div>
         <div class="tags">
           <span class="tag key">Lakeflow Connect</span><span class="tag key">Autoloader</span>
           <span class="tag">Azure Data Factory</span><span class="tag">Cloud Data Fusion</span>
-          <span class="tag">Dataflow</span><span class="tag">Kafka</span><span class="tag">Debezium CDC</span>
-          <span class="tag">REST APIs</span>
+          <span class="tag">Dataflow</span><span class="tag">Kafka</span><span class="tag">Debezium CDC</span><span class="tag">REST APIs</span>
         </div>
       </div>
 
-      <div class="layer">
-        <div class="layer-name"><span class="bar" style="background:var(--silver)"></span>
-          <span>Store<small>Tables and formats</small></span>
-        </div>
+      <div class="glass layer">
+        <div class="layer-name"><span class="bar" style="background:linear-gradient(180deg,#7C8FA8,#B9C9DC)"></span>
+          <span>Store<small>Tables and formats</small></span></div>
         <div class="tags">
           <span class="tag key">Delta Lake</span><span class="tag key">Apache Iceberg</span>
           <span class="tag">Azure Data Lake</span><span class="tag">OneLake</span><span class="tag">BigQuery</span>
@@ -187,22 +218,20 @@
         </div>
       </div>
 
-      <div class="layer">
-        <div class="layer-name"><span class="bar" style="background:var(--gold)"></span>
-          <span>Process<small>Turning raw into usable</small></span>
-        </div>
+      <div class="glass layer">
+        <div class="layer-name"><span class="bar" style="background:linear-gradient(180deg,#C98A1E,#FFB43D)"></span>
+          <span>Process<small>Raw into usable</small></span></div>
         <div class="tags">
-          <span class="tag key">PySpark</span><span class="tag key">Databricks</span>
-          <span class="tag key">DLT / Lakeflow</span><span class="tag">Spark SQL</span><span class="tag">dbt</span>
-          <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Scala</span>
-          <span class="tag">Trino</span><span class="tag">Azure Synapse</span><span class="tag">Microsoft Fabric</span>
+          <span class="tag key">PySpark</span><span class="tag key">Databricks</span><span class="tag key">DLT / Lakeflow</span>
+          <span class="tag">Spark SQL</span><span class="tag">dbt</span><span class="tag">Python</span>
+          <span class="tag">SQL</span><span class="tag">Scala</span><span class="tag">Trino</span>
+          <span class="tag">Azure Synapse</span><span class="tag">Microsoft Fabric</span>
         </div>
       </div>
 
-      <div class="layer">
-        <div class="layer-name"><span class="bar" style="background:var(--teal)"></span>
-          <span>Orchestrate<small>Scheduling and shipping</small></span>
-        </div>
+      <div class="glass layer">
+        <div class="layer-name"><span class="bar" style="background:linear-gradient(180deg,#22E1FF,#7C5CFF)"></span>
+          <span>Orchestrate<small>Scheduling and shipping</small></span></div>
         <div class="tags">
           <span class="tag key">Apache Airflow</span><span class="tag">Dagster</span>
           <span class="tag">Databricks Asset Bundles</span><span class="tag">Cloud Composer</span>
@@ -211,21 +240,19 @@
         </div>
       </div>
 
-      <div class="layer">
-        <div class="layer-name"><span class="bar" style="background:var(--silver)"></span>
-          <span>Serve<small>Where people meet the data</small></span>
-        </div>
+      <div class="glass layer">
+        <div class="layer-name"><span class="bar" style="background:linear-gradient(180deg,#B9C9DC,#7C8FA8)"></span>
+          <span>Serve<small>Where people meet data</small></span></div>
         <div class="tags">
-          <span class="tag key">Power BI</span><span class="tag">Looker Studio</span>
-          <span class="tag">Tableau</span><span class="tag">MicroStrategy</span><span class="tag">Superset</span>
+          <span class="tag key">Power BI</span><span class="tag">Looker Studio</span><span class="tag">Tableau</span>
+          <span class="tag">MicroStrategy</span><span class="tag">Superset</span>
           <span class="tag">Semantic models</span><span class="tag">KPI design</span>
         </div>
       </div>
 
-      <div class="layer">
-        <div class="layer-name"><span class="bar" style="background:var(--bronze)"></span>
-          <span>Govern &amp; observe<small>Trust and uptime</small></span>
-        </div>
+      <div class="glass layer">
+        <div class="layer-name"><span class="bar" style="background:linear-gradient(180deg,#7C5CFF,#FF5CA8)"></span>
+          <span>Govern &amp; observe<small>Trust and uptime</small></span></div>
         <div class="tags">
           <span class="tag key">Unity Catalog</span><span class="tag">Microsoft Purview</span>
           <span class="tag">Entra ID / RBAC</span><span class="tag">Data quality frameworks</span>
@@ -234,32 +261,31 @@
         </div>
       </div>
 
-      <div class="layer">
-        <div class="layer-name"><span class="bar" style="background:var(--gold)"></span>
-          <span>AI in the pipeline<small>Newer ground</small></span>
-        </div>
+      <div class="glass layer">
+        <div class="layer-name"><span class="bar" style="background:linear-gradient(180deg,#3DFFC0,#22E1FF)"></span>
+          <span>AI in the pipeline<small>Newer ground</small></span></div>
         <div class="tags">
-          <span class="tag key">RAG</span><span class="tag key">Vector search</span>
-          <span class="tag">Embeddings</span><span class="tag">LLM data enrichment</span>
-          <span class="tag">AI-generated tests</span><span class="tag">Synthetic test data</span>
-          <span class="tag">Claude Code</span><span class="tag">GitHub Copilot</span>
+          <span class="tag key">RAG</span><span class="tag key">Vector search</span><span class="tag">Embeddings</span>
+          <span class="tag">LLM data enrichment</span><span class="tag">AI-generated tests</span>
+          <span class="tag">Synthetic test data</span><span class="tag">Claude Code</span><span class="tag">GitHub Copilot</span>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- ============ EXPERIENCE ============ -->
+<!-- ================= EXPERIENCE ================= -->
 <section id="experience">
   <div class="wrap reveal">
     <p class="eyebrow">Experience</p>
-    <h2 class="section-title">Career pipeline</h2>
+    <h2 class="section-title">Career <span class="grad-text">pipeline</span></h2>
     <p class="section-lede">Six roles, one direction: closer to the data, and closer to the decisions it feeds.</p>
 
     <div class="rail">
 
-      <article class="role tier-gold">
-        <div class="role-card">
+      <article class="role tier-now">
+        <div class="glass role-card">
           <div class="role-head">
             <h3 class="role-title">Lead Data Engineer <span class="badge-now">Now</span></h3>
             <span class="role-when">Sep 2025 — Present</span>
@@ -273,7 +299,7 @@
             <li><strong>Orchestrated</strong> end-to-end pipelines with PySpark notebooks, DLT and Databricks Lakeflow.</li>
             <li><strong>Set up</strong> automated testing, continuous integration and infrastructure-as-code deployment across dev and prod.</li>
             <li><strong>Governed</strong> lineage and access through Unity Catalog; monitored runs, investigated incidents, added alerting.</li>
-            <li><strong>Led</strong> data engineers on pipeline design, development standards and technical direction for the platform roadmap.</li>
+            <li><strong>Led</strong> data engineers on pipeline design, development standards and the platform roadmap.</li>
           </ul>
           <div class="role-stack tags">
             <span class="tag">Azure Databricks</span><span class="tag">Delta Lake</span><span class="tag">DLT</span>
@@ -283,8 +309,8 @@
         </div>
       </article>
 
-      <article class="role">
-        <div class="role-card">
+      <article class="role tier-mid">
+        <div class="glass role-card">
           <div class="role-head">
             <h3 class="role-title">Data Engineer</h3>
             <span class="role-when">Apr 2025 — Sep 2025</span>
@@ -304,8 +330,8 @@
         </div>
       </article>
 
-      <article class="role">
-        <div class="role-card">
+      <article class="role tier-mid">
+        <div class="glass role-card">
           <div class="role-head">
             <h3 class="role-title">Data Engineer</h3>
             <span class="role-when">Sep 2023 — Apr 2025</span>
@@ -327,7 +353,7 @@
       </article>
 
       <article class="role">
-        <div class="role-card">
+        <div class="glass role-card">
           <div class="role-head">
             <h3 class="role-title">Data Engineer</h3>
             <span class="role-when">Mar 2021 — Apr 2023</span>
@@ -347,8 +373,8 @@
         </div>
       </article>
 
-      <article class="role tier-bronze">
-        <div class="role-card">
+      <article class="role">
+        <div class="glass role-card">
           <div class="role-head">
             <h3 class="role-title">Data Analyst</h3>
             <span class="role-when">Jan 2020 — Mar 2021</span>
@@ -367,8 +393,8 @@
         </div>
       </article>
 
-      <article class="role tier-bronze">
-        <div class="role-card">
+      <article class="role">
+        <div class="glass role-card">
           <div class="role-head">
             <h3 class="role-title">Product Engineer / Data Analyst</h3>
             <span class="role-when">Sep 2018 — Jan 2020</span>
@@ -391,184 +417,153 @@
   </div>
 </section>
 
-<!-- ============ PROJECTS TEASER ============ -->
+<!-- ================= PROJECTS TEASER ================= -->
 <section id="projects">
   <div class="wrap reveal">
     <p class="eyebrow">Projects</p>
-    <h2 class="section-title">Built in the open</h2>
-    <p class="section-lede">
-      Side projects are where I test ideas that are too risky to try first on someone's production data.
-    </p>
+    <h2 class="section-title">Built in the <span class="grad-text">open</span></h2>
+    <p class="section-lede">Side projects are where I test ideas that would be irresponsible to try first on someone's production data.</p>
 
-    <div class="flagship">
-      <div class="flagship-body">
-        <p class="proj-kicker" style="color:var(--gold);">Flagship · 39 services · one docker compose up</p>
-        <h2>OpenLakehouse</h2>
-        <p class="lede">
-          A self-hosted, open-source data platform that does what a cloud lakehouse does — Spark writing
-          real Iceberg tables, Trino querying them, Kafka and Debezium streaming change data, Dagster
-          orchestrating, Superset visualizing, MLflow tracking models — all behind one sign-on, running
-          entirely on your own hardware for nothing.
-        </p>
-        <a href="projects.html" class="btn">See how it's built</a>
-      </div>
-      <div class="shot">
-        <img src="https://github.com/hakkache/openlakehouse/raw/master/docs/screenshots/home.jpg"
-             alt="OpenLakehouse platform home screen" loading="lazy">
+    <div class="beam flagship">
+      <div class="glass" style="border-radius:var(--r);">
+        <div class="flagship-body">
+          <p class="proj-kicker" style="color:var(--amber);">Flagship · 39 services · one docker compose up</p>
+          <h2>OpenLakehouse</h2>
+          <p class="lede">
+            A self-hosted, open-source data platform that does what a cloud lakehouse does — Spark writing
+            real Iceberg tables, Trino querying them, Kafka and Debezium streaming change data, Dagster
+            orchestrating, Superset visualizing, MLflow tracking models — all behind one sign-on, running
+            entirely on your own hardware for nothing.
+          </p>
+          <a href="projects.html" class="btn">See how it's built</a>
+        </div>
+        <div class="shot">
+          <img src="https://github.com/hakkache/openlakehouse/raw/master/docs/screenshots/home.jpg" alt="OpenLakehouse platform home screen" loading="lazy">
+        </div>
       </div>
     </div>
 
     <div class="proj-grid">
-      <a class="proj" href="https://github.com/hakkache/Self-Healing-Agentic-Sentiment-Analysis-Pipeline" target="_blank" rel="noopener">
+      <a class="glass proj" href="https://github.com/hakkache/Self-Healing-Agentic-Sentiment-Analysis-Pipeline" target="_blank" rel="noopener">
         <div class="proj-kicker">Agentic pipeline</div>
         <h3>Self-Healing Sentiment Pipeline</h3>
         <p>A pipeline where a local LLM diagnoses its own failures and repairs them — automated recovery instead of a 3 a.m. page.</p>
         <div class="tags"><span class="tag">Airflow</span><span class="tag">Ollama</span><span class="tag">Llama 3.2</span><span class="tag">Celery</span></div>
       </a>
 
-      <a class="proj" href="https://github.com/hakkache/End-to-End-Modern-Distributed-Lakehouse" target="_blank" rel="noopener">
+      <a class="glass proj" href="https://github.com/hakkache/End-to-End-Modern-Distributed-Lakehouse" target="_blank" rel="noopener">
         <div class="proj-kicker">Lakehouse architecture</div>
         <h3>Distributed Lakehouse</h3>
         <p>Iceberg tables with git-like branching through Nessie, federated queries via Trino, object storage on MinIO.</p>
         <div class="tags"><span class="tag">Iceberg</span><span class="tag">Nessie</span><span class="tag">Trino</span><span class="tag">Polars</span></div>
       </a>
 
-      <a class="proj" href="projects.html">
+      <a class="glass proj" href="projects.html">
         <div class="proj-kicker">Everything else</div>
         <h3>Four more projects</h3>
         <p>Modern data stack on AWS and Snowflake, real-time IoT monitoring for port cranes, Kafka streaming, and a game-data pipeline.</p>
-        <div class="tags"><span class="tag">View all →</span></div>
+        <div class="tags"><span class="tag key">View all →</span></div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ============ CERTIFICATIONS ============ -->
+<!-- ================= CERTIFICATIONS ================= -->
 <section id="certifications">
   <div class="wrap reveal">
     <p class="eyebrow">Certifications</p>
-    <h2 class="section-title">100+ credentials, 14 that matter</h2>
-    <p class="section-lede">
-      The full list is on LinkedIn. These are the ones I'd actually point to in an interview.
-    </p>
+    <h2 class="section-title">100+ credentials, <span class="grad-text">14 that matter</span></h2>
+    <p class="section-lede">The full list is on LinkedIn. These are the ones I'd actually point to in an interview.</p>
 
     <div class="cert-grid">
-      <a class="cert" href="https://www.udemy.com/certificate/UC-5a814ce6-7d4a-488b-a0af-1a94c96018f6/" target="_blank" rel="noopener">
+      <a class="glass cert" href="https://www.udemy.com/certificate/UC-5a814ce6-7d4a-488b-a0af-1a94c96018f6/" target="_blank" rel="noopener">
         <div class="cert-name">Microsoft DP-700: Fabric Data Engineer Associate</div>
-        <div class="cert-meta"><span class="org">Microsoft / Udemy</span><span>Nov 2025</span></div>
-      </a>
-      <a class="cert" href="https://credentials.databricks.com/e9118f3a-57f7-44ae-a3cd-3efc3ddb1311" target="_blank" rel="noopener">
+        <div class="cert-meta"><span class="org">Microsoft / Udemy</span><span>Nov 2025</span></div></a>
+      <a class="glass cert" href="https://credentials.databricks.com/e9118f3a-57f7-44ae-a3cd-3efc3ddb1311" target="_blank" rel="noopener">
         <div class="cert-name">Academy Accreditation — Databricks Fundamentals</div>
-        <div class="cert-meta"><span class="org">Databricks</span><span>Oct 2025</span></div>
-      </a>
-      <a class="cert" href="https://www.udemy.com/certificate/UC-0acfc3b0-0333-4f07-b633-f550ece1d0dd/" target="_blank" rel="noopener">
+        <div class="cert-meta"><span class="org">Databricks</span><span>Oct 2025</span></div></a>
+      <a class="glass cert" href="https://www.udemy.com/certificate/UC-0acfc3b0-0333-4f07-b633-f550ece1d0dd/" target="_blank" rel="noopener">
         <div class="cert-name">Databricks Certified Data Engineer Associate</div>
-        <div class="cert-meta"><span class="org">Bootcamp / Udemy</span><span>Oct 2025</span></div>
-      </a>
-      <a class="cert" href="https://www.coursera.org/account/accomplishments/specialization/0GG5JZESCU94" target="_blank" rel="noopener">
+        <div class="cert-meta"><span class="org">Bootcamp / Udemy</span><span>Oct 2025</span></div></a>
+      <a class="glass cert" href="https://www.coursera.org/account/accomplishments/specialization/0GG5JZESCU94" target="_blank" rel="noopener">
         <div class="cert-name">Google Cloud Data Analytics Specialization</div>
-        <div class="cert-meta"><span class="org">Google Cloud</span><span>Oct 2025</span></div>
-      </a>
-      <a class="cert" href="https://www.coursera.org/account/accomplishments/specialization/WKRGBAERWO65" target="_blank" rel="noopener">
+        <div class="cert-meta"><span class="org">Google Cloud</span><span>Oct 2025</span></div></a>
+      <a class="glass cert" href="https://www.coursera.org/account/accomplishments/specialization/WKRGBAERWO65" target="_blank" rel="noopener">
         <div class="cert-name">Microsoft Azure Data Fundamentals DP-900</div>
-        <div class="cert-meta"><span class="org">Microsoft</span><span>Oct 2025</span></div>
-      </a>
-      <a class="cert" href="https://www.coursera.org/account/accomplishments/specialization/DOKNVFQACHMG" target="_blank" rel="noopener">
+        <div class="cert-meta"><span class="org">Microsoft</span><span>Oct 2025</span></div></a>
+      <a class="glass cert" href="https://www.coursera.org/account/accomplishments/specialization/DOKNVFQACHMG" target="_blank" rel="noopener">
         <div class="cert-name">Data Engineering, Big Data &amp; ML on Google Cloud</div>
-        <div class="cert-meta"><span class="org">Google Cloud</span><span>Sep 2025</span></div>
-      </a>
-      <a class="cert" href="https://www.coursera.org/account/accomplishments/specialization/7SR5OZH6ER5I" target="_blank" rel="noopener">
+        <div class="cert-meta"><span class="org">Google Cloud</span><span>Sep 2025</span></div></a>
+      <a class="glass cert" href="https://www.coursera.org/account/accomplishments/specialization/7SR5OZH6ER5I" target="_blank" rel="noopener">
         <div class="cert-name">Cloud Data Engineer Specialization</div>
-        <div class="cert-meta"><span class="org">Google Cloud</span><span>Sep 2025</span></div>
-      </a>
-      <a class="cert" href="https://www.coursera.org/account/accomplishments/specialization/SKGHFEYY7KW4" target="_blank" rel="noopener">
+        <div class="cert-meta"><span class="org">Google Cloud</span><span>Sep 2025</span></div></a>
+      <a class="glass cert" href="https://www.coursera.org/account/accomplishments/specialization/SKGHFEYY7KW4" target="_blank" rel="noopener">
         <div class="cert-name">Microsoft Power BI Data Analyst Specialization</div>
-        <div class="cert-meta"><span class="org">Microsoft</span><span>Dec 2023</span></div>
-      </a>
-      <a class="cert" href="https://www.coursera.org/account/accomplishments/specialization/certificate/KRF8YZL2UR99" target="_blank" rel="noopener">
+        <div class="cert-meta"><span class="org">Microsoft</span><span>Dec 2023</span></div></a>
+      <a class="glass cert" href="https://www.coursera.org/account/accomplishments/specialization/certificate/KRF8YZL2UR99" target="_blank" rel="noopener">
         <div class="cert-name">Natural Language Processing Specialization</div>
-        <div class="cert-meta"><span class="org">DeepLearning.AI</span><span>Jun 2023</span></div>
-      </a>
-      <a class="cert" href="https://www.coursera.org/account/accomplishments/specialization/certificate/WPGM4RJKFJYQ" target="_blank" rel="noopener">
+        <div class="cert-meta"><span class="org">DeepLearning.AI</span><span>Jun 2023</span></div></a>
+      <a class="glass cert" href="https://www.coursera.org/account/accomplishments/specialization/certificate/WPGM4RJKFJYQ" target="_blank" rel="noopener">
         <div class="cert-name">Google Business Intelligence Specialization</div>
-        <div class="cert-meta"><span class="org">Google</span><span>May 2023</span></div>
-      </a>
-      <a class="cert" href="https://www.coursera.org/account/accomplishments/specialization/certificate/L3C5MGKCY37A" target="_blank" rel="noopener">
+        <div class="cert-meta"><span class="org">Google</span><span>May 2023</span></div></a>
+      <a class="glass cert" href="https://www.coursera.org/account/accomplishments/specialization/certificate/L3C5MGKCY37A" target="_blank" rel="noopener">
         <div class="cert-name">Google Project Management Specialization</div>
-        <div class="cert-meta"><span class="org">Google</span><span>Apr 2023</span></div>
-      </a>
-      <a class="cert" href="https://www.coursera.org/account/accomplishments/specialization/certificate/MSARE4DERMGD" target="_blank" rel="noopener">
+        <div class="cert-meta"><span class="org">Google</span><span>Apr 2023</span></div></a>
+      <a class="glass cert" href="https://www.coursera.org/account/accomplishments/specialization/certificate/MSARE4DERMGD" target="_blank" rel="noopener">
         <div class="cert-name">Google Data Analytics Specialization</div>
-        <div class="cert-meta"><span class="org">Google</span><span>Apr 2023</span></div>
-      </a>
-      <a class="cert" href="https://www.coursera.org/account/accomplishments/specialization/certificate/DG7HB99ZKMPH" target="_blank" rel="noopener">
+        <div class="cert-meta"><span class="org">Google</span><span>Apr 2023</span></div></a>
+      <a class="glass cert" href="https://www.coursera.org/account/accomplishments/specialization/certificate/DG7HB99ZKMPH" target="_blank" rel="noopener">
         <div class="cert-name">Deep Learning Specialization</div>
-        <div class="cert-meta"><span class="org">DeepLearning.AI</span><span>Jul 2018</span></div>
-      </a>
-      <a class="cert" href="https://iassc.org/contact/verify-a-certificate/" target="_blank" rel="noopener">
+        <div class="cert-meta"><span class="org">DeepLearning.AI</span><span>Jul 2018</span></div></a>
+      <a class="glass cert" href="https://iassc.org/contact/verify-a-certificate/" target="_blank" rel="noopener">
         <div class="cert-name">IASSC ICCB — Six Sigma Certification</div>
-        <div class="cert-meta"><span class="org">IASSC</span><span>Oct 2016</span></div>
-      </a>
+        <div class="cert-meta"><span class="org">IASSC</span><span>Oct 2016</span></div></a>
     </div>
 
-    <div style="margin-top:1.5rem;">
+    <div style="margin-top:1.6rem;">
       <a href="https://www.linkedin.com/in/hakkache-mohamed/details/certifications/" target="_blank" rel="noopener" class="btn btn-ghost">See all 100+ on LinkedIn</a>
     </div>
 
-    <h3 style="margin:4rem 0 1.25rem; font-size:1.3rem;">Education</h3>
+    <h3 style="margin:4rem 0 1.3rem; font-size:1.4rem;">Education</h3>
     <div class="edu">
-      <div class="edu-row">
-        <div>
-          <h4>State Engineer in Industrial Engineering</h4>
-          <p>School of Textiles and Clothing Industries (ESITH) — Casablanca</p>
-        </div>
+      <div class="glass edu-row">
+        <div><h4>State Engineer in Industrial Engineering</h4>
+        <p>School of Textiles and Clothing Industries (ESITH) — Casablanca</p></div>
         <span class="when">2011 — 2015</span>
       </div>
-      <div class="edu-row">
-        <div>
-          <h4>Preparatory Classes (CPGE) — Mathematics &amp; Physics</h4>
-          <p>Two-year intensive program for national engineering school entrance — Taza</p>
-        </div>
+      <div class="glass edu-row">
+        <div><h4>Preparatory Classes (CPGE) — Mathematics &amp; Physics</h4>
+        <p>Two-year intensive program for national engineering school entrance — Taza</p></div>
         <span class="when">2008 — 2011</span>
       </div>
-      <div class="edu-row">
-        <div>
-          <h4>Baccalaureate in Mathematical Sciences</h4>
-          <p>Honors: Very Good — Taza</p>
-        </div>
+      <div class="glass edu-row">
+        <div><h4>Baccalaureate in Mathematical Sciences</h4>
+        <p>Honors: Very Good — Taza</p></div>
         <span class="when">2008</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ CONTACT ============ -->
+<!-- ================= CONTACT ================= -->
 <section id="contact">
   <div class="wrap reveal">
     <p class="eyebrow">Contact</p>
-    <h2 class="section-title">Let's talk</h2>
+    <h2 class="section-title">Let's <span class="grad-text">talk</span></h2>
     <p class="section-lede">
-      Open to lead and senior data engineering roles — remote or Europe. Also happy to talk
-      lakehouse migrations with no agenda attached.
+      Open to lead and senior data engineering roles — remote or Europe. Also happy to talk lakehouse
+      migrations with no agenda attached.
     </p>
 
     <div class="contact-grid">
-      <a class="contact-card" href="mailto:Hakkache.mohamed@gmail.com">
-        <div class="c-label">Email</div>
-        <div class="c-value">Hakkache.mohamed@gmail.com</div>
-      </a>
-      <a class="contact-card" href="tel:+212673189608">
-        <div class="c-label">Phone</div>
-        <div class="c-value">+212 6 73 18 96 08</div>
-      </a>
-      <a class="contact-card" href="https://www.linkedin.com/in/hakkache-mohamed/" target="_blank" rel="noopener">
-        <div class="c-label">LinkedIn</div>
-        <div class="c-value">in/hakkache-mohamed</div>
-      </a>
-      <a class="contact-card" href="https://github.com/hakkache" target="_blank" rel="noopener">
-        <div class="c-label">GitHub</div>
-        <div class="c-value">@hakkache</div>
-      </a>
+      <a class="glass contact-card" href="mailto:Hakkache.mohamed@gmail.com">
+        <div class="c-label">Email</div><div class="c-value">Hakkache.mohamed@gmail.com</div></a>
+      <a class="glass contact-card" href="tel:+212673189608">
+        <div class="c-label">Phone</div><div class="c-value">+212 6 73 18 96 08</div></a>
+      <a class="glass contact-card" href="https://www.linkedin.com/in/hakkache-mohamed/" target="_blank" rel="noopener">
+        <div class="c-label">LinkedIn</div><div class="c-value">in/hakkache-mohamed</div></a>
+      <a class="glass contact-card" href="https://github.com/hakkache" target="_blank" rel="noopener">
+        <div class="c-label">GitHub</div><div class="c-value">@hakkache</div></a>
     </div>
   </div>
 </section>
@@ -585,7 +580,7 @@
       </div>
     </div>
     <div class="foot-meta" style="text-align:right;">
-      <span id="visits">—</span> visits<br>
+      <span id="visitWrap"><span id="visits">—</span> visits<br></span>
       &copy; <span id="year">2026</span> Mohamed Hakkache
     </div>
   </div>
@@ -595,96 +590,104 @@
 (function () {
   'use strict';
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  /* ---- year ---- */
   document.getElementById('year').textContent = new Date().getFullYear();
 
   /* ---- rotating role line ---- */
-  var roles = [
-    'Lead Data Engineer',
-    'Lakehouse migration specialist',
-    'Databricks · Azure · GCP',
-    'Creator of OpenLakehouse'
-  ];
+  var roles = ['Lead Data Engineer','Lakehouse migration specialist','Databricks · Azure · GCP','Creator of OpenLakehouse'];
   var el = document.getElementById('role');
   if (el) {
-    if (reduced) {
-      el.textContent = roles[0];
-    } else {
-      var ri = 0, ci = 0, deleting = false;
+    if (reduced) { el.textContent = roles[0]; }
+    else {
+      var ri = 0, ci = 0, del = false;
       (function tick() {
-        var word = roles[ri];
-        ci += deleting ? -1 : 1;
-        el.innerHTML = word.substring(0, ci).replace(/ /g, '&nbsp;') + '<span class="caret"></span>';
-        var wait = deleting ? 35 : 70;
-        if (!deleting && ci === word.length) { wait = 2200; deleting = true; }
-        else if (deleting && ci === 0) { deleting = false; ri = (ri + 1) % roles.length; wait = 350; }
+        var w = roles[ri];
+        ci += del ? -1 : 1;
+        el.innerHTML = w.substring(0, ci).replace(/ /g, '&nbsp;') + '<span class="caret"></span>';
+        var wait = del ? 35 : 70;
+        if (!del && ci === w.length) { wait = 2200; del = true; }
+        else if (del && ci === 0) { del = false; ri = (ri + 1) % roles.length; wait = 350; }
         setTimeout(tick, wait);
       })();
     }
   }
 
-  /* ---- nav shadow + active section ---- */
-  var nav = document.getElementById('nav');
-  var links = Array.prototype.slice.call(document.querySelectorAll('.nav-links a[href^="#"]'));
-  var sections = links.map(function (a) { return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+  /* ---- scroll progress + nav state ---- */
+  var nav = document.getElementById('nav'), bar = document.getElementById('progress');
+  var links = [].slice.call(document.querySelectorAll('.nav-links a[href^="#"]'));
+  var secs = links.map(function (a) { return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
 
   function onScroll() {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
     nav.classList.toggle('scrolled', window.scrollY > 20);
-    var pos = window.scrollY + 140, current = null;
-    sections.forEach(function (s) { if (s.offsetTop <= pos) current = s.id; });
-    links.forEach(function (a) {
-      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-    });
+    var pos = window.scrollY + 150, cur = null;
+    secs.forEach(function (s) { if (s.offsetTop <= pos) cur = s.id; });
+    links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + cur); });
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  /* ---- counters ---- */
-  function count(node) {
-    var target = parseInt(node.getAttribute('data-target'), 10);
-    var suffix = node.getAttribute('data-suffix') || '';
-    if (isNaN(target)) return;
-    if (reduced) { node.innerHTML = target + '<span class="suffix">' + suffix + '</span>'; return; }
-    var start = performance.now(), dur = 1400;
-    (function step(now) {
-      var p = Math.min((now - start) / dur, 1);
-      var eased = 1 - Math.pow(1 - p, 3);
-      node.innerHTML = Math.round(target * eased) + '<span class="suffix">' + suffix + '</span>';
-      if (p < 1) requestAnimationFrame(step);
-    })(start);
+  /* ---- cursor-tracked spotlight on glass panels ---- */
+  if (window.matchMedia('(hover: hover)').matches) {
+    document.addEventListener('mousemove', function (e) {
+      var card = e.target.closest ? e.target.closest('.glass') : null;
+      if (!card) return;
+      var r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    }, { passive: true });
   }
 
-  /* ---- reveal + counter triggers ---- */
+  /* ---- counters ---- */
+  function count(n) {
+    var t = parseInt(n.getAttribute('data-target'), 10), sfx = n.getAttribute('data-suffix') || '';
+    if (isNaN(t)) return;
+    if (reduced) { n.innerHTML = t + '<span class="suffix">' + sfx + '</span>'; return; }
+    var s = performance.now();
+    (function step(now) {
+      var p = Math.min((now - s) / 1500, 1), e = 1 - Math.pow(1 - p, 3);
+      n.innerHTML = Math.round(t * e) + '<span class="suffix">' + sfx + '</span>';
+      if (p < 1) requestAnimationFrame(step);
+    })(s);
+  }
+
+  /* ---- observers ---- */
   if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        e.target.classList.add('in');
-        io.unobserve(e.target);
-      });
-    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.06, rootMargin: '0px 0px -50px 0px' });
     document.querySelectorAll('.reveal').forEach(function (n) { io.observe(n); });
 
-    var co = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        count(e.target);
-        co.unobserve(e.target);
-      });
+    var co = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { count(e.target); co.unobserve(e.target); } });
     }, { threshold: 0.4 });
     document.querySelectorAll('.stat-num').forEach(function (n) { co.observe(n); });
+
+    var po = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.querySelectorAll('.stage-fill').forEach(function (f, i) {
+          setTimeout(function () { f.style.width = f.getAttribute('data-w'); }, i * 160);
+        });
+        po.unobserve(e.target);
+      });
+    }, { threshold: 0.3 });
+    var con = document.getElementById('console');
+    if (con) po.observe(con);
   } else {
     document.querySelectorAll('.reveal').forEach(function (n) { n.classList.add('in'); });
     document.querySelectorAll('.stat-num').forEach(count);
+    document.querySelectorAll('.stage-fill').forEach(function (f) { f.style.width = f.getAttribute('data-w'); });
   }
 
-  /* ---- visit counter (fails quietly) ---- */
-  var v = document.getElementById('visits');
+  /* ---- visit counter (hides itself on failure) ---- */
   fetch('https://api.counterapi.dev/v1/hakkache-portfolio/visits/up')
     .then(function (r) { return r.json(); })
-    .then(function (d) { if (d && typeof d.count === 'number') v.textContent = d.count.toLocaleString(); })
-    .catch(function () { v.parentNode.style.display = 'none'; });
+    .then(function (d) {
+      if (d && typeof d.count === 'number') document.getElementById('visits').textContent = d.count.toLocaleString();
+      else document.getElementById('visitWrap').style.display = 'none';
+    })
+    .catch(function () { document.getElementById('visitWrap').style.display = 'none'; });
 })();
 </script>
 </body>

@@ -9,7 +9,7 @@
 <meta name="keywords" content="OpenLakehouse, self-hosted lakehouse, Apache Iceberg, Trino, Dagster, MLflow, Superset, Debezium, data engineering projects, Databricks, Snowflake, dbt">
 <meta name="author" content="Mohamed Hakkache">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#0A0E13">
+<meta name="theme-color" content="#04060C">
 <link rel="canonical" href="https://hakkache.github.io/hakkache-Med/projects.html">
 
 <meta property="og:type" content="website">
@@ -22,11 +22,11 @@
 <meta name="twitter:description" content="OpenLakehouse and other data engineering builds.">
 <meta name="twitter:image" content="https://github.com/hakkache/openlakehouse/raw/master/docs/screenshots/home.jpg">
 
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230A0E13'/><text x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='%2335D6C0' text-anchor='middle'>MH</text></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2304060C'/><text x='50' y='68' font-size='50' font-family='monospace' font-weight='bold' fill='%2322E1FF' text-anchor='middle'>MH</text></svg>">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;500;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 
 <script type="application/ld+json">
@@ -45,10 +45,17 @@
 <body>
 
 <a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress"></div>
+
+<div class="aurora" aria-hidden="true">
+  <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+</div>
+<div class="lattice" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
 
 <nav id="nav">
   <div class="nav-inner">
-    <a class="brand" href="index.html"><span class="dot"></span>hakkache.dev</a>
+    <a class="brand" href="index.html"><span class="orb"></span>hakkache.dev</a>
     <ul class="nav-links">
       <li><a href="index.html#about">About</a></li>
       <li><a href="index.html#stack">Stack</a></li>
@@ -62,14 +69,13 @@
 
 <main id="main">
 
-<!-- ============ HEADER ============ -->
 <section class="hero" style="padding-bottom:2rem;">
   <div class="wrap">
     <p class="eyebrow">Projects</p>
-    <h1 style="font-size:clamp(2.2rem,6.5vw,4rem);">Things I've built</h1>
-    <p class="hero-lede" style="margin-top:1rem;">
+    <h1 style="font-size:clamp(2.3rem,6.5vw,4.4rem);">Things I've <span class="grad-text">built</span></h1>
+    <p class="hero-lede" style="margin-top:1.2rem; max-width:62ch;">
       Personal projects are where I try the ideas that would be irresponsible to test first on
-      someone's production data. Everything here is public, runnable, and documented.
+      someone's production data. Everything here is public, runnable and documented.
     </p>
     <div class="hero-actions">
       <a href="https://github.com/hakkache?tab=repositories" target="_blank" rel="noopener" class="btn">All repositories</a>
@@ -78,225 +84,153 @@
   </div>
 </section>
 
-<!-- ============ FLAGSHIP ============ -->
+<!-- ================= FLAGSHIP ================= -->
 <section style="padding-top:2rem;">
   <div class="wrap reveal">
+    <div class="beam flagship">
+      <div class="glass" style="border-radius:var(--r);">
 
-    <div class="flagship">
-      <div class="flagship-body">
-        <p class="proj-kicker" style="color:var(--gold);">Flagship project · MIT licensed · all 20 build phases complete</p>
-        <h2>OpenLakehouse</h2>
-        <p class="lede">
-          A working Databricks-style data and AI platform that runs entirely on your own machine.
-          Not a tutorial, not a diagram — real Spark jobs writing real Iceberg tables, real Trino
-          queries against them, real Kafka change-data-capture streams, a real orchestrator and a
-          real model registry, behind one login and one UI. Thirty-nine Docker services, one command.
-        </p>
-        <div class="hero-actions">
-          <a href="https://github.com/hakkache/openlakehouse" target="_blank" rel="noopener" class="btn">View on GitHub</a>
-          <a href="https://github.com/hakkache/openlakehouse/blob/master/docs/architecture.md" target="_blank" rel="noopener" class="btn btn-ghost">Architecture doc</a>
-          <a href="https://github.com/hakkache/openlakehouse/blob/master/docs/GUIDED_PROJECT.md" target="_blank" rel="noopener" class="btn btn-ghost">Guided tutorial</a>
+        <div class="flagship-body">
+          <p class="proj-kicker" style="color:var(--amber);">Flagship · MIT licensed · all 20 build phases complete</p>
+          <h2>OpenLakehouse</h2>
+          <p class="lede">
+            A working Databricks-style data and AI platform that runs entirely on your own machine.
+            Not a tutorial, not a diagram — real Spark jobs writing real Iceberg tables, real Trino
+            queries against them, real Kafka change-data-capture streams, a real orchestrator and a
+            real model registry, behind one login and one UI. Thirty-nine Docker services, one command.
+          </p>
+          <div class="hero-actions">
+            <a href="https://github.com/hakkache/openlakehouse" target="_blank" rel="noopener" class="btn">View on GitHub</a>
+            <a href="https://github.com/hakkache/openlakehouse/blob/master/docs/architecture.md" target="_blank" rel="noopener" class="btn btn-ghost">Architecture doc</a>
+            <a href="https://github.com/hakkache/openlakehouse/blob/master/docs/GUIDED_PROJECT.md" target="_blank" rel="noopener" class="btn btn-ghost">Guided tutorial</a>
+          </div>
         </div>
-      </div>
 
-      <div class="shot">
-        <img src="https://github.com/hakkache/openlakehouse/raw/master/docs/screenshots/home.jpg"
-             alt="OpenLakehouse home dashboard" loading="lazy">
-      </div>
+        <div class="shot">
+          <img src="https://github.com/hakkache/openlakehouse/raw/master/docs/screenshots/home.jpg" alt="OpenLakehouse home dashboard" loading="lazy">
+        </div>
 
-      <div class="flagship-body">
-        <h3 style="font-size:1.25rem; margin-bottom:0.9rem;">Why it exists</h3>
-        <p style="color:var(--text-2); max-width:68ch; margin-bottom:1.5rem;">
-          Most "learn the modern data stack" guides ask you to stitch together a dozen SaaS trials or
-          fight half-broken local installs. This is one <code style="font-family:var(--mono); font-size:0.85em; color:var(--teal);">docker compose up</code>
-          that gives you the whole thing — so you can learn it, prototype on it, or demo it without
-          paying a cloud bill or handing your data to a vendor.
-        </p>
+        <div class="flagship-body">
+          <h3 style="font-size:1.3rem; margin-bottom:.9rem;">Why it exists</h3>
+          <p style="color:var(--text-2); max-width:68ch; margin-bottom:1.6rem;">
+            Most "learn the modern data stack" guides ask you to stitch together a dozen SaaS trials or
+            fight half-broken local installs. This is one command that gives you the whole thing — so you
+            can learn it, prototype on it, or demo it without paying a cloud bill or handing your data to a vendor.
+          </p>
 
-        <div class="code-block">
-<span class="c"># start the control plane in about a minute</span>
+          <div class="code-block">
+<span class="c"># control plane only — up in about a minute</span>
 docker compose <span class="k">--profile</span> core up -d --build
 
-<span class="c"># or the full platform — 39 services</span>
+<span class="c"># the full platform — 39 services</span>
 docker compose <span class="k">--profile</span> full up -d --build   <span class="c">→ http://localhost</span>
+          </div>
+
+          <div class="spec">
+            <div class="glass spec-item"><h4>Lakehouse core</h4><p>Apache Spark writing Iceberg tables through an Apache Polaris REST catalog, stored on MinIO in bronze → silver → gold layers.</p></div>
+            <div class="glass spec-item"><h4>Query &amp; BI</h4><p>Trino as the SQL engine with saved queries and history; Apache Superset dashboards embedded directly in the app.</p></div>
+            <div class="glass spec-item"><h4>No-code pipeline builder</h4><p>A visual graph — source → transform → quality gate → destination — compiling down to real Spark SQL against the live catalog.</p></div>
+            <div class="glass spec-item"><h4>Streaming &amp; CDC</h4><p>Kafka in KRaft mode with Debezium capturing Postgres changes in real time into the lakehouse.</p></div>
+            <div class="glass spec-item"><h4>Orchestration</h4><p>Dagster schedules and sensors driving Spark jobs and dbt-core models built against Trino.</p></div>
+            <div class="glass spec-item"><h4>Quality &amp; lineage</h4><p>Not-null, unique, range, regex, schema, freshness and row-count checks with scoring, plus an auto-derived lineage graph and OpenMetadata catalog.</p></div>
+            <div class="glass spec-item"><h4>ML &amp; notebooks</h4><p>MLflow experiment tracking and model registry, with Jupyter pre-wired to the same Spark cluster.</p></div>
+            <div class="glass spec-item"><h4>Security</h4><p>Keycloak issuing real OIDC/JWT tokens, five RBAC roles enforced server-side on every API call, OpenBao for secrets, Traefik as the single gateway.</p></div>
+            <div class="glass spec-item"><h4>Observability</h4><p>Prometheus, Grafana, Loki and an OpenTelemetry collector pre-provisioned, so a slow Trino query traces back to the request that caused it.</p></div>
+            <div class="glass spec-item"><h4>AI assistant</h4><p>A local LLM through Ollama wired into the platform for in-app help — no data leaves the machine.</p></div>
+          </div>
+
+          <h3 style="font-size:1.3rem; margin:2.5rem 0 1rem;">Inside the platform</h3>
+          <div class="shot-grid">
+            <figure class="glass shot-cell">
+              <img src="https://github.com/hakkache/openlakehouse/raw/master/docs/screenshots/pipelines.jpg" alt="Visual no-code pipeline builder" loading="lazy">
+              <figcaption>Visual pipeline builder — compiles to Spark SQL</figcaption></figure>
+            <figure class="glass shot-cell">
+              <img src="https://github.com/hakkache/openlakehouse/raw/master/docs/screenshots/sql.jpg" alt="SQL analytics against live Iceberg tables" loading="lazy">
+              <figcaption>SQL analytics on live Iceberg tables</figcaption></figure>
+            <figure class="glass shot-cell">
+              <img src="https://github.com/hakkache/openlakehouse/raw/master/docs/screenshots/lineage.jpg" alt="Auto-derived table lineage graph" loading="lazy">
+              <figcaption>Auto-derived table lineage</figcaption></figure>
+            <figure class="glass shot-cell">
+              <img src="https://github.com/hakkache/openlakehouse/raw/master/docs/screenshots/quality.jpg" alt="Data quality scoring dashboard" loading="lazy">
+              <figcaption>Data quality scoring and run history</figcaption></figure>
+            <figure class="glass shot-cell">
+              <img src="https://github.com/hakkache/openlakehouse/raw/master/docs/screenshots/dashboards.jpg" alt="Superset dashboards embedded in the app" loading="lazy">
+              <figcaption>Superset dashboards, embedded</figcaption></figure>
+            <figure class="glass shot-cell">
+              <img src="https://github.com/hakkache/openlakehouse/raw/master/docs/screenshots/ml.jpg" alt="MLflow experiments and model registry" loading="lazy">
+              <figcaption>MLflow experiments and registry</figcaption></figure>
+          </div>
+
+          <div class="tags" style="margin-top:2rem;">
+            <span class="tag key">Apache Spark</span><span class="tag key">Apache Iceberg</span><span class="tag key">Trino</span>
+            <span class="tag">Apache Polaris</span><span class="tag">Kafka</span><span class="tag">Debezium</span>
+            <span class="tag">Dagster</span><span class="tag">dbt-core</span><span class="tag">MLflow</span>
+            <span class="tag">Superset</span><span class="tag">OpenMetadata</span><span class="tag">Keycloak</span>
+            <span class="tag">OpenBao</span><span class="tag">Traefik</span><span class="tag">FastAPI</span>
+            <span class="tag">React</span><span class="tag">MinIO</span><span class="tag">Prometheus</span>
+            <span class="tag">Grafana</span><span class="tag">Loki</span><span class="tag">Ollama</span><span class="tag">Docker</span>
+          </div>
         </div>
 
-        <div class="spec">
-          <div class="spec-item">
-            <h4>Lakehouse core</h4>
-            <p>Apache Spark writing Iceberg tables through an Apache Polaris REST catalog, stored on MinIO in bronze → silver → gold layers.</p>
-          </div>
-          <div class="spec-item">
-            <h4>Query &amp; BI</h4>
-            <p>Trino as the SQL engine with saved queries and history; Apache Superset dashboards embedded directly in the app.</p>
-          </div>
-          <div class="spec-item">
-            <h4>No-code pipeline builder</h4>
-            <p>A visual graph — source → transform → quality gate → destination — that compiles down to real Spark SQL and runs on the live catalog.</p>
-          </div>
-          <div class="spec-item">
-            <h4>Streaming &amp; CDC</h4>
-            <p>Kafka in KRaft mode with Debezium capturing Postgres changes in real time into the lakehouse.</p>
-          </div>
-          <div class="spec-item">
-            <h4>Orchestration</h4>
-            <p>Dagster schedules and sensors driving Spark jobs and dbt-core models built against Trino.</p>
-          </div>
-          <div class="spec-item">
-            <h4>Quality &amp; lineage</h4>
-            <p>Not-null, unique, range, regex, schema, freshness and row-count checks with scoring, plus an auto-derived lineage graph and OpenMetadata catalog.</p>
-          </div>
-          <div class="spec-item">
-            <h4>ML &amp; notebooks</h4>
-            <p>MLflow experiment tracking and model registry, with Jupyter pre-wired to the same Spark cluster.</p>
-          </div>
-          <div class="spec-item">
-            <h4>Security</h4>
-            <p>Keycloak issuing real OIDC/JWT tokens, five RBAC roles enforced server-side on every API call, OpenBao for secrets, Traefik as the single gateway.</p>
-          </div>
-          <div class="spec-item">
-            <h4>Observability</h4>
-            <p>Prometheus, Grafana, Loki and an OpenTelemetry collector pre-provisioned, so a slow Trino query can be traced back to the request that caused it.</p>
-          </div>
-          <div class="spec-item">
-            <h4>AI assistant</h4>
-            <p>A local LLM through Ollama wired into the platform for in-app help — no data leaves the machine.</p>
-          </div>
-        </div>
-
-        <h3 style="font-size:1.25rem; margin:2.5rem 0 1rem;">Inside the platform</h3>
-        <div class="shot-grid">
-          <figure class="shot-cell">
-            <img src="https://github.com/hakkache/openlakehouse/raw/master/docs/screenshots/pipelines.jpg" alt="Visual no-code pipeline builder" loading="lazy">
-            <figcaption>Visual pipeline builder — compiles to Spark SQL</figcaption>
-          </figure>
-          <figure class="shot-cell">
-            <img src="https://github.com/hakkache/openlakehouse/raw/master/docs/screenshots/sql.jpg" alt="SQL analytics against live Iceberg tables" loading="lazy">
-            <figcaption>SQL analytics on live Iceberg tables</figcaption>
-          </figure>
-          <figure class="shot-cell">
-            <img src="https://github.com/hakkache/openlakehouse/raw/master/docs/screenshots/lineage.jpg" alt="Auto-derived table lineage graph" loading="lazy">
-            <figcaption>Auto-derived table lineage</figcaption>
-          </figure>
-          <figure class="shot-cell">
-            <img src="https://github.com/hakkache/openlakehouse/raw/master/docs/screenshots/quality.jpg" alt="Data quality scoring dashboard" loading="lazy">
-            <figcaption>Data quality scoring and run history</figcaption>
-          </figure>
-          <figure class="shot-cell">
-            <img src="https://github.com/hakkache/openlakehouse/raw/master/docs/screenshots/dashboards.jpg" alt="Superset dashboards embedded in the app" loading="lazy">
-            <figcaption>Superset dashboards, embedded</figcaption>
-          </figure>
-          <figure class="shot-cell">
-            <img src="https://github.com/hakkache/openlakehouse/raw/master/docs/screenshots/ml.jpg" alt="MLflow experiments and model registry" loading="lazy">
-            <figcaption>MLflow experiments and registry</figcaption>
-          </figure>
-        </div>
-
-        <div class="tags" style="margin-top:2rem;">
-          <span class="tag key">Apache Spark</span><span class="tag key">Apache Iceberg</span><span class="tag key">Trino</span>
-          <span class="tag">Apache Polaris</span><span class="tag">Kafka</span><span class="tag">Debezium</span>
-          <span class="tag">Dagster</span><span class="tag">dbt-core</span><span class="tag">MLflow</span>
-          <span class="tag">Superset</span><span class="tag">OpenMetadata</span><span class="tag">Keycloak</span>
-          <span class="tag">OpenBao</span><span class="tag">Traefik</span><span class="tag">FastAPI</span>
-          <span class="tag">React</span><span class="tag">MinIO</span><span class="tag">Prometheus</span>
-          <span class="tag">Grafana</span><span class="tag">Loki</span><span class="tag">Ollama</span><span class="tag">Docker</span>
-        </div>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- ============ OTHER PROJECTS ============ -->
+<!-- ================= OTHER PROJECTS ================= -->
 <section style="padding-top:1rem;">
   <div class="wrap reveal">
     <p class="eyebrow">More work</p>
-    <h2 class="section-title">Other projects</h2>
-    <p class="section-lede">Smaller builds, each one aimed at a specific problem I wanted to understand properly.</p>
+    <h2 class="section-title">Other <span class="grad-text">projects</span></h2>
+    <p class="section-lede">Smaller builds, each aimed at a specific problem I wanted to understand properly.</p>
 
     <div class="proj-grid">
 
-      <a class="proj" href="https://github.com/hakkache/Self-Healing-Agentic-Sentiment-Analysis-Pipeline" target="_blank" rel="noopener">
+      <a class="glass proj" href="https://github.com/hakkache/Self-Healing-Agentic-Sentiment-Analysis-Pipeline" target="_blank" rel="noopener">
         <div class="proj-kicker">Agentic pipeline · MLOps</div>
         <h3>Self-Healing Sentiment Pipeline</h3>
-        <p>
-          A sentiment analysis pipeline that repairs itself. When a task fails, a local LLM inspects
-          the error, decides on a fix and retries — the goal being automated recovery instead of an
-          engineer woken at 3 a.m.
-        </p>
-        <div class="tags">
-          <span class="tag key">Airflow</span><span class="tag">Ollama</span><span class="tag">Llama 3.2</span>
-          <span class="tag">Celery</span><span class="tag">Redis</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span>
-        </div>
+        <p>A sentiment analysis pipeline that repairs itself. When a task fails, a local LLM inspects the error, decides on a fix and retries — automated recovery instead of an engineer woken at 3 a.m.</p>
+        <div class="tags"><span class="tag key">Airflow</span><span class="tag">Ollama</span><span class="tag">Llama 3.2</span><span class="tag">Celery</span><span class="tag">Redis</span><span class="tag">Docker</span></div>
       </a>
 
-      <a class="proj" href="https://github.com/hakkache/End-to-End-Modern-Distributed-Lakehouse" target="_blank" rel="noopener">
+      <a class="glass proj" href="https://github.com/hakkache/End-to-End-Modern-Distributed-Lakehouse" target="_blank" rel="noopener">
         <div class="proj-kicker">Lakehouse architecture</div>
         <h3>End-to-End Distributed Lakehouse</h3>
-        <p>
-          A distributed lakehouse built on open table formats: Iceberg for the tables, Nessie for
-          git-style branching and rollback of data, Trino for federated queries, MinIO underneath it all.
-        </p>
-        <div class="tags">
-          <span class="tag key">Apache Iceberg</span><span class="tag">Project Nessie</span><span class="tag">Trino</span>
-          <span class="tag">Airflow</span><span class="tag">dbt</span><span class="tag">Polars</span><span class="tag">MinIO</span>
-        </div>
+        <p>A distributed lakehouse on open table formats: Iceberg for tables, Nessie for git-style branching and rollback of data, Trino for federated queries, MinIO underneath.</p>
+        <div class="tags"><span class="tag key">Apache Iceberg</span><span class="tag">Nessie</span><span class="tag">Trino</span><span class="tag">Airflow</span><span class="tag">dbt</span><span class="tag">Polars</span></div>
       </a>
 
-      <a class="proj" href="https://github.com/hakkache/Data_Engineering_Project_AWS_DBT_SNOWFLAKE" target="_blank" rel="noopener">
+      <a class="glass proj" href="https://github.com/hakkache/Data_Engineering_Project_AWS_DBT_SNOWFLAKE" target="_blank" rel="noopener">
         <div class="proj-kicker">Modern data stack</div>
         <h3>AWS · dbt · Snowflake</h3>
-        <p>
-          A full path from raw files in S3 through dbt transformations in Snowflake, ending in a
-          CatBoost model served through a Streamlit app — the whole analytics loop rather than just
-          the ingestion half.
-        </p>
-        <div class="tags">
-          <span class="tag key">Snowflake</span><span class="tag">dbt Core</span><span class="tag">AWS S3</span>
-          <span class="tag">Streamlit</span><span class="tag">CatBoost</span><span class="tag">Plotly</span>
-        </div>
+        <p>The full path from raw files in S3 through dbt transformations in Snowflake, ending in a CatBoost model served through Streamlit — the whole analytics loop, not just ingestion.</p>
+        <div class="tags"><span class="tag key">Snowflake</span><span class="tag">dbt Core</span><span class="tag">AWS S3</span><span class="tag">Streamlit</span><span class="tag">CatBoost</span></div>
       </a>
 
-      <a class="proj" href="https://github.com/hakkache/QUAY-CRANE-REAL-TIME-MONITORING-SYSTEM" target="_blank" rel="noopener">
+      <a class="glass proj" href="https://github.com/hakkache/QUAY-CRANE-REAL-TIME-MONITORING-SYSTEM" target="_blank" rel="noopener">
         <div class="proj-kicker">IoT · real-time</div>
         <h3>Quay Crane Monitoring</h3>
-        <p>
-          Real-time monitoring for port crane operations, turning IoT sensor streams into operational
-          insight and predictive maintenance signals. Built from what I learned working at a container terminal.
-        </p>
-        <div class="tags">
-          <span class="tag key">Streaming</span><span class="tag">IoT telemetry</span><span class="tag">Python</span>
-          <span class="tag">Real-time analytics</span>
-        </div>
+        <p>Real-time monitoring for port crane operations, turning IoT sensor streams into operational insight and predictive maintenance signals. Built from what I learned at a container terminal.</p>
+        <div class="tags"><span class="tag key">Streaming</span><span class="tag">IoT telemetry</span><span class="tag">Python</span><span class="tag">Real-time analytics</span></div>
       </a>
 
-      <a class="proj" href="https://github.com/hakkache/Real-Time-Data-Streaming" target="_blank" rel="noopener">
+      <a class="glass proj" href="https://github.com/hakkache/Real-Time-Data-Streaming" target="_blank" rel="noopener">
         <div class="proj-kicker">Stream processing</div>
         <h3>Real-Time Data Streaming</h3>
-        <p>
-          High-throughput streaming pipelines on Kafka, working through the patterns that matter at
-          volume — partitioning, consumer groups, backpressure and exactly-once handling.
-        </p>
-        <div class="tags">
-          <span class="tag key">Apache Kafka</span><span class="tag">Python</span><span class="tag">Stream processing</span>
-        </div>
+        <p>High-throughput streaming pipelines on Kafka, working through the patterns that matter at volume — partitioning, consumer groups, backpressure and exactly-once handling.</p>
+        <div class="tags"><span class="tag key">Apache Kafka</span><span class="tag">Python</span><span class="tag">Stream processing</span></div>
       </a>
 
-      <a class="proj" href="https://github.com/hakkache/EldenRingDataE2Project" target="_blank" rel="noopener">
+      <a class="glass proj" href="https://github.com/hakkache/EldenRingDataE2Project" target="_blank" rel="noopener">
         <div class="proj-kicker">End-to-end ETL</div>
         <h3>Elden Ring Data Pipeline</h3>
-        <p>
-          A complete ETL and visualization pipeline over Elden Ring game data. The fundamentals are
-          identical to any enterprise pipeline; the dataset is considerably more fun to debug.
-        </p>
-        <div class="tags">
-          <span class="tag key">Python</span><span class="tag">Jupyter</span><span class="tag">ETL</span><span class="tag">Pandas</span>
-        </div>
+        <p>A complete ETL and visualization pipeline over Elden Ring game data. The fundamentals are identical to any enterprise pipeline; the dataset is considerably more fun to debug.</p>
+        <div class="tags"><span class="tag key">Python</span><span class="tag">Jupyter</span><span class="tag">ETL</span><span class="tag">Pandas</span></div>
       </a>
 
     </div>
 
-    <div style="margin-top:2.5rem; display:flex; gap:0.9rem; flex-wrap:wrap;">
+    <div style="margin-top:2.5rem; display:flex; gap:.9rem; flex-wrap:wrap;">
       <a href="https://github.com/hakkache?tab=repositories" target="_blank" rel="noopener" class="btn">Browse all repositories</a>
       <a href="index.html#contact" class="btn btn-ghost">Talk about this work</a>
     </div>
@@ -314,9 +248,7 @@ docker compose <span class="k">--profile</span> full up -d --build   <span class
         <a href="index.html">Back to profile</a> · <a href="https://github.com/hakkache" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
-    <div class="foot-meta" style="text-align:right;">
-      &copy; <span id="year">2026</span> Mohamed Hakkache
-    </div>
+    <div class="foot-meta" style="text-align:right;">&copy; <span id="year">2026</span> Mohamed Hakkache</div>
   </div>
 </footer>
 
@@ -325,19 +257,27 @@ docker compose <span class="k">--profile</span> full up -d --build   <span class
   'use strict';
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  var nav = document.getElementById('nav');
+  var nav = document.getElementById('nav'), bar = document.getElementById('progress');
   window.addEventListener('scroll', function () {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
     nav.classList.toggle('scrolled', window.scrollY > 20);
   }, { passive: true });
 
+  if (window.matchMedia('(hover: hover)').matches) {
+    document.addEventListener('mousemove', function (e) {
+      var card = e.target.closest ? e.target.closest('.glass') : null;
+      if (!card) return;
+      var r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    }, { passive: true });
+  }
+
   if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        e.target.classList.add('in');
-        io.unobserve(e.target);
-      });
-    }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.04, rootMargin: '0px 0px -50px 0px' });
     document.querySelectorAll('.reveal').forEach(function (n) { io.observe(n); });
   } else {
     document.querySelectorAll('.reveal').forEach(function (n) { n.classList.add('in'); });
