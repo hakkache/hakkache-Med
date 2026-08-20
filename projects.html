@@ -707,6 +707,105 @@ footer { border-top: 1px solid var(--edge); padding: 3rem 0 2.5rem; position: re
   .avatar, .logo .hex, .logo .pulse { animation: none; }
 }
 
+/* ============================================================
+   LAYER 4 — company marks + animated technology wall
+   ============================================================ */
+
+/* --- company mark inside each role --- */
+.role-org { display: flex; align-items: center; gap: .65rem; }
+.co-logo {
+  width: 34px; height: 34px; flex: none;
+  border-radius: 9px;
+  background: #FFFFFF;
+  display: grid; place-items: center;
+  padding: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.14);
+  transition: transform .3s, box-shadow .3s;
+}
+.role-card:hover .co-logo { transform: scale(1.08) rotate(-3deg); box-shadow: 0 4px 18px rgba(34,225,255,.35), 0 0 0 1px rgba(34,225,255,.5); }
+.co-logo img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.co-logo .fb {
+  font-family: var(--mono); font-weight: 700; font-size: .72rem;
+  color: #0B1018; letter-spacing: -.02em;
+}
+
+/* --- animated technology wall --- */
+.techwall {
+  position: relative; z-index: 3;
+  padding: 2rem 0;
+  border-top: 1px solid var(--edge);
+  border-bottom: 1px solid var(--edge);
+  background: rgba(255,255,255,.015);
+  overflow: hidden;
+}
+.techwall::before, .techwall::after {
+  content: ''; position: absolute; top: 0; bottom: 0; width: 16%; z-index: 4; pointer-events: none;
+}
+.techwall::before { left: 0;  background: linear-gradient(90deg, var(--void), transparent); }
+.techwall::after  { right: 0; background: linear-gradient(270deg, var(--void), transparent); }
+
+.tw-label {
+  text-align: center;
+  font-family: var(--mono); font-size: .68rem; letter-spacing: .24em;
+  text-transform: uppercase; color: var(--muted);
+  margin-bottom: 1.4rem;
+}
+
+.tw-row { display: flex; gap: 1rem; width: max-content; margin-bottom: 1rem; }
+.tw-row:last-child { margin-bottom: 0; }
+.tw-row.a { animation: twSlide 46s linear infinite; }
+.tw-row.b { animation: twSlide 38s linear infinite reverse; }
+.techwall:hover .tw-row { animation-play-state: paused; }
+@keyframes twSlide { to { transform: translateX(-50%); } }
+
+.tw-chip {
+  width: 74px; height: 74px; flex: none;
+  border-radius: 18px;
+  background: var(--panel);
+  border: 1px solid var(--edge);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  display: grid; place-items: center;
+  position: relative;
+  transition: transform .35s cubic-bezier(.2,.8,.2,1), border-color .35s, box-shadow .35s, background .35s;
+  animation: twFloat 6s ease-in-out infinite;
+}
+.tw-chip:nth-child(3n)   { animation-delay: -1.4s; }
+.tw-chip:nth-child(3n+1) { animation-delay: -2.9s; }
+.tw-chip:nth-child(4n)   { animation-delay: -4.2s; }
+@keyframes twFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+
+.tw-chip img {
+  width: 34px; height: 34px; object-fit: contain; display: block;
+  filter: grayscale(1) brightness(1.7);
+  opacity: .62;
+  transition: filter .35s, opacity .35s, transform .35s;
+}
+.tw-chip:hover {
+  transform: translateY(-9px) scale(1.12);
+  border-color: var(--cyan);
+  background: rgba(34,225,255,.09);
+  box-shadow: 0 14px 40px rgba(0,0,0,.55), 0 0 34px rgba(34,225,255,.32);
+  animation-play-state: paused;
+}
+.tw-chip:hover img { filter: none; opacity: 1; transform: scale(1.08); }
+
+.tw-chip .fb {
+  font-family: var(--mono); font-size: .58rem; font-weight: 700;
+  letter-spacing: .04em; color: var(--text-2); text-align: center;
+  padding: 0 4px; line-height: 1.2;
+}
+
+@media (max-width: 720px) {
+  .tw-chip { width: 60px; height: 60px; border-radius: 15px; }
+  .tw-chip img { width: 28px; height: 28px; }
+  .techwall { padding: 1.5rem 0; }
+  .co-logo { width: 30px; height: 30px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tw-chip { animation: none; }
+  .tw-row.a, .tw-row.b { animation: none; }
+}
+
 </style>
 
 <script type="application/ld+json">

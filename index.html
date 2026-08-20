@@ -710,6 +710,105 @@ footer { border-top: 1px solid var(--edge); padding: 3rem 0 2.5rem; position: re
   .avatar, .logo .hex, .logo .pulse { animation: none; }
 }
 
+/* ============================================================
+   LAYER 4 — company marks + animated technology wall
+   ============================================================ */
+
+/* --- company mark inside each role --- */
+.role-org { display: flex; align-items: center; gap: .65rem; }
+.co-logo {
+  width: 34px; height: 34px; flex: none;
+  border-radius: 9px;
+  background: #FFFFFF;
+  display: grid; place-items: center;
+  padding: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.14);
+  transition: transform .3s, box-shadow .3s;
+}
+.role-card:hover .co-logo { transform: scale(1.08) rotate(-3deg); box-shadow: 0 4px 18px rgba(34,225,255,.35), 0 0 0 1px rgba(34,225,255,.5); }
+.co-logo img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.co-logo .fb {
+  font-family: var(--mono); font-weight: 700; font-size: .72rem;
+  color: #0B1018; letter-spacing: -.02em;
+}
+
+/* --- animated technology wall --- */
+.techwall {
+  position: relative; z-index: 3;
+  padding: 2rem 0;
+  border-top: 1px solid var(--edge);
+  border-bottom: 1px solid var(--edge);
+  background: rgba(255,255,255,.015);
+  overflow: hidden;
+}
+.techwall::before, .techwall::after {
+  content: ''; position: absolute; top: 0; bottom: 0; width: 16%; z-index: 4; pointer-events: none;
+}
+.techwall::before { left: 0;  background: linear-gradient(90deg, var(--void), transparent); }
+.techwall::after  { right: 0; background: linear-gradient(270deg, var(--void), transparent); }
+
+.tw-label {
+  text-align: center;
+  font-family: var(--mono); font-size: .68rem; letter-spacing: .24em;
+  text-transform: uppercase; color: var(--muted);
+  margin-bottom: 1.4rem;
+}
+
+.tw-row { display: flex; gap: 1rem; width: max-content; margin-bottom: 1rem; }
+.tw-row:last-child { margin-bottom: 0; }
+.tw-row.a { animation: twSlide 46s linear infinite; }
+.tw-row.b { animation: twSlide 38s linear infinite reverse; }
+.techwall:hover .tw-row { animation-play-state: paused; }
+@keyframes twSlide { to { transform: translateX(-50%); } }
+
+.tw-chip {
+  width: 74px; height: 74px; flex: none;
+  border-radius: 18px;
+  background: var(--panel);
+  border: 1px solid var(--edge);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  display: grid; place-items: center;
+  position: relative;
+  transition: transform .35s cubic-bezier(.2,.8,.2,1), border-color .35s, box-shadow .35s, background .35s;
+  animation: twFloat 6s ease-in-out infinite;
+}
+.tw-chip:nth-child(3n)   { animation-delay: -1.4s; }
+.tw-chip:nth-child(3n+1) { animation-delay: -2.9s; }
+.tw-chip:nth-child(4n)   { animation-delay: -4.2s; }
+@keyframes twFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+
+.tw-chip img {
+  width: 34px; height: 34px; object-fit: contain; display: block;
+  filter: grayscale(1) brightness(1.7);
+  opacity: .62;
+  transition: filter .35s, opacity .35s, transform .35s;
+}
+.tw-chip:hover {
+  transform: translateY(-9px) scale(1.12);
+  border-color: var(--cyan);
+  background: rgba(34,225,255,.09);
+  box-shadow: 0 14px 40px rgba(0,0,0,.55), 0 0 34px rgba(34,225,255,.32);
+  animation-play-state: paused;
+}
+.tw-chip:hover img { filter: none; opacity: 1; transform: scale(1.08); }
+
+.tw-chip .fb {
+  font-family: var(--mono); font-size: .58rem; font-weight: 700;
+  letter-spacing: .04em; color: var(--text-2); text-align: center;
+  padding: 0 4px; line-height: 1.2;
+}
+
+@media (max-width: 720px) {
+  .tw-chip { width: 60px; height: 60px; border-radius: 15px; }
+  .tw-chip img { width: 28px; height: 28px; }
+  .techwall { padding: 1.5rem 0; }
+  .co-logo { width: 30px; height: 30px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tw-chip { animation: none; }
+  .tw-row.a, .tw-row.b { animation: none; }
+}
+
 </style>
 
 <script type="application/ld+json">
@@ -855,12 +954,11 @@ footer { border-top: 1px solid var(--edge); padding: 3rem 0 2.5rem; position: re
   </div>
 </section>
 
-<!-- ================= MARQUEE ================= -->
-<div class="marquee" aria-hidden="true">
-  <div class="mq-track">
-    <span>DATABRICKS</span><span>DELTA LAKE</span><span>UNITY CATALOG</span><span>PYSPARK</span><span>APACHE ICEBERG</span><span>TRINO</span><span>BIGQUERY</span><span>MICROSOFT FABRIC</span><span>AZURE SYNAPSE</span><span>DBT</span><span>AIRFLOW</span><span>KAFKA</span><span>SNOWFLAKE</span><span>POWER BI</span><span>KUBERNETES</span>
-    <span>DATABRICKS</span><span>DELTA LAKE</span><span>UNITY CATALOG</span><span>PYSPARK</span><span>APACHE ICEBERG</span><span>TRINO</span><span>BIGQUERY</span><span>MICROSOFT FABRIC</span><span>AZURE SYNAPSE</span><span>DBT</span><span>AIRFLOW</span><span>KAFKA</span><span>SNOWFLAKE</span><span>POWER BI</span><span>KUBERNETES</span>
-  </div>
+<!-- ================= TECHNOLOGY WALL ================= -->
+<div class="techwall" aria-label="Technologies I work with">
+  <div class="tw-label">Technologies in daily use</div>
+    <div class="tw-row a"><span class="tw-chip" title="Databricks"><img src="https://cdn.simpleicons.org/databricks/FF3621" alt="Databricks" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Databricks'}))"></span><span class="tw-chip" title="Spark"><img src="https://cdn.simpleicons.org/apachespark/E25A1C" alt="Spark" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Spark'}))"></span><span class="tw-chip" title="Delta Lake"><img src="https://cdn.simpleicons.org/delta/00ADD4" alt="Delta Lake" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Delta Lake'}))"></span><span class="tw-chip" title="Iceberg"><img src="https://cdn.simpleicons.org/apacheiceberg/2A8FBD" alt="Iceberg" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Iceberg'}))"></span><span class="tw-chip" title="Trino"><img src="https://cdn.simpleicons.org/trino/DD00A1" alt="Trino" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Trino'}))"></span><span class="tw-chip" title="Snowflake"><img src="https://cdn.simpleicons.org/snowflake/29B5E8" alt="Snowflake" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Snowflake'}))"></span><span class="tw-chip" title="Airflow"><img src="https://cdn.simpleicons.org/apacheairflow/017CEE" alt="Airflow" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Airflow'}))"></span><span class="tw-chip" title="dbt"><img src="https://cdn.simpleicons.org/dbt/FF694B" alt="dbt" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'dbt'}))"></span><span class="tw-chip" title="Kafka"><img src="https://cdn.simpleicons.org/apachekafka/FFFFFF" alt="Kafka" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Kafka'}))"></span><span class="tw-chip" title="GCP"><img src="https://cdn.simpleicons.org/googlecloud/4285F4" alt="GCP" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'GCP'}))"></span><span class="tw-chip" title="BigQuery"><img src="https://cdn.simpleicons.org/googlebigquery/669DF6" alt="BigQuery" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'BigQuery'}))"></span><span class="tw-chip" title="AWS"><img src="https://cdn.simpleicons.org/amazonwebservices/FF9900" alt="AWS" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'AWS'}))"></span><span class="tw-chip" title="Azure"><img src="https://cdn.simpleicons.org/microsoftazure/0089D6" alt="Azure" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Azure'}))"></span><span class="tw-chip" title="Python"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Python'}))"></span><span class="tw-chip" title="Scala"><img src="https://cdn.simpleicons.org/scala/DC322F" alt="Scala" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Scala'}))"></span><span class="tw-chip" title="Databricks"><img src="https://cdn.simpleicons.org/databricks/FF3621" alt="Databricks" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Databricks'}))"></span><span class="tw-chip" title="Spark"><img src="https://cdn.simpleicons.org/apachespark/E25A1C" alt="Spark" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Spark'}))"></span><span class="tw-chip" title="Delta Lake"><img src="https://cdn.simpleicons.org/delta/00ADD4" alt="Delta Lake" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Delta Lake'}))"></span><span class="tw-chip" title="Iceberg"><img src="https://cdn.simpleicons.org/apacheiceberg/2A8FBD" alt="Iceberg" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Iceberg'}))"></span><span class="tw-chip" title="Trino"><img src="https://cdn.simpleicons.org/trino/DD00A1" alt="Trino" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Trino'}))"></span><span class="tw-chip" title="Snowflake"><img src="https://cdn.simpleicons.org/snowflake/29B5E8" alt="Snowflake" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Snowflake'}))"></span><span class="tw-chip" title="Airflow"><img src="https://cdn.simpleicons.org/apacheairflow/017CEE" alt="Airflow" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Airflow'}))"></span><span class="tw-chip" title="dbt"><img src="https://cdn.simpleicons.org/dbt/FF694B" alt="dbt" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'dbt'}))"></span><span class="tw-chip" title="Kafka"><img src="https://cdn.simpleicons.org/apachekafka/FFFFFF" alt="Kafka" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Kafka'}))"></span><span class="tw-chip" title="GCP"><img src="https://cdn.simpleicons.org/googlecloud/4285F4" alt="GCP" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'GCP'}))"></span><span class="tw-chip" title="BigQuery"><img src="https://cdn.simpleicons.org/googlebigquery/669DF6" alt="BigQuery" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'BigQuery'}))"></span><span class="tw-chip" title="AWS"><img src="https://cdn.simpleicons.org/amazonwebservices/FF9900" alt="AWS" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'AWS'}))"></span><span class="tw-chip" title="Azure"><img src="https://cdn.simpleicons.org/microsoftazure/0089D6" alt="Azure" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Azure'}))"></span><span class="tw-chip" title="Python"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Python'}))"></span><span class="tw-chip" title="Scala"><img src="https://cdn.simpleicons.org/scala/DC322F" alt="Scala" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Scala'}))"></span></div>
+    <div class="tw-row b"><span class="tw-chip" title="Postgres"><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="Postgres" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Postgres'}))"></span><span class="tw-chip" title="MongoDB"><img src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'MongoDB'}))"></span><span class="tw-chip" title="Oracle"><img src="https://cdn.simpleicons.org/oracle/F80000" alt="Oracle" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Oracle'}))"></span><span class="tw-chip" title="Docker"><img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Docker'}))"></span><span class="tw-chip" title="Kubernetes"><img src="https://cdn.simpleicons.org/kubernetes/326CE5" alt="Kubernetes" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Kubernetes'}))"></span><span class="tw-chip" title="Git"><img src="https://cdn.simpleicons.org/git/F05032" alt="Git" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Git'}))"></span><span class="tw-chip" title="GitLab"><img src="https://cdn.simpleicons.org/gitlab/FC6D26" alt="GitLab" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'GitLab'}))"></span><span class="tw-chip" title="Grafana"><img src="https://cdn.simpleicons.org/grafana/F46800" alt="Grafana" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Grafana'}))"></span><span class="tw-chip" title="Prometheus"><img src="https://cdn.simpleicons.org/prometheus/E6522C" alt="Prometheus" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Prometheus'}))"></span><span class="tw-chip" title="Elastic"><img src="https://cdn.simpleicons.org/elasticsearch/005571" alt="Elastic" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Elastic'}))"></span><span class="tw-chip" title="Jupyter"><img src="https://cdn.simpleicons.org/jupyter/F37626" alt="Jupyter" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Jupyter'}))"></span><span class="tw-chip" title="pandas"><img src="https://cdn.simpleicons.org/pandas/E0E7F0" alt="pandas" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'pandas'}))"></span><span class="tw-chip" title="Terraform"><img src="https://cdn.simpleicons.org/terraform/844FBA" alt="Terraform" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Terraform'}))"></span><span class="tw-chip" title="Jira"><img src="https://cdn.simpleicons.org/jira/0052CC" alt="Jira" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Jira'}))"></span><span class="tw-chip" title="Looker"><img src="https://cdn.simpleicons.org/looker/4285F4" alt="Looker" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Looker'}))"></span><span class="tw-chip" title="Postgres"><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="Postgres" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Postgres'}))"></span><span class="tw-chip" title="MongoDB"><img src="https://cdn.simpleicons.org/mongodb/47A248" alt="MongoDB" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'MongoDB'}))"></span><span class="tw-chip" title="Oracle"><img src="https://cdn.simpleicons.org/oracle/F80000" alt="Oracle" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Oracle'}))"></span><span class="tw-chip" title="Docker"><img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Docker'}))"></span><span class="tw-chip" title="Kubernetes"><img src="https://cdn.simpleicons.org/kubernetes/326CE5" alt="Kubernetes" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Kubernetes'}))"></span><span class="tw-chip" title="Git"><img src="https://cdn.simpleicons.org/git/F05032" alt="Git" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Git'}))"></span><span class="tw-chip" title="GitLab"><img src="https://cdn.simpleicons.org/gitlab/FC6D26" alt="GitLab" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'GitLab'}))"></span><span class="tw-chip" title="Grafana"><img src="https://cdn.simpleicons.org/grafana/F46800" alt="Grafana" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Grafana'}))"></span><span class="tw-chip" title="Prometheus"><img src="https://cdn.simpleicons.org/prometheus/E6522C" alt="Prometheus" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Prometheus'}))"></span><span class="tw-chip" title="Elastic"><img src="https://cdn.simpleicons.org/elasticsearch/005571" alt="Elastic" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Elastic'}))"></span><span class="tw-chip" title="Jupyter"><img src="https://cdn.simpleicons.org/jupyter/F37626" alt="Jupyter" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Jupyter'}))"></span><span class="tw-chip" title="pandas"><img src="https://cdn.simpleicons.org/pandas/E0E7F0" alt="pandas" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'pandas'}))"></span><span class="tw-chip" title="Terraform"><img src="https://cdn.simpleicons.org/terraform/844FBA" alt="Terraform" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Terraform'}))"></span><span class="tw-chip" title="Jira"><img src="https://cdn.simpleicons.org/jira/0052CC" alt="Jira" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Jira'}))"></span><span class="tw-chip" title="Looker"><img src="https://cdn.simpleicons.org/looker/4285F4" alt="Looker" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'Looker'}))"></span></div>
 </div>
 
 <!-- ================= ABOUT ================= -->
@@ -994,7 +1092,7 @@ footer { border-top: 1px solid var(--edge); padding: 3rem 0 2.5rem; position: re
             <h3 class="role-title">Lead Data Engineer <span class="badge-now">Now</span></h3>
             <span class="role-when">Sep 2025 — Present</span>
           </div>
-          <div class="role-org">Allianz &middot; Freelance</div>
+          <div class="role-org"><span class="co-logo"><img src="https://www.google.com/s2/favicons?domain=allianz.com&sz=128" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'AZ'}))"></span>Allianz &middot; Freelance</div>
           <div class="role-where">Mainframe &amp; SAS → Azure Databricks migration</div>
           <ul>
             <li><strong>Migrated</strong> legacy mainframe/SAS insurance portfolio processing onto a modern Azure Databricks lakehouse.</li>
@@ -1019,7 +1117,7 @@ footer { border-top: 1px solid var(--edge); padding: 3rem 0 2.5rem; position: re
             <h3 class="role-title">Data Engineer</h3>
             <span class="role-when">Apr 2025 — Sep 2025</span>
           </div>
-          <div class="role-org">Expleo Group &middot; client: Renault Group</div>
+          <div class="role-org"><span class="co-logo"><img src="https://www.google.com/s2/favicons?domain=expleo.com&sz=128" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'EX'}))"></span>Expleo Group &middot; client: Renault Group</div>
           <div class="role-where">Romania · France · Spain — Firmware Over-The-Air testing</div>
           <ul>
             <li><strong>Designed and automated</strong> pipelines in Google Cloud Data Fusion and Dataflow for large-scale vehicle test and anomaly datasets.</li>
@@ -1040,7 +1138,7 @@ footer { border-top: 1px solid var(--edge); padding: 3rem 0 2.5rem; position: re
             <h3 class="role-title">Data Engineer</h3>
             <span class="role-when">Sep 2023 — Apr 2025</span>
           </div>
-          <div class="role-org">Emirates Logistics</div>
+          <div class="role-org"><span class="co-logo"><img src="https://www.google.com/s2/favicons?domain=emirateslogistics.com&sz=128" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'EL'}))"></span>Emirates Logistics</div>
           <div class="role-where">Tangier, Morocco</div>
           <ul>
             <li><strong>Architected</strong> the company's business intelligence ecosystem on Microsoft Fabric and Power BI from scratch.</li>
@@ -1062,7 +1160,7 @@ footer { border-top: 1px solid var(--edge); padding: 3rem 0 2.5rem; position: re
             <h3 class="role-title">Data Engineer</h3>
             <span class="role-when">Mar 2021 — Apr 2023</span>
           </div>
-          <div class="role-org">APM Terminals MedPort Tangier</div>
+          <div class="role-org"><span class="co-logo"><img src="https://www.google.com/s2/favicons?domain=apmterminals.com&sz=128" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'APM'}))"></span>APM Terminals MedPort Tangier</div>
           <div class="role-where">Tangier, Morocco</div>
           <ul>
             <li><strong>Led</strong> the migration from on-premise BI to Azure — Synapse Analytics, Data Factory, Power BI Service.</li>
@@ -1083,7 +1181,7 @@ footer { border-top: 1px solid var(--edge); padding: 3rem 0 2.5rem; position: re
             <h3 class="role-title">Data Analyst</h3>
             <span class="role-when">Jan 2020 — Mar 2021</span>
           </div>
-          <div class="role-org">APM Terminals MedPort Tangier</div>
+          <div class="role-org"><span class="co-logo"><img src="https://www.google.com/s2/favicons?domain=apmterminals.com&sz=128" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'APM'}))"></span>APM Terminals MedPort Tangier</div>
           <div class="role-where">Tangier, Morocco</div>
           <ul>
             <li><strong>Analyzed</strong> large operational datasets with Python and SQL for operations, maintenance and supply chain teams.</li>
@@ -1103,7 +1201,7 @@ footer { border-top: 1px solid var(--edge); padding: 3rem 0 2.5rem; position: re
             <h3 class="role-title">Product Engineer / Data Analyst</h3>
             <span class="role-when">Sep 2018 — Jan 2020</span>
           </div>
-          <div class="role-org">LEAR E-Systems</div>
+          <div class="role-org"><span class="co-logo"><img src="https://www.google.com/s2/favicons?domain=lear.com&sz=128" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'fb',textContent:'LE'}))"></span>LEAR E-Systems</div>
           <div class="role-where">Tangier, Morocco</div>
           <ul>
             <li><strong>Analyzed</strong> production data to evaluate material usage, process times and cost structures.</li>
