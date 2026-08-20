@@ -1,2813 +1,691 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mohamed Hakkache - Senior Data Engineer with 6+ years experience in Azure, GCP, Databricks, and Microsoft Fabric. Expert in cloud data pipelines, big data analytics, and multi-cloud solutions. 100+ professional certifications.">
-    <meta name="keywords" content="Data Engineer, Cloud Architect, Azure Data Engineer, GCP Data Engineer,Apche Icberg Databricks, Microsoft Fabric, PySpark, Big Data, ETL, Data Analytics, Power BI, Machine Learning, Morocco, Tangier">
-    <meta name="author" content="Mohamed Hakkache">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="English">
-    <meta name="revisit-after" content="7 days">
-    <meta name="theme-color" content="#00f5ff">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hakkache.github.io/">
-    <meta property="og:title" content="Mohamed Hakkache - Data Engineer & Data Architect">
-    <meta property="og:description" content="Senior Data Engineer specializing in Azure, GCP, Databricks & Microsoft Fabric. 6+ years experience building scalable cloud data solutions. 100+ certifications.">
-    <meta property="og:image" content="https://github.com/hakkache.png">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:site_name" content="Mohamed Hakkache Portfolio">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://hakkache.github.io/">
-    <meta name="twitter:title" content="Mohamed Hakkache - Data Engineer & Cloud Architect">
-    <meta name="twitter:description" content="Senior Data Engineer | Azure, GCP, Databricks Expert | 100+ Certifications | Building scalable cloud data solutions">
-    <meta name="twitter:image" content="https://github.com/hakkache.png">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://hakkache.github.io/">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
-    
-    <title>Mohamed Hakkache - Data Engineer & Cloud Architect | Azure, GCP, Databricks Expert</title>
-    
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Mohamed Hakkache",
-      "jobTitle": "Data Engineer & Cloud Architect",
-      "description": "Senior Data Engineer with 6+ years experience specializing in Azure, Google Cloud Platform, Databricks, and Microsoft Fabric. Expert in building scalable data pipelines and cloud solutions.",
-      "url": "https://hakkache.github.io/",
-      "image": "https://github.com/hakkache.png",
-      "email": "Hakkache.mohamed@gmail.com",
-      "telephone": "+212673189608",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Tangier",
-        "addressCountry": "Morocco"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/in/hakkache-mohamed/",
-        "https://github.com/hakkache"
-      ],
-      "alumniOf": {
-        "@type": "EducationalOrganization",
-        "name": "The School of Textiles and Clothing Industries (ESITH)",
-        "location": "Casablanca, Morocco"
-      },
-      "knowsAbout": [
-        "Data Engineering",
-        "Cloud Architecture",
-        "Microsoft Azure",
-        "Google Cloud Platform",
-        "Databricks",
-        "Microsoft Fabric",
-        "Apache Spark",
-        "PySpark",
-        "Python",
-        "SQL",
-        "ETL",
-        "Big Data",
-        "Machine Learning",
-        "Power BI",
-        "Data Analytics"
-      ],
-      "hasCredential": [
-        {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "certificate",
-          "name": "Google Cloud Data Analytics Specialization",
-          "educationalLevel": "Professional Certificate"
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "certificate",
-          "name": "Microsoft Azure Data Fundamentals DP-900",
-          "educationalLevel": "Professional Certificate"
-        },
-        {
-          "@type": "EducationalOccupationalCredential",
-          "credentialCategory": "certificate",
-          "name": "Databricks Certified Data Engineer Associate",
-          "educationalLevel": "Professional Certificate"
-        }
-      ]
-    }
-    </script>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --neon-cyan: #00f5ff;
-            --neon-purple: #bd00ff;
-            --neon-green: #00ff88;
-            --neon-pink: #ff00ff;
-            --neon-gold: #ffd700;
-            --neon-red: #ff0055;
-            --cyber-dark: #0a0e27;
-            --cyber-darker: #05070f;
-            --cyber-black: #000000;
-            --hud-glow: #e0e7ff;
-            --game-glass: rgba(10, 14, 39, 0.85);
-            --game-border: rgba(0, 245, 255, 0.5);
-            --health-bar: #00ff00;
-            --energy-bar: #00f5ff;
-            --xp-bar: #ffd700;
-        }
-
-        /* Game HUD Animations */
-        @keyframes scanlines {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(10px); }
-        }
-
-        @keyframes levelUp {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.5); opacity: 0.8; }
-        }
-
-        @keyframes powerUp {
-            0% { transform: translateY(100%) scale(0) rotate(0deg); opacity: 0; }
-            50% { opacity: 1; }
-            100% { transform: translateY(-100%) scale(1.5) rotate(360deg); opacity: 0; }
-        }
-
-        @keyframes glitchGame {
-            0%, 100% { clip-path: inset(0 0 0 0); }
-            20% { clip-path: inset(10% 0 85% 0); transform: translateX(5px); }
-            40% { clip-path: inset(80% 0 15% 0); transform: translateX(-5px); }
-            60% { clip-path: inset(40% 0 40% 0); transform: translateX(3px); }
-            80% { clip-path: inset(5% 0 90% 0); transform: translateX(-3px); }
-        }
-
-        @keyframes hexagonSpin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        @keyframes digitalRain {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(100vh); }
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-
-        @keyframes rotate3d {
-            0% { transform: rotateY(0deg); }
-            100% { transform: rotateY(360deg); }
-        }
-
-        @keyframes holographic {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        @keyframes neonPulse {
-            0%, 100% {
-                box-shadow: 0 0 5px var(--primary),
-                            0 0 10px var(--primary),
-                            0 0 20px var(--primary),
-                            0 0 40px var(--primary);
-            }
-            50% {
-                box-shadow: 0 0 10px var(--primary),
-                            0 0 20px var(--primary),
-                            0 0 40px var(--primary),
-                            0 0 80px var(--primary),
-                            0 0 120px var(--primary);
-            }
-        }
-
-        @keyframes shimmer {
-            0% { background-position: -1000px 0; }
-            100% { background-position: 1000px 0; }
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        body {
-            font-family: 'Orbitron', 'Rajdhani', 'Inter', monospace;
-            background: #000000;
-            background-image: 
-                repeating-linear-gradient(0deg, rgba(0, 245, 255, 0.03) 0px, transparent 1px, transparent 2px, rgba(0, 245, 255, 0.03) 3px),
-                radial-gradient(circle at 20% 30%, rgba(0, 245, 255, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(189, 0, 255, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 50% 50%, rgba(0, 255, 136, 0.1) 0%, transparent 60%);
-            color: var(--hud-glow);
-            overflow-x: hidden;
-            line-height: 1.6;
-            position: relative;
-        }
-
-        /* Cyberpunk Scanlines Effect */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: repeating-linear-gradient(
-                0deg,
-                rgba(0, 0, 0, 0.1) 0px,
-                transparent 1px,
-                transparent 2px,
-                rgba(0, 0, 0, 0.1) 3px
-            );
-            pointer-events: none;
-            z-index: 9998;
-            animation: scanlines 10s linear infinite;
-        }
-
-        /* Game HUD Overlay */
-        body::after {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.3) 100%);
-            pointer-events: none;
-            z-index: 9997;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 12px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--darker);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, var(--primary), var(--secondary));
-            border-radius: 10px;
-            border: 2px solid var(--darker);
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(180deg, var(--secondary), var(--accent));
-        }
-
-        /* Animated Grid Background with Particles */
-        .grid-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                radial-gradient(circle at 20% 50%, rgba(0, 245, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(189, 0, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 20%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
-                linear-gradient(rgba(0, 245, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0, 245, 255, 0.03) 1px, transparent 1px);
-            background-size: 100% 100%, 100% 100%, 100% 100%, 50px 50px, 50px 50px;
-            animation: gridMove 20s linear infinite, gradientShift 15s ease infinite;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        @keyframes gridMove {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
-        }
-
-        /* Floating Particles */
-        .particle {
-            position: fixed;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 1;
-            animation: floatParticle 20s infinite;
-            opacity: 0.6;
-        }
-
-        @keyframes floatParticle {
-            0%, 100% {
-                transform: translate(0, 0) scale(1);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.6;
-            }
-            90% {
-                opacity: 0.6;
-            }
-            100% {
-                transform: translate(var(--tx), var(--ty)) scale(0);
-                opacity: 0;
-            }
-        }
-
-        /* Canvas for Data Visualization */
-        #dataCanvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-            opacity: 0.6;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0.95) 0%, rgba(10, 14, 39, 0.9) 100%);
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            padding: 0.5rem 2rem;
-            z-index: 9999;
-            border-bottom: 3px solid var(--neon-cyan);
-            box-shadow: 0 0 20px rgba(0, 245, 255, 0.5),
-                        0 8px 32px rgba(0, 0, 0, 0.8),
-                        inset 0 -2px 10px rgba(0, 245, 255, 0.2);
-            transition: all 0.3s ease;
-            font-family: 'Orbitron', monospace;
-        }
-
-        nav.scrolled {
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0.98) 0%, rgba(10, 14, 39, 0.95) 100%);
-            box-shadow: 0 0 30px rgba(0, 245, 255, 0.7),
-                        0 8px 32px rgba(0, 245, 255, 0.3);
-        }
-
-        /* HUD Corner Decorations */
-        nav::before,
-        nav::after {
-            content: '';
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            border: 2px solid var(--neon-cyan);
-        }
-
-        nav::before {
-            top: 10px;
-            left: 10px;
-            border-right: none;
-            border-bottom: none;
-            box-shadow: -2px -2px 10px rgba(0, 245, 255, 0.5);
-        }
-
-        nav::after {
-            top: 10px;
-            right: 10px;
-            border-left: none;
-            border-bottom: none;
-            box-shadow: 2px -2px 10px rgba(0, 245, 255, 0.5);
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.3rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            position: relative;
-            padding: 0.5rem 1rem;
-            border: 2px solid var(--neon-cyan);
-            border-radius: 5px;
-            box-shadow: 0 0 20px rgba(0, 245, 255, 0.3),
-                        inset 0 0 10px rgba(0, 245, 255, 0.1);
-            animation: neonPulse 3s ease-in-out infinite;
-        }
-
-        .logo::before {
-            content: '► ';
-            color: var(--neon-green);
-            margin-right: 5px;
-            animation: blink 1s infinite;
-        }
-
-        .logo::after {
-            content: ' LVL 99';
-            position: absolute;
-            top: -15px;
-            right: -10px;
-            font-size: 0.6rem;
-            background: var(--neon-gold);
-            color: #000;
-            padding: 2px 8px;
-            border-radius: 10px;
-            font-weight: 900;
-            box-shadow: 0 0 10px var(--neon-gold);
-        }
-
-        nav ul {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        nav a {
-            color: var(--neon-cyan);
-            text-decoration: none;
-            font-weight: 700;
-            transition: all 0.3s;
-            position: relative;
-            padding: 0.7rem 1.2rem;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            border: 1px solid transparent;
-        }
-
-        nav a::before {
-            content: '[ ';
-            color: var(--neon-purple);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        nav a::after {
-            content: ' ]';
-            color: var(--neon-purple);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        nav a:hover::before,
-        nav a:hover::after {
-            opacity: 1;
-        }
-
-        nav a:hover {
-            color: var(--neon-gold);
-            text-shadow: 0 0 10px var(--neon-gold);
-            background: rgba(0, 245, 255, 0.1);
-            border: 1px solid var(--neon-cyan);
-            border-radius: 3px;
-            box-shadow: 0 0 15px rgba(0, 245, 255, 0.3);
-        }
-
-        nav a.active {
-            color: var(--neon-green);
-            background: rgba(0, 255, 136, 0.1);
-            border: 1px solid var(--neon-green);
-            box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            z-index: 2;
-            padding: 2rem;
-        }
-
-        .hero-content {
-            max-width: 1200px;
-            text-align: center;
-        }
-
-        .glitch {
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 900;
-            text-transform: uppercase;
-            position: relative;
-            margin-bottom: 1rem;
-            color: var(--neon-cyan);
-            letter-spacing: 0.1em;
-            transform-style: preserve-3d;
-            animation: glitchGame 0.5s infinite alternate-reverse;
-            text-shadow: 
-                2px 2px 0 var(--neon-purple),
-                -2px -2px 0 var(--neon-green),
-                0 0 20px var(--neon-cyan),
-                0 0 40px var(--neon-cyan),
-                0 0 60px var(--neon-cyan),
-                0 0 80px var(--neon-purple);
-            font-family: 'Orbitron', monospace;
-        }
-
-        .glitch::before {
-            content: attr(data-text);
-            position: absolute;
-            left: -2px;
-            top: -2px;
-            background: linear-gradient(135deg, var(--primary), transparent);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            opacity: 0.8;
-            animation: glitchAnim 3s infinite;
-        }
-
-        .glitch::after {
-            content: attr(data-text);
-            position: absolute;
-            left: 2px;
-            top: 2px;
-            background: linear-gradient(135deg, var(--secondary), transparent);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            opacity: 0.8;
-            animation: glitchAnim 2s infinite reverse;
-        }
-
-        @keyframes glitchAnim {
-            0%, 90%, 100% {
-                transform: translate(0);
-            }
-            20% {
-                transform: translate(-2px, 2px);
-            }
-            40% {
-                transform: translate(-2px, -2px);
-            }
-            60% {
-                transform: translate(2px, 2px);
-            }
-            80% {
-                transform: translate(2px, -2px);
-            }
-        }
-
-        @keyframes glow {
-            from { filter: drop-shadow(0 0 20px rgba(0, 245, 255, 0.5)) drop-shadow(0 0 40px rgba(189, 0, 255, 0.3)); }
-            to { filter: drop-shadow(0 0 40px rgba(189, 0, 255, 0.8)) drop-shadow(0 0 60px rgba(0, 255, 136, 0.5)); }
-        }
-
-        .typing-text {
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
-            color: var(--neon-green);
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-            min-height: 60px;
-            font-family: 'Courier New', monospace;
-            text-shadow: 0 0 10px var(--neon-green);
-            position: relative;
-            padding-left: 30px;
-        }
-
-        .typing-text::before {
-            content: '>';
-            position: absolute;
-            left: 0;
-            color: var(--neon-cyan);
-            animation: blink 0.7s infinite;
-        }
-
-        .cursor {
-            display: inline-block;
-            width: 12px;
-            height: 30px;
-            background: var(--neon-green);
-            animation: blink 0.7s infinite;
-            box-shadow: 0 0 10px var(--neon-green);
-            margin-left: 3px;
-        }
-
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
-        }
-
-        .hero-description {
-            font-size: clamp(1rem, 2vw, 1.3rem);
-            color: rgba(224, 231, 255, 0.7);
-            margin-bottom: 3rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 1.2rem 2.5rem;
-            background: linear-gradient(135deg, rgba(0, 245, 255, 0.2), rgba(189, 0, 255, 0.2));
-            color: var(--neon-cyan);
-            text-decoration: none;
-            border-radius: 0;
-            font-weight: 700;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 2px solid var(--neon-cyan);
-            border-left: 5px solid var(--neon-cyan);
-            position: relative;
-            overflow: hidden;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.9rem;
-            transform-style: preserve-3d;
-            cursor: pointer;
-            font-family: 'Orbitron', monospace;
-            clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
-            box-shadow: 0 0 20px rgba(0, 245, 255, 0.3),
-                        inset 0 0 20px rgba(0, 245, 255, 0.1);
-        }
-
-        .btn::before {
-            content: '▸ ';
-            color: var(--neon-green);
-            margin-right: 10px;
-            animation: blink 1.5s infinite;
-        }
-
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-
-        .btn::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transform: rotate(45deg);
-            animation: shimmer 3s infinite;
-        }
-
-        .btn:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px) scale(1.05);
-            background: linear-gradient(135deg, rgba(0, 245, 255, 0.4), rgba(189, 0, 255, 0.4));
-            color: #fff;
-            border-color: var(--neon-gold);
-            border-left-color: var(--neon-gold);
-            box-shadow: 0 0 40px rgba(0, 245, 255, 0.8),
-                        0 0 60px rgba(189, 0, 255, 0.5),
-                        inset 0 0 30px rgba(0, 245, 255, 0.2);
-            animation: neonPulse 1s infinite;
-        }
-
-        .btn:active {
-            transform: translateY(0) scale(0.98);
-        }
-
-        .btn-outline {
-            background: rgba(0, 0, 0, 0.5);
-            border: 2px solid var(--neon-purple);
-            border-left: 5px solid var(--neon-purple);
-            color: var(--neon-purple);
-        }
-
-        .btn-outline:hover {
-            background: linear-gradient(135deg, rgba(189, 0, 255, 0.3), rgba(255, 0, 255, 0.3));
-            border-color: var(--neon-pink);
-            border-left-color: var(--neon-pink);
-            color: #fff;
-            box-shadow: 0 0 40px rgba(189, 0, 255, 0.8),
-                        inset 0 0 30px rgba(189, 0, 255, 0.2);
-        }
-
-        /* Section Styling */
-        section {
-            padding: 8rem 2rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            text-align: center;
-            margin-bottom: 4rem;
-            position: relative;
-            display: inline-block;
-            left: 50%;
-            transform: translateX(-50%);
-            font-family: 'Orbitron', monospace;
-        }
-
-        .section-title::before {
-            content: '[ MISSION: ';
-            color: var(--neon-cyan);
-            margin-right: 1rem;
-            font-weight: 700;
-            font-size: 0.5em;
-            text-shadow: 0 0 10px var(--neon-cyan);
-        }
-
-        .section-title::after {
-            content: ' ]';
-            color: var(--neon-cyan);
-            margin-left: 1rem;
-            font-weight: 700;
-            font-size: 0.5em;
-            text-shadow: 0 0 10px var(--neon-cyan);
-        }
-
-        .section-title span {
-            color: var(--neon-purple);
-            text-shadow: 0 0 20px var(--neon-purple),
-                        0 0 40px var(--neon-purple);
-            animation: neonPulse 3s ease-in-out infinite;
-        }
-
-        /* Stats Dashboard */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        .stat-card {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(10, 14, 39, 0.7));
-            backdrop-filter: blur(10px) saturate(180%);
-            -webkit-backdrop-filter: blur(10px) saturate(180%);
-            border: 2px solid var(--neon-cyan);
-            border-left: 5px solid var(--neon-cyan);
-            border-radius: 0;
-            padding: 2.5rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-            transform-style: preserve-3d;
-            perspective: 1000px;
-            clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
-            box-shadow: 0 0 30px rgba(0, 245, 255, 0.3),
-                        inset 0 0 30px rgba(0, 245, 255, 0.05);
-        }
-
-        .stat-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, 
-                var(--neon-cyan) 0%, 
-                var(--neon-purple) 50%, 
-                var(--neon-green) 100%);
-            box-shadow: 0 0 10px var(--neon-cyan);
-            animation: gradientShift 3s ease infinite;
-            background-size: 200% 100%;
-        }
-
-        .stat-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(0, 245, 255, 0.1), transparent);
-            transform: rotate(45deg);
-            transition: all 0.6s;
-        }
-
-        .stat-card:hover::before {
-            left: 100%;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-15px) rotateX(5deg) rotateY(5deg) scale(1.05);
-            border-color: var(--primary);
-            box-shadow: 0 25px 80px rgba(0, 245, 255, 0.4),
-                        0 0 50px rgba(189, 0, 255, 0.3),
-                        inset 0 0 30px rgba(0, 245, 255, 0.1);
-            background: rgba(10, 14, 39, 0.7);
-        }
-
-        .stat-card::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent 30%, rgba(0, 245, 255, 0.1) 50%, transparent 70%);
-            transform: rotate(45deg);
-            transition: all 0.6s;
-        }
-
-        .stat-card:hover::after {
-            left: 100%;
-        }
-
-        .stat-number {
-            font-size: 4rem;
-            font-weight: 900;
-            color: var(--neon-cyan);
-            margin-bottom: 0.5rem;
-            transition: all 0.3s;
-            font-family: 'Orbitron', monospace;
-            text-shadow: 0 0 20px var(--neon-cyan),
-                        0 0 40px var(--neon-cyan);
-            position: relative;
-        }
-
-        .stat-number::after {
-            content: '+';
-            font-size: 0.5em;
-            color: var(--neon-green);
-            position: absolute;
-            top: 0;
-            right: -20px;
-        }
-
-        .stat-card:hover .stat-number {
-            transform: scale(1.15);
-            animation: levelUp 0.5s ease;
-            color: var(--neon-gold);
-            text-shadow: 0 0 30px var(--neon-gold),
-                        0 0 50px var(--neon-gold);
-        }
-
-        .stat-label {
-            color: var(--neon-green);
-            font-size: 1.2rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-family: 'Orbitron', monospace;
-            text-shadow: 0 0 10px var(--neon-green);
-        }
-
-        .stat-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            filter: drop-shadow(0 0 15px var(--neon-gold));
-            animation: float 3s ease-in-out infinite;
-        }
-
-        /* Skills Matrix */
-        .skills-matrix {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .skill-box {
-            background: rgba(10, 14, 39, 0.6);
-            backdrop-filter: blur(10px);
-            border: 2px solid;
-            border-image: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent)) 1;
-            border-radius: 20px;
-            padding: 2rem;
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-            transform-style: preserve-3d;
-        }
-
-        .skill-box::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: 18px;
-            padding: 2px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            opacity: 0;
-            transition: opacity 0.5s;
-        }
-
-        .skill-box::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.1), transparent);
-            transition: left 0.5s;
-        }
-
-        .skill-box:hover::after {
-            left: 100%;
-        }
-
-        .skill-box:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 60px rgba(0, 245, 255, 0.3),
-                        0 0 40px rgba(189, 0, 255, 0.2);
-            background: rgba(10, 14, 39, 0.8);
-        }
-
-        .skill-box:hover::before {
-            opacity: 1;
-        }
-
-        .skill-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .skill-icon {
-            font-size: 2.5rem;
-        }
-
-        .skill-title {
-            color: var(--neon-cyan);
-            font-size: 1.5rem;
-            font-weight: 700;
-            font-family: 'Orbitron', monospace;
-            text-transform: uppercase;
-            text-shadow: 0 0 15px var(--neon-cyan);
-            letter-spacing: 2px;
-        }
-
-        .skill-items {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.7rem;
-        }
-
-        .skill-tag {
-            background: rgba(0, 0, 0, 0.6);
-            border: 1px solid var(--neon-green);
-            border-left: 3px solid var(--neon-green);
-            padding: 0.6rem 1.2rem;
-            border-radius: 0;
-            font-size: 0.85rem;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-            font-weight: 600;
-            position: relative;
-            overflow: hidden;
-            color: var(--neon-green);
-            font-family: 'Courier New', monospace;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 0 10px rgba(0, 255, 136, 0.2),
-                        inset 0 0 10px rgba(0, 255, 136, 0.05);
-        }
-
-        .skill-tag::before {
-            content: '●';
-            margin-right: 5px;
-            color: var(--neon-gold);
-            animation: blink 2s infinite;
-        }
-
-        .skill-tag::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .skill-tag:hover::before {
-            left: 100%;
-        }
-
-        .skill-tag:hover {
-            background: rgba(0, 255, 136, 0.2);
-            border-color: var(--neon-gold);
-            border-left-color: var(--neon-gold);
-            color: var(--neon-gold);
-            transform: translateY(-3px) scale(1.08);
-            box-shadow: 0 8px 25px rgba(0, 255, 136, 0.5),
-                        0 0 30px rgba(255, 215, 0, 0.3),
-                        inset 0 0 20px rgba(0, 255, 136, 0.2);
-            animation: powerUp 0.5s ease;
-        }
-
-        /* Experience Timeline */
-        .timeline {
-            position: relative;
-            padding: 2rem 0;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: linear-gradient(180deg, var(--neon-cyan), var(--neon-purple), var(--neon-green), var(--neon-gold));
-            transform: translateX(-50%);
-            box-shadow: 0 0 20px var(--neon-cyan),
-                        0 0 40px var(--neon-purple);
-            animation: gradientShift 5s ease infinite;
-            background-size: 100% 200%;
-        }
-
-        .timeline-item {
-            margin-bottom: 4rem;
-            position: relative;
-            width: 45%;
-        }
-
-        .timeline-item:nth-child(odd) {
-            left: 0;
-            padding-right: 4rem;
-        }
-
-        .timeline-item:nth-child(even) {
-            left: 55%;
-            padding-left: 4rem;
-        }
-
-        .timeline-dot {
-            position: absolute;
-            top: 0;
-            width: 25px;
-            height: 25px;
-            border-radius: 50%;
-            background: radial-gradient(circle, var(--primary), var(--secondary));
-            border: 4px solid var(--darker);
-            box-shadow: 0 0 30px var(--primary),
-                        0 0 50px var(--secondary),
-                        inset 0 0 10px rgba(255, 255, 255, 0.5);
-            z-index: 1;
-            animation: dotPulse 2s ease-in-out infinite;
-        }
-
-        @keyframes dotPulse {
-            0%, 100% {
-                transform: scale(1);
-                box-shadow: 0 0 30px var(--primary),
-                            0 0 50px var(--secondary),
-                            inset 0 0 10px rgba(255, 255, 255, 0.5);
-            }
-            50% {
-                transform: scale(1.2);
-                box-shadow: 0 0 40px var(--primary),
-                            0 0 70px var(--secondary),
-                            0 0 90px var(--accent),
-                            inset 0 0 15px rgba(255, 255, 255, 0.8);
-            }
-        }
-
-        .timeline-item:nth-child(odd) .timeline-dot {
-            right: -12.5px;
-        }
-
-        .timeline-item:nth-child(even) .timeline-dot {
-            left: -12.5px;
-        }
-
-        .timeline-content {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.85), rgba(10, 14, 39, 0.75));
-            backdrop-filter: blur(10px);
-            border: 2px solid var(--neon-cyan);
-            border-left: 5px solid var(--neon-cyan);
-            border-radius: 0;
-            padding: 2rem;
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            transform-style: preserve-3d;
-            position: relative;
-            clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
-            box-shadow: 0 0 20px rgba(0, 245, 255, 0.2),
-                        inset 0 0 20px rgba(0, 245, 255, 0.05);
-        }
-
-        .timeline-content::after {
-            content: 'COMPLETED';
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: var(--neon-green);
-            color: #000;
-            padding: 3px 10px;
-            font-size: 0.7rem;
-            font-weight: 900;
-            letter-spacing: 1px;
-            box-shadow: 0 0 10px var(--neon-green);
-            font-family: 'Orbitron', monospace;
-        }
-
-        .timeline-content::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
-            border-radius: 20px;
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.5s;
-        }
-
-        .timeline-content:hover {
-            transform: scale(1.03) translateZ(20px);
-            box-shadow: 0 20px 60px rgba(0, 245, 255, 0.4),
-                        0 0 40px rgba(189, 0, 255, 0.2);
-            background: rgba(10, 14, 39, 0.8);
-        }
-
-        .timeline-content:hover::before {
-            opacity: 0.3;
-        }
-
-        .job-title {
-            color: var(--neon-cyan);
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            font-family: 'Orbitron', monospace;
-            text-shadow: 0 0 15px var(--neon-cyan);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .job-title::before {
-            content: '▸ ';
-            color: var(--neon-gold);
-            margin-right: 10px;
-        }
-
-        .company {
-            color: var(--neon-green);
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            font-family: 'Courier New', monospace;
-            text-shadow: 0 0 10px var(--neon-green);
-        }
-
-        .company::before {
-            content: '[ FACTION: ';
-            color: var(--neon-purple);
-            font-size: 0.8em;
-        }
-
-        .company::after {
-            content: ' ]';
-            color: var(--neon-purple);
-            font-size: 0.8em;
-        }
-
-        .date {
-            color: rgba(224, 231, 255, 0.6);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-            font-style: italic;
-        }
-
-        .job-highlights {
-            list-style: none;
-        }
-
-        .job-highlights li {
-            padding-left: 1.5rem;
-            margin-bottom: 0.8rem;
-            position: relative;
-            color: rgba(224, 231, 255, 0.85);
-            line-height: 1.6;
-        }
-
-        .job-highlights li::before {
-            content: '▹';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        /* Certifications */
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 3rem;
-        }
-
-        .cert-card {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(10, 14, 39, 0.7));
-            backdrop-filter: blur(10px);
-            border: 2px solid var(--neon-gold);
-            border-top: 3px solid var(--neon-gold);
-            border-radius: 0;
-            padding: 1.8rem;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            transform-style: preserve-3d;
-            clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2),
-                        inset 0 0 20px rgba(255, 215, 0, 0.05);
-        }
-
-        .cert-card::before {
-            content: '🏆';
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            font-size: 1.5rem;
-            filter: drop-shadow(0 0 10px var(--neon-gold));
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .cert-card::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            background: radial-gradient(circle, rgba(0, 245, 255, 0.2), transparent);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-            border-radius: 50%;
-            z-index: 0;
-        }
-
-        .cert-card::before {
-            content: '🔗';
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            font-size: 1.5rem;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .cert-card:hover::before {
-            opacity: 1;
-        }
-
-        .cert-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-8px) scale(1.03);
-            box-shadow: 0 15px 40px rgba(0, 245, 255, 0.3),
-                        0 0 30px rgba(189, 0, 255, 0.2);
-            background: rgba(10, 14, 39, 0.8);
-        }
-
-        .cert-card:hover::after {
-            width: 300px;
-            height: 300px;
-        }
-
-        .cert-title {
-            color: var(--neon-cyan);
-            font-weight: 700;
-            margin-bottom: 0.7rem;
-            font-size: 1.1rem;
-            font-family: 'Orbitron', monospace;
-            text-shadow: 0 0 10px var(--neon-cyan);
-        }
-
-        .cert-org {
-            color: var(--neon-gold);
-            font-size: 0.95rem;
-            font-weight: 600;
-            font-family: 'Courier New', monospace;
-            text-shadow: 0 0 5px var(--neon-gold);
-        }
-
-        .cert-date {
-            color: rgba(224, 231, 255, 0.5);
-            font-size: 0.85rem;
-            margin-top: 0.3rem;
-        }
-
-        /* Contact Section */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .contact-card {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(10, 14, 39, 0.8));
-            border: 2px solid var(--neon-purple);
-            border-left: 5px solid var(--neon-purple);
-            border-radius: 0;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.4s;
-            cursor: pointer;
-            text-decoration: none;
-            color: var(--hud-glow);
-            display: block;
-            clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
-            box-shadow: 0 0 20px rgba(189, 0, 255, 0.2),
-                        inset 0 0 20px rgba(189, 0, 255, 0.05);
-            position: relative;
-        }
-
-        .contact-card::before {
-            content: 'ACTIVE';
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            background: var(--neon-green);
-            color: #000;
-            padding: 2px 6px;
-            font-size: 0.6rem;
-            font-weight: 900;
-            letter-spacing: 1px;
-            box-shadow: 0 0 8px var(--neon-green);
-            animation: blink 2s infinite;
-        }
-
-        .contact-card:hover {
-            border-color: var(--neon-cyan);
-            border-left-color: var(--neon-cyan);
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 20px 60px rgba(0, 245, 255, 0.4),
-                        0 0 40px rgba(189, 0, 255, 0.3),
-                        inset 0 0 30px rgba(0, 245, 255, 0.1);
-            background: linear-gradient(135deg, rgba(0, 245, 255, 0.2), rgba(189, 0, 255, 0.2));
-        }
-
-        .contact-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .contact-label {
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--neon-cyan);
-            font-family: 'Orbitron', monospace;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-shadow: 0 0 10px var(--neon-cyan);
-        }
-
-        .contact-info {
-            color: rgba(224, 231, 255, 0.8);
-            font-size: 0.95rem;
-        }
-
-        /* Footer */
-        footer {
-            background: rgba(5, 7, 15, 0.95);
-            padding: 3rem 2rem;
-            text-align: center;
-            position: relative;
-            z-index: 2;
-            border-top: 1px solid rgba(0, 245, 255, 0.2);
-        }
-
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .footer-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 1rem;
-        }
-
-        .footer-text {
-            color: rgba(224, 231, 255, 0.6);
-            margin-bottom: 0.5rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .timeline::before {
-                left: 30px;
-            }
-
-            .timeline-item {
-                width: 100%;
-                left: 0 !important;
-                padding-left: 4rem !important;
-                padding-right: 0 !important;
-            }
-
-            .timeline-item .timeline-dot {
-                left: 17.5px !important;
-                right: auto !important;
-            }
-
-            /* Hide game HUD on tablets */
-            .game-hud {
-                display: none !important;
-            }
-        }
-
-        @media (max-width: 768px) {
-            /* Navigation optimizations */
-            nav {
-                padding: 0.5rem 1rem;
-            }
-
-            nav::before,
-            nav::after {
-                width: 20px;
-                height: 20px;
-            }
-
-            .nav-container {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-
-            nav ul {
-                flex-wrap: wrap;
-                gap: 0.5rem;
-                font-size: 0.75rem;
-                justify-content: center;
-            }
-
-            nav a {
-                padding: 0.5rem 0.8rem;
-                font-size: 0.7rem;
-            }
-
-            .logo {
-                font-size: 1rem;
-                padding: 0.3rem 0.8rem;
-                letter-spacing: 2px;
-            }
-
-            .logo::after {
-                font-size: 0.5rem;
-                top: -12px;
-                right: -8px;
-                padding: 1px 5px;
-            }
-
-            /* Hero section mobile */
-            .hero {
-                padding: 6rem 1rem 2rem;
-                min-height: 80vh;
-            }
-
-            .glitch {
-                font-size: clamp(2rem, 10vw, 3rem);
-                line-height: 1.2;
-            }
-
-            .typing-text {
-                font-size: clamp(1rem, 5vw, 1.5rem);
-                padding-left: 20px;
-            }
-
-            .typing-text::before {
-                font-size: 1rem;
-            }
-
-            .cursor {
-                width: 8px;
-                height: 20px;
-            }
-
-            .hero-description {
-                font-size: 0.9rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .btn {
-                width: 100%;
-                max-width: 300px;
-                padding: 1rem 2rem;
-                font-size: 0.8rem;
-            }
-
-            /* Sections mobile */
-            section {
-                padding: 4rem 1rem;
-            }
-
-            .section-title {
-                font-size: clamp(1.8rem, 8vw, 2.5rem);
-                margin-bottom: 2rem;
-            }
-
-            .section-title::before {
-                font-size: 0.4em;
-                margin-right: 0.5rem;
-            }
-
-            .section-title::after {
-                font-size: 0.4em;
-                margin-left: 0.5rem;
-            }
-
-            /* Stats grid mobile */
-            .stats-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .stat-card {
-                padding: 2rem 1.5rem;
-                min-height: 200px;
-            }
-
-            .stat-number {
-                font-size: 3rem;
-                min-height: 60px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            
-            .stat-number::after {
-                position: relative;
-                right: 0;
-                margin-left: 5px;
-            }
-
-            .stat-label {
-                font-size: 1rem;
-                letter-spacing: 2px;
-            }
-
-            .stat-icon {
-                font-size: 2.5rem;
-            }
-
-            /* Skills matrix mobile */
-            .skills-matrix {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .skill-box {
-                padding: 1.5rem;
-            }
-
-            .skill-title {
-                font-size: 1.2rem;
-            }
-
-            .skill-items {
-                gap: 0.5rem;
-            }
-
-            .skill-tag {
-                font-size: 0.75rem;
-                padding: 0.5rem 1rem;
-            }
-
-            /* Timeline mobile */
-            .timeline-item {
-                padding-left: 3rem !important;
-            }
-
-            .timeline-content {
-                padding: 1.5rem;
-            }
-
-            .timeline-content::after {
-                font-size: 0.6rem;
-                padding: 2px 6px;
-            }
-
-            .job-title {
-                font-size: 1.3rem;
-            }
-
-            .company {
-                font-size: 1rem;
-            }
-
-            .company::before,
-            .company::after {
-                font-size: 0.7em;
-            }
-
-            /* Certifications mobile */
-            .cert-grid {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-
-            .cert-card {
-                padding: 1.5rem;
-            }
-
-            .cert-card::before {
-                font-size: 1.2rem;
-            }
-
-            .cert-title {
-                font-size: 1rem;
-            }
-
-            /* Contact grid mobile */
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .contact-card {
-                padding: 1.5rem;
-            }
-
-            .contact-icon {
-                font-size: 2.5rem;
-            }
-
-            .contact-label {
-                font-size: 1rem;
-            }
-
-            /* Hide achievement notification on mobile */
-            #achievement {
-                display: none !important;
-            }
-        }
-
-        @media (max-width: 480px) {
-            /* Extra small mobile optimizations */
-            nav ul {
-                gap: 0.3rem;
-            }
-
-            nav a {
-                padding: 0.4rem 0.6rem;
-                font-size: 0.65rem;
-                letter-spacing: 0.5px;
-            }
-
-            .logo {
-                font-size: 0.9rem;
-                letter-spacing: 1px;
-            }
-
-            .glitch {
-                font-size: clamp(1.5rem, 12vw, 2.5rem);
-            }
-
-            .section-title {
-                font-size: clamp(1.5rem, 10vw, 2rem);
-            }
-
-            .stat-number {
-                font-size: 2.5rem;
-            }
-
-            .skill-tag {
-                font-size: 0.7rem;
-                padding: 0.4rem 0.8rem;
-            }
-
-            .btn {
-                padding: 0.9rem 1.5rem;
-                font-size: 0.75rem;
-            }
-        }
-
-        /* Touch device optimizations */
-        @media (hover: none) and (pointer: coarse) {
-            /* Remove hover-only effects on touch devices */
-            .stat-card:hover,
-            .skill-box:hover,
-            .cert-card:hover,
-            .timeline-content:hover,
-            .contact-card:hover {
-                transform: none;
-            }
-
-            /* Make buttons more touch-friendly */
-            .btn {
-                min-height: 44px;
-            }
-
-            nav a {
-                min-height: 44px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .skill-tag {
-                min-height: 36px;
-                display: inline-flex;
-                align-items: center;
-            }
-        }
-
-        /* Landscape mobile optimization */
-        @media (max-width: 768px) and (orientation: landscape) {
-            .hero {
-                min-height: auto;
-                padding: 5rem 1rem 2rem;
-            }
-
-            section {
-                padding: 3rem 1rem;
-            }
-        }
-
-        /* Loading Animation */
-        .loader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #000000;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 99999;
-            transition: opacity 0.5s, visibility 0.5s;
-        }
-
-        .loader.hidden {
-            opacity: 0;
-            visibility: hidden;
-        }
-
-        .loader-text {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--neon-cyan);
-            font-family: 'Orbitron', monospace;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            animation: glitchGame 0.5s infinite, neonPulse 2s ease-in-out infinite;
-            text-shadow: 0 0 20px var(--neon-cyan),
-                        0 0 40px var(--neon-cyan);
-            margin-bottom: 2rem;
-        }
-
-        .loader-text::before {
-            content: '>>> ';
-            color: var(--neon-green);
-        }
-
-        .loader-text::after {
-            content: ' <<<';
-            color: var(--neon-green);
-        }
-
-        /* Loading Progress Bar */
-        .loading-bar {
-            width: 300px;
-            height: 4px;
-            background: rgba(0, 245, 255, 0.2);
-            position: relative;
-            overflow: hidden;
-            border: 1px solid var(--neon-cyan);
-        }
-
-        .loading-bar::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple), var(--neon-green));
-            animation: loadingProgress 2s ease-in-out infinite;
-            box-shadow: 0 0 20px var(--neon-cyan);
-        }
-
-        @keyframes loadingProgress {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.7; transform: scale(1.05); }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mohamed Hakkache — Lead Data Engineer | Databricks, Azure, GCP</title>
+<meta name="description" content="Mohamed Hakkache — Lead Data Engineer with 8+ years building data platforms. Mainframe &amp; SAS to Databricks lakehouse migrations, Azure, GCP, AWS. Creator of OpenLakehouse. 100+ certifications. Tangier, Morocco.">
+<meta name="keywords" content="Lead Data Engineer, Databricks, Delta Lake, Unity Catalog, Azure Data Engineer, GCP Data Engineer, Microsoft Fabric, Apache Iceberg, Trino, PySpark, dbt, Airflow, Data Lakehouse, ETL, Morocco, Tangier">
+<meta name="author" content="Mohamed Hakkache">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0A0E13">
+<link rel="canonical" href="https://hakkache.github.io/hakkache-Med/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hakkache.github.io/hakkache-Med/">
+<meta property="og:title" content="Mohamed Hakkache — Lead Data Engineer">
+<meta property="og:description" content="8+ years building data platforms. Mainframe &amp; SAS to Databricks lakehouse migrations. Creator of OpenLakehouse — a self-hosted open-source data platform.">
+<meta property="og:image" content="https://github.com/hakkache.png">
+<meta property="og:site_name" content="Mohamed Hakkache">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mohamed Hakkache — Lead Data Engineer">
+<meta name="twitter:description" content="8+ years building data platforms. Databricks, Azure, GCP. Creator of OpenLakehouse.">
+<meta name="twitter:image" content="https://github.com/hakkache.png">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230A0E13'/><text x='50' y='68' font-size='52' font-family='monospace' font-weight='bold' fill='%2335D6C0' text-anchor='middle'>MH</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@400;500;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Mohamed Hakkache",
+  "jobTitle": "Lead Data Engineer",
+  "description": "Lead Data Engineer with 8+ years of experience designing and implementing end-to-end data platforms across cloud and on-premise ecosystems. Specialist in Databricks lakehouse migrations, Azure, GCP and AWS.",
+  "url": "https://hakkache.github.io/hakkache-Med/",
+  "image": "https://github.com/hakkache.png",
+  "email": "Hakkache.mohamed@gmail.com",
+  "telephone": "+212673189608",
+  "address": { "@type": "PostalAddress", "addressLocality": "Tangier", "addressCountry": "MA" },
+  "sameAs": [
+    "https://www.linkedin.com/in/hakkache-mohamed/",
+    "https://github.com/hakkache"
+  ],
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "School of Textiles and Clothing Industries (ESITH)",
+    "location": "Casablanca, Morocco"
+  },
+  "knowsAbout": ["Data Engineering","Databricks","Delta Lake","Unity Catalog","Apache Spark","PySpark","Apache Iceberg","Trino","dbt","Apache Airflow","Microsoft Azure","Microsoft Fabric","Google Cloud Platform","BigQuery","Amazon Web Services","Data Lakehouse","ETL","Data Governance","Power BI","Retrieval-Augmented Generation"]
+}
+</script>
 </head>
 <body>
-    <!-- Game HUD Overlay -->
-    <div class="game-hud" style="position: fixed; top: 80px; left: 20px; z-index: 9000; font-family: 'Orbitron', monospace; font-size: 0.8rem;">
-        <div style="background: rgba(0, 0, 0, 0.8); border: 2px solid var(--neon-green); border-left: 4px solid var(--neon-green); padding: 10px 15px; margin-bottom: 10px; box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);">
-            <div style="color: var(--neon-green); margin-bottom: 5px; text-shadow: 0 0 10px var(--neon-green);">⚡ POWER: <span style="color: var(--neon-gold);">100%</span></div>
-            <div style="width: 150px; height: 4px; background: rgba(0, 255, 136, 0.2); border: 1px solid var(--neon-green);">
-                <div style="width: 100%; height: 100%; background: linear-gradient(90deg, var(--neon-green), var(--neon-gold)); box-shadow: 0 0 10px var(--neon-green);"></div>
-            </div>
-        </div>
-        <div style="background: rgba(0, 0, 0, 0.8); border: 2px solid var(--neon-cyan); border-left: 4px solid var(--neon-cyan); padding: 10px 15px; box-shadow: 0 0 15px rgba(0, 245, 255, 0.3);">
-            <div style="color: var(--neon-cyan); margin-bottom: 5px; text-shadow: 0 0 10px var(--neon-cyan);">🎯 XP: <span style="color: var(--neon-gold);">6+ YRS</span></div>
-            <div style="width: 150px; height: 4px; background: rgba(0, 245, 255, 0.2); border: 1px solid var(--neon-cyan);">
-                <div style="width: 100%; height: 100%; background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple)); box-shadow: 0 0 10px var(--neon-cyan); animation: gradientShift 3s ease infinite; background-size: 200% 100%;"></div>
-            </div>
-        </div>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><span class="dot"></span>hakkache.dev</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="status-pill">
+      <span class="live"></span>
+      Lead Data Engineer at Allianz &middot; open to new roles
     </div>
 
-    <!-- Achievement Notification -->
-    <div id="achievement" style="position: fixed; top: 80px; right: -400px; z-index: 9000; background: rgba(0, 0, 0, 0.95); border: 2px solid var(--neon-gold); border-left: 5px solid var(--neon-gold); padding: 15px 20px; font-family: 'Orbitron', monospace; box-shadow: 0 0 30px rgba(255, 215, 0, 0.5); transition: right 0.5s; clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));">
-        <div style="color: var(--neon-gold); font-weight: 700; margin-bottom: 5px; text-shadow: 0 0 10px var(--neon-gold);">🏆 ACHIEVEMENT UNLOCKED!</div>
-        <div style="color: var(--neon-cyan); font-size: 0.9rem;">Portfolio Master - Viewed Profile</div>
+    <h1>Mohamed <span class="surname">Hakkache</span></h1>
+    <p class="hero-role" id="role" aria-live="polite"></p>
+
+    <p class="hero-lede">
+      I build the systems that move data from wherever it's trapped to wherever
+      decisions get made. Right now that means lifting a <strong>40-year-old mainframe and SAS
+      insurance portfolio onto a Databricks lakehouse</strong> — with lineage, quality gates
+      and CI/CD that hold up in production.
+    </p>
+
+    <div class="hero-actions">
+      <a href="projects.html" class="btn">View projects</a>
+      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      <a href="https://github.com/hakkache/my_resume/raw/refs/heads/main/HAKKACHE%20MOHAMED_RESU%20(1)%20(1).pdf" target="_blank" rel="noopener" class="btn btn-ghost">Download resume</a>
     </div>
 
-    <!-- Loading Screen -->
-    <div class="loader" id="loader">
-        <div class="loader-text">INITIALIZING SYSTEM</div>
-        <div class="loading-bar"></div>
-        <div style="margin-top: 1rem; color: var(--neon-green); font-family: 'Courier New', monospace; font-size: 0.9rem;">
-            Loading Profile Data... █████████████ 100%
-        </div>
+    <div class="stat-band">
+      <div class="stat">
+        <div class="stat-num" data-target="8" data-suffix="+">0</div>
+        <div class="stat-label">Years in data</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" data-target="100" data-suffix="+">0</div>
+        <div class="stat-label">Certifications</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" data-target="3">0</div>
+        <div class="stat-label">Clouds in production</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num" data-target="5">0</div>
+        <div class="stat-label">Countries worked with</div>
+      </div>
     </div>
-    
-    <!-- CRITICAL: Inline script to hide loader immediately -->
-    <script>
-        setTimeout(function() {
-            var loader = document.getElementById('loader');
-            if (loader) {
-                loader.style.opacity = '0';
-                loader.style.visibility = 'hidden';
-                setTimeout(function() {
-                    loader.style.display = 'none';
-                }, 500);
-            }
-        }, 1500);
-    </script>
+  </div>
+</section>
 
-    <!-- Animated Background -->
-    <div class="grid-background"></div>
-    <canvas id="dataCanvas"></canvas>
+<div class="divider"></div>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <div class="logo">MH.DEV</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap reveal">
+    <p class="eyebrow">About</p>
+    <h2 class="section-title">Engineering, then data — in that order</h2>
+    <p class="section-lede">
+      I trained as an industrial engineer, which is why I think about pipelines the way I was
+      taught to think about production lines: throughput, failure modes, and the cost of a
+      defect discovered late.
+    </p>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:2rem; max-width:900px;">
+      <p style="color:var(--text-2);">
+        Eight years in, I've moved from analyzing production data on a factory floor to leading
+        the migration of insurance portfolio processing off a mainframe. The through-line is the
+        same: find where information gets stuck, and unstick it permanently rather than
+        with a report.
+      </p>
+      <p style="color:var(--text-2);">
+        Lately I spend a lot of time on <strong style="color:var(--text);">AI inside the pipeline</strong> — not
+        chatbots bolted on top, but LLM-assisted enrichment, generated test scenarios, and
+        synthetic data for validating pipelines before real data exists. I build in the open;
+        <a href="projects.html">OpenLakehouse</a> is where most of that ends up.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STACK ============ -->
+<section id="stack">
+  <div class="wrap reveal">
+    <p class="eyebrow">Stack</p>
+    <h2 class="section-title">What I work with</h2>
+    <p class="section-lede">
+      Grouped the way a pipeline actually runs, rather than by vendor — because the interesting
+      question is never "do you know Azure", it's "where does the data stop moving".
+    </p>
+
+    <div class="layers">
+      <div class="layer">
+        <div class="layer-name"><span class="bar" style="background:var(--bronze)"></span>
+          <span>Ingest<small>Landing raw data</small></span>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="glitch" data-text="MOHAMED HAKKACHE">
-                <span style="display: inline-block; animation: glitchGame 0.3s infinite;">M</span><span style="display: inline-block; animation: glitchGame 0.4s infinite;">O</span><span style="display: inline-block; animation: glitchGame 0.35s infinite;">H</span><span style="display: inline-block; animation: glitchGame 0.45s infinite;">A</span><span style="display: inline-block; animation: glitchGame 0.38s infinite;">M</span><span style="display: inline-block; animation: glitchGame 0.42s infinite;">E</span><span style="display: inline-block; animation: glitchGame 0.37s infinite;">D</span>
-                <span style="margin: 0 0.5rem;"> </span>
-                <span style="display: inline-block; animation: glitchGame 0.36s infinite;">H</span><span style="display: inline-block; animation: glitchGame 0.44s infinite;">A</span><span style="display: inline-block; animation: glitchGame 0.39s infinite;">K</span><span style="display: inline-block; animation: glitchGame 0.41s infinite;">K</span><span style="display: inline-block; animation: glitchGame 0.33s infinite;">A</span><span style="display: inline-block; animation: glitchGame 0.43s infinite;">C</span><span style="display: inline-block; animation: glitchGame 0.34s infinite;">H</span><span style="display: inline-block; animation: glitchGame 0.40s infinite;">E</span>
-            </h1>
-            <div class="typing-text" id="typingText"></div>
-            <p class="hero-description">
-                Architecting scalable data solutions across multi-cloud ecosystems. Transforming raw data into strategic insights through advanced engineering, automation, and analytics.
-            </p>
-            <div class="cta-buttons">
-                <a href="#contact" class="btn">Connect</a>
-                <a href="#experience" class="btn btn-outline">Explore Work</a>
-                <a href="https://github.com/hakkache/my_resume/raw/refs/heads/main/HAKKACHE%20MOHAMED_RESU%20(1)%20(1).pdf" target="_blank" class="btn btn-outline">Download Resume PDF</a>
-            </div>
+        <div class="tags">
+          <span class="tag key">Lakeflow Connect</span><span class="tag key">Autoloader</span>
+          <span class="tag">Azure Data Factory</span><span class="tag">Cloud Data Fusion</span>
+          <span class="tag">Dataflow</span><span class="tag">Kafka</span><span class="tag">Debezium CDC</span>
+          <span class="tag">REST APIs</span>
         </div>
-    </section>
+      </div>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title"><span>About</span></h2>
-            <p style="text-align: center; max-width: 900px; margin: 0 auto 3rem; font-size: 1.2rem; color: rgba(224, 231, 255, 0.85); line-height: 1.8;">
-                Data Engineer & Analyst with <strong style="color: var(--primary);">6+ years</strong> of experience designing and implementing end-to-end data solutions across cloud and on-premise ecosystems. Expert in data integration, pipeline automation, and advanced analytics using modern platforms and frameworks. Backed by <strong style="color: var(--accent);">100+ professional certifications</strong> from leading institutions including Microsoft, Google, IBM, and DeepLearning.AI.
-            </p>
-
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon">⚡</div>
-                    <div class="stat-number" data-target="6">0</div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">🏆</div>
-                    <div class="stat-number" data-target="100">0</div>
-                    <div class="stat-label">Certifications</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">☁️</div>
-                    <div class="stat-number" data-target="3">0</div>
-                    <div class="stat-label">Cloud Platforms</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">🛠️</div>
-                    <div class="stat-number" data-target="50">0</div>
-                    <div class="stat-label">Technologies</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">👁️</div>
-                    <div class="stat-number" id="visitorCount">0</div>
-                    <div class="stat-label">Visitors</div>
-                </div>
-            </div>
-            <script>
-                // Visitor Counter using localStorage for tracking
-                (function() {
-                    const visitorElement = document.getElementById('visitorCount');
-                    if (!visitorElement) return;
-                    
-                    // Use API Counter (alternative service)
-                    fetch('https://api.counterapi.dev/v1/hakkache-portfolio/visits/up', {
-                        method: 'GET'
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        const count = data.count || 0;
-                        visitorElement.setAttribute('data-target', count);
-                        
-                        // Animate visitor count
-                        let current = 0;
-                        const target = count;
-                        const duration = 2000;
-                        const step = target / (duration / 16);
-                        
-                        function updateVisitor() {
-                            current += step;
-                            if (current < target) {
-                                visitorElement.textContent = Math.floor(current);
-                                requestAnimationFrame(updateVisitor);
-                            } else {
-                                visitorElement.textContent = target;
-                            }
-                        }
-                        updateVisitor();
-                    })
-                    .catch(err => {
-                        console.log('Visitor counter:', err);
-                        // Fallback to local count
-                        let visits = localStorage.getItem('portfolio-visits') || 0;
-                        visits = parseInt(visits) + 1;
-                        localStorage.setItem('portfolio-visits', visits);
-                        visitorElement.textContent = visits;
-                    });
-                })();
-                
-                // Immediately trigger counter animation
-                setTimeout(function() {
-                    var statNumbers = document.querySelectorAll('.stat-number');
-                    statNumbers.forEach(function(element) {
-                        var target = parseInt(element.getAttribute('data-target'));
-                        if (!target || isNaN(target)) return;
-                        
-                        var duration = 2000;
-                        var step = target / (duration / 16);
-                        var current = 0;
-                        
-                        function updateCounter() {
-                            current += step;
-                            if (current < target) {
-                                element.textContent = Math.floor(current) + '+';
-                                requestAnimationFrame(updateCounter);
-                            } else {
-                                element.textContent = target + '+';
-                            }
-                        }
-                        updateCounter();
-                    });
-                }, 500);
-            </script>
+      <div class="layer">
+        <div class="layer-name"><span class="bar" style="background:var(--silver)"></span>
+          <span>Store<small>Tables and formats</small></span>
         </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title"><span>Technical Arsenal</span></h2>
-            <div class="skills-matrix">
-                <div class="skill-box">
-                    <div class="skill-header">
-                        <div class="skill-icon">☁️</div>
-                        <div class="skill-title">Cloud Platforms</div>
-                    </div>
-                    <div class="skill-items">
-                        <span class="skill-tag">Microsoft Azure</span>
-                        <span class="skill-tag">Google Cloud (GCP)</span>
-                        <span class="skill-tag">Azure Databricks</span>
-                        <span class="skill-tag">Microsoft Fabric</span>
-                        <span class="skill-tag">Azure Synapse</span>
-                        <span class="skill-tag">BigQuery</span>
-                    </div>
-                </div>
-
-                <div class="skill-box">
-                    <div class="skill-header">
-                        <div class="skill-icon">💻</div>
-                        <div class="skill-title">Programming</div>
-                    </div>
-                    <div class="skill-items">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">Scala</span>
-                        <span class="skill-tag">PySpark</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Bash</span>
-                        <span class="skill-tag">DAX</span>
-                        <span class="skill-tag">Power Query M</span>
-                    </div>
-                </div>
-
-                <div class="skill-box">
-                    <div class="skill-header">
-                        <div class="skill-icon">⚙️</div>
-                        <div class="skill-title">Big Data</div>
-                    </div>
-                    <div class="skill-items">
-                        <span class="skill-tag">Apache Spark</span>
-                        <span class="skill-tag">Hadoop</span>
-                        <span class="skill-tag">Kafka</span>
-                        <span class="skill-tag">Delta Lake</span>
-                        <span class="skill-tag">Unity Catalog</span>
-                        <span class="skill-tag">Databricks</span>
-                        <span class="skill-tag">Lakehouse</span>
-                    </div>
-                </div>
-
-                <div class="skill-box">
-                    <div class="skill-header">
-                        <div class="skill-icon">📊</div>
-                        <div class="skill-title">BI & Analytics</div>
-                    </div>
-                    <div class="skill-items">
-                        <span class="skill-tag">Power BI</span>
-                        <span class="skill-tag">Looker Studio</span>
-                        <span class="skill-tag">Tableau</span>
-                        <span class="skill-tag">MicroStrategy</span>
-                        <span class="skill-tag">Dataflows</span>
-                    </div>
-                </div>
-
-                <div class="skill-box">
-                    <div class="skill-header">
-                        <div class="skill-icon">🔄</div>
-                        <div class="skill-title">Data Engineering</div>
-                    </div>
-                    <div class="skill-items">
-                        <span class="skill-tag">ETL/ELT</span>
-                        <span class="skill-tag">Azure Data Factory</span>
-                        <span class="skill-tag">Cloud Data Fusion</span>
-                        <span class="skill-tag">Dataflow</span>
-                        <span class="skill-tag">Data Pipelines</span>
-                        <span class="skill-tag">Data Modeling</span>
-                        <span class="skill-tag">Autoloader</span>
-                    </div>
-                </div>
-
-                <div class="skill-box">
-                    <div class="skill-header">
-                        <div class="skill-icon">🗄️</div>
-                        <div class="skill-title">Databases</div>
-                    </div>
-                    <div class="skill-items">
-                        <span class="skill-tag">Azure SQL</span>
-                        <span class="skill-tag">SQL Server</span>
-                        <span class="skill-tag">Oracle</span>
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">Data Lake Storage</span>
-                        <span class="skill-tag">Cloud Storage</span>
-                    </div>
-                </div>
-
-                <div class="skill-box">
-                    <div class="skill-header">
-                        <div class="skill-icon">🚀</div>
-                        <div class="skill-title">DevOps & Tools</div>
-                    </div>
-                    <div class="skill-items">
-                        <span class="skill-tag">Git/GitLab</span>
-                        <span class="skill-tag">Azure DevOps</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Kubernetes</span>
-                        <span class="skill-tag">Agile/Scrum</span>
-                        <span class="skill-tag">Jira</span>
-                    </div>
-                </div>
-
-                <div class="skill-box">
-                    <div class="skill-header">
-                        <div class="skill-icon">🤖</div>
-                        <div class="skill-title">AI & ML</div>
-                    </div>
-                    <div class="skill-items">
-                        <span class="skill-tag">TensorFlow</span>
-                        <span class="skill-tag">Deep Learning</span>
-                        <span class="skill-tag">NLP</span>
-                        <span class="skill-tag">Time Series</span>
-                        <span class="skill-tag">Statistics</span>
-                    </div>
-                </div>
-            </div>
+        <div class="tags">
+          <span class="tag key">Delta Lake</span><span class="tag key">Apache Iceberg</span>
+          <span class="tag">Azure Data Lake</span><span class="tag">OneLake</span><span class="tag">BigQuery</span>
+          <span class="tag">Snowflake</span><span class="tag">Azure SQL</span><span class="tag">SQL Server</span>
+          <span class="tag">Oracle</span><span class="tag">MongoDB</span><span class="tag">MinIO</span>
         </div>
-    </section>
+      </div>
 
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title"><span>Career Journey</span></h2>
-            <div class="timeline">
-                <!-- Experience 1 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3 class="job-title">Data Engineer</h3>
-                        <div class="company">Expleo Group - Renault (Romania, France, Spain)</div>
-                        <div class="date">April 2025 - Present</div>
-                        <ul class="job-highlights">
-                            <li>Supporting Renault's Firmware Over-The-Air (FOTA) testing campaigns across international teams</li>
-                            <li>Developing end-to-end data integration pipelines using Google Cloud Data Fusion and Cloud Dataflow</li>
-                            <li>Leveraging BigQuery for advanced SQL-based transformations and large-scale analytics</li>
-                            <li>Building interactive dashboards in Looker Studio for test coverage and campaign efficiency metrics</li>
-                            <li>Collaborating with stakeholders using Agile ceremonies (Scrum/Kanban)</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Experience 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3 class="job-title">Data Engineer</h3>
-                        <div class="company">Emirates Logistics - Tangier, Morocco</div>
-                        <div class="date">September 2022 - April 2025</div>
-                        <ul class="job-highlights">
-                            <li>Designed and implemented the company's Business Intelligence ecosystem using Microsoft Fabric and Power BI</li>
-                            <li>Developed and maintained data pipelines within Microsoft Fabric Data Factory and Azure Data Factory</li>
-                            <li>Leveraged PySpark within Databricks and Microsoft Fabric Lakehouse for efficient data processing</li>
-                            <li>Managed user roles, data security, and governance through Microsoft Entra ID and Microsoft Purview</li>
-                            <li>Led deployment of cloud-based dashboards providing near real-time analytics to management teams</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Experience 3 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3 class="job-title">Data Engineer</h3>
-                        <div class="company">APM Terminals MedPort Tangier - Tangier, Morocco</div>
-                        <div class="date">March 2021 - April 2023</div>
-                        <ul class="job-highlights">
-                            <li>Led migration from on-premise BI systems to Microsoft Azure cloud environment</li>
-                            <li>Built and managed ETL pipelines in Azure Data Factory integrating multiple operational systems</li>
-                            <li>Created transformation notebooks leveraging Scala and PySpark for data processing</li>
-                            <li>Designed data models and optimized query performance within Azure Synapse Analytics</li>
-                            <li>Delivered interactive dashboards for global terminals (Los Angeles, Algeciras, Rotterdam)</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Experience 4 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3 class="job-title">Data Analyst</h3>
-                        <div class="company">APM Terminals MedPort Tangier - Tangier, Morocco</div>
-                        <div class="date">January 2020 - March 2021</div>
-                        <ul class="job-highlights">
-                            <li>Utilized Python and SQL to clean, transform, and analyze large operational datasets</li>
-                            <li>Delivered automated dashboards and KPI reports using MicroStrategy</li>
-                            <li>Conducted process and performance analysis to identify efficiency gaps</li>
-                            <li>Partnered with IT and data teams to ensure data integrity and governance</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Experience 5 -->
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3 class="job-title">Product Engineer</h3>
-                        <div class="company">LEAR E-Systems - Tangier</div>
-                        <div class="date">September 2018 - January 2020</div>
-                        <ul class="job-highlights">
-                            <li>Queried and analyzed product and production data from internal databases</li>
-                            <li>Conducted material and time studies using quantitative data analysis</li>
-                            <li>Developed and reported monthly project performance metrics (Car Key KPIs)</li>
-                            <li>Implemented continuous improvement initiatives using data-driven insights</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+      <div class="layer">
+        <div class="layer-name"><span class="bar" style="background:var(--gold)"></span>
+          <span>Process<small>Turning raw into usable</small></span>
         </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="certifications">
-        <div class="container">
-            <h2 class="section-title"><span>Certifications</span></h2>
-            <div class="cert-grid">
-                <a href="https://www.coursera.org/account/accomplishments/specialization/0GG5JZESCU94" target="_blank" class="cert-card">
-                    <div class="cert-title">Google Cloud Data Analytics Specialization</div>
-                    <div class="cert-org">Google Cloud</div>
-                    <div class="cert-date">October 2025</div>
-                </a>
-                <a href="https://www.coursera.org/account/accomplishments/specialization/DOKNVFQACHMG" target="_blank" class="cert-card">
-                    <div class="cert-title">Data Engineering, Big Data, and Machine Learning on GCP</div>
-                    <div class="cert-org">Google Cloud</div>
-                    <div class="cert-date">September 2025</div>
-                </a>
-                <a href="https://www.coursera.org/account/accomplishments/specialization/7SR5OZH6ER5I" target="_blank" class="cert-card">
-                    <div class="cert-title">Google Cloud Certification: Cloud Data Engineer</div>
-                    <div class="cert-org">Google Cloud</div>
-                    <div class="cert-date">September 2025</div>
-                </a>
-                <a href="https://www.coursera.org/account/accomplishments/specialization/WKRGBAERWO65" target="_blank" class="cert-card">
-                    <div class="cert-title">Microsoft Azure Data Fundamentals DP-900</div>
-                    <div class="cert-org">Microsoft</div>
-                    <div class="cert-date">October 2025</div>
-                </a>
-                <a href="https://www.udemy.com/certificate/UC-5a814ce6-7d4a-488b-a0af-1a94c96018f6/" target="_blank" class="cert-card">
-                    <div class="cert-title">Microsoft DP-700: Fabric Data Engineer Associate</div>
-                    <div class="cert-org">Udemy</div>
-                    <div class="cert-date">November 2025</div>
-                </a>
-                <a href="https://credentials.databricks.com/e9118f3a-57f7-44ae-a3cd-3efc3ddb1311" target="_blank" class="cert-card">
-                    <div class="cert-title">Academy Accreditation - Databricks Fundamentals</div>
-                    <div class="cert-org">Databricks</div>
-                    <div class="cert-date">October 2025</div>
-                </a>
-                <a href="https://www.udemy.com/certificate/UC-0acfc3b0-0333-4f07-b633-f550ece1d0dd/" target="_blank" class="cert-card">
-                    <div class="cert-title">Databricks Certified Data Engineer Associate - Bootcamp</div>
-                    <div class="cert-org">Udemy</div>
-                    <div class="cert-date">October 2025</div>
-                </a>
-                <a href="https://www.coursera.org/account/accomplishments/specialization/SKGHFEYY7KW4" target="_blank" class="cert-card">
-                    <div class="cert-title">Microsoft Power BI Data Analyst Specialization</div>
-                    <div class="cert-org">Microsoft</div>
-                    <div class="cert-date">December 2023</div>
-                </a>
-                <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/KRF8YZL2UR99" target="_blank" class="cert-card">
-                    <div class="cert-title">Natural Language Processing Specialization</div>
-                    <div class="cert-org">DeepLearning.AI</div>
-                    <div class="cert-date">June 2023</div>
-                </a>
-                <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/WPGM4RJKFJYQ" target="_blank" class="cert-card">
-                    <div class="cert-title">Google Business Intelligence Specialization</div>
-                    <div class="cert-org">Google</div>
-                    <div class="cert-date">May 2023</div>
-                </a>
-                <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/L3C5MGKCY37A" target="_blank" class="cert-card">
-                    <div class="cert-title">Google Project Management Specialization</div>
-                    <div class="cert-org">Google</div>
-                    <div class="cert-date">April 2023</div>
-                </a>
-                <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/MSARE4DERMGD" target="_blank" class="cert-card">
-                    <div class="cert-title">Google Data Analytics Specialization</div>
-                    <div class="cert-org">Google</div>
-                    <div class="cert-date">April 2023</div>
-                </a>
-                <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/DG7HB99ZKMPH" target="_blank" class="cert-card">
-                    <div class="cert-title">Deep Learning Specialization</div>
-                    <div class="cert-org">DeepLearning.AI</div>
-                    <div class="cert-date">July 2018</div>
-                </a>
-                <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/DG7HB99ZKMPH" target="_blank" class="cert-card">
-                    <div class="cert-title">IASSC ICCB - Six Sigma Certification</div>
-                    <div class="cert-org">International Association for Six Sigma</div>
-                    <div class="cert-date">October 2016</div>
-                </a>
-            </div>
-
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="https://www.linkedin.com/in/hakkache-mohamed/details/certifications/" target="_blank" class="btn" style="display: inline-block;">
-                    View All 100+ Certifications on LinkedIn →
-                </a>
-            </div>
-
-            <div style="margin-top: 5rem; text-align: center;">
-                <h3 style="color: var(--primary); font-size: 2rem; margin-bottom: 2rem;">🎓 Education</h3>
-                <div class="cert-card" style="max-width: 700px; margin: 0 auto; padding: 2.5rem;">
-                    <div class="cert-title" style="font-size: 1.4rem;">State Engineer in Industrial Engineering</div>
-                    <div class="cert-org" style="font-size: 1.1rem;">The School of Textiles and Clothing Industries (ESITH)</div>
-                    <div class="cert-date" style="font-size: 1rem;">Casablanca, Morocco • 2011-2015</div>
-                </div>
-            </div>
+        <div class="tags">
+          <span class="tag key">PySpark</span><span class="tag key">Databricks</span>
+          <span class="tag key">DLT / Lakeflow</span><span class="tag">Spark SQL</span><span class="tag">dbt</span>
+          <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Scala</span>
+          <span class="tag">Trino</span><span class="tag">Azure Synapse</span><span class="tag">Microsoft Fabric</span>
         </div>
-    </section>
+      </div>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title"><span>Get In Touch</span></h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; font-size: 1.2rem; color: rgba(224, 231, 255, 0.8);">
-                Let's discuss data engineering challenges, cloud architecture, or collaboration opportunities. I'm always excited to connect with fellow data professionals and innovators.
-            </p>
-            <div class="contact-grid">
-                <a href="mailto:Hakkache.mohamed@gmail.com" class="contact-card">
-                    <div class="contact-icon">📧</div>
-                    <div class="contact-label">Email</div>
-                    <div class="contact-info">Hakkache.mohamed@gmail.com</div>
-                </a>
-                <a href="tel:+212673189608" class="contact-card">
-                    <div class="contact-icon">📱</div>
-                    <div class="contact-label">Phone</div>
-                    <div class="contact-info">+212 6 73 18 96 08</div>
-                </a>
-                <a href="https://www.linkedin.com/in/hakkache-mohamed/" target="_blank" class="contact-card">
-                    <div class="contact-icon">💼</div>
-                    <div class="contact-label">LinkedIn</div>
-                    <div class="contact-info">linkedin.com/in/hakkache-mohamed</div>
-                </a>
-                <a href="https://github.com/hakkache" target="_blank" class="contact-card">
-                    <div class="contact-icon">💻</div>
-                    <div class="contact-label">GitHub</div>
-                    <div class="contact-info">@hakkache</div>
-                </a>
-            </div>
-            <div style="margin-top: 3rem; text-align: center;">
-                <div style="display: inline-block; background: rgba(0, 245, 255, 0.1); border: 2px solid rgba(0, 245, 255, 0.3); border-radius: 50px; padding: 1.5rem 3rem;">
-                    <div style="color: var(--primary); font-size: 1.5rem; margin-bottom: 0.5rem;">📍 Location</div>
-                    <div style="color: var(--light); font-size: 1.1rem;">Tangier, Morocco</div>
-                </div>
-            </div>
+      <div class="layer">
+        <div class="layer-name"><span class="bar" style="background:var(--teal)"></span>
+          <span>Orchestrate<small>Scheduling and shipping</small></span>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-title">MOHAMED HAKKACHE</div>
-            <p class="footer-text">Data Engineer | Cloud Architect | Analytics Expert</p>
-            <p class="footer-text" style="margin-top: 1rem;">
-                Lifelong Learner • Results Focused • AI Enthusiast
-            </p>
-            <p class="footer-text" style="margin-top: 1rem;">
-                🌐 Arabic (Native) • English (Fluent) • French (Fluent)
-            </p>
-            <p class="footer-text" style="margin-top: 2rem; font-size: 0.9rem;">
-                © 2025 Mohamed Hakkache. All rights reserved.
-            </p>
+        <div class="tags">
+          <span class="tag key">Apache Airflow</span><span class="tag">Dagster</span>
+          <span class="tag">Databricks Asset Bundles</span><span class="tag">Cloud Composer</span>
+          <span class="tag">Azure DevOps</span><span class="tag">GitLab CI</span><span class="tag">Docker</span>
+          <span class="tag">Kubernetes</span><span class="tag">pytest</span>
         </div>
-    </footer>
+      </div>
 
-    <script>
-        // CRITICAL: Ensure loader always hides
-        (function() {
-            function forceHideLoader() {
-                const loader = document.getElementById('loader');
-                if (loader) {
-                    loader.classList.add('hidden');
-                    loader.style.opacity = '0';
-                    loader.style.visibility = 'hidden';
-                    setTimeout(() => {
-                        loader.style.display = 'none';
-                    }, 500);
-                }
-            }
+      <div class="layer">
+        <div class="layer-name"><span class="bar" style="background:var(--silver)"></span>
+          <span>Serve<small>Where people meet the data</small></span>
+        </div>
+        <div class="tags">
+          <span class="tag key">Power BI</span><span class="tag">Looker Studio</span>
+          <span class="tag">Tableau</span><span class="tag">MicroStrategy</span><span class="tag">Superset</span>
+          <span class="tag">Semantic models</span><span class="tag">KPI design</span>
+        </div>
+      </div>
 
-            // Try to hide loader as soon as DOM is ready
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', () => {
-                    setTimeout(forceHideLoader, 1000);
-                });
-            } else {
-                // DOM already loaded
-                setTimeout(forceHideLoader, 1000);
-            }
+      <div class="layer">
+        <div class="layer-name"><span class="bar" style="background:var(--bronze)"></span>
+          <span>Govern &amp; observe<small>Trust and uptime</small></span>
+        </div>
+        <div class="tags">
+          <span class="tag key">Unity Catalog</span><span class="tag">Microsoft Purview</span>
+          <span class="tag">Entra ID / RBAC</span><span class="tag">Data quality frameworks</span>
+          <span class="tag">Lineage</span><span class="tag">Prometheus</span><span class="tag">Grafana</span>
+          <span class="tag">Elasticsearch</span><span class="tag">Kibana</span>
+        </div>
+      </div>
 
-            // Absolute failsafe - hide after 2 seconds no matter what
-            setTimeout(forceHideLoader, 2000);
-        })();
+      <div class="layer">
+        <div class="layer-name"><span class="bar" style="background:var(--gold)"></span>
+          <span>AI in the pipeline<small>Newer ground</small></span>
+        </div>
+        <div class="tags">
+          <span class="tag key">RAG</span><span class="tag key">Vector search</span>
+          <span class="tag">Embeddings</span><span class="tag">LLM data enrichment</span>
+          <span class="tag">AI-generated tests</span><span class="tag">Synthetic test data</span>
+          <span class="tag">Claude Code</span><span class="tag">GitHub Copilot</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        // Create Floating Particles
-        function createParticles() {
-            const particleCount = 30;
-            const colors = ['#00f5ff', '#bd00ff', '#00ff88', '#ffd700'];
-            
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                
-                const size = Math.random() * 6 + 2;
-                const color = colors[Math.floor(Math.random() * colors.length)];
-                const startX = Math.random() * window.innerWidth;
-                const startY = Math.random() * window.innerHeight;
-                const endX = (Math.random() - 0.5) * 400;
-                const endY = (Math.random() - 0.5) * 400;
-                const duration = Math.random() * 10 + 15;
-                const delay = Math.random() * 5;
-                
-                particle.style.width = size + 'px';
-                particle.style.height = size + 'px';
-                particle.style.background = color;
-                particle.style.left = startX + 'px';
-                particle.style.top = startY + 'px';
-                particle.style.setProperty('--tx', endX + 'px');
-                particle.style.setProperty('--ty', endY + 'px');
-                particle.style.animationDuration = duration + 's';
-                particle.style.animationDelay = delay + 's';
-                particle.style.boxShadow = `0 0 ${size * 3}px ${color}`;
-                
-                document.body.appendChild(particle);
-            }
-        }
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience">
+  <div class="wrap reveal">
+    <p class="eyebrow">Experience</p>
+    <h2 class="section-title">Career pipeline</h2>
+    <p class="section-lede">Six roles, one direction: closer to the data, and closer to the decisions it feeds.</p>
 
-        // Initialize page after DOM is ready
-        document.addEventListener('DOMContentLoaded', () => {
-            try {
-                // Reduce particles on mobile for better performance
-                const isMobile = window.innerWidth <= 768;
-                if (!isMobile) {
-                    setTimeout(() => {
-                        try {
-                            createParticles();
-                        } catch (e) {
-                            console.log('Particles skipped');
-                        }
-                    }, 500);
-                }
-                
-                // Show achievement notification after loading (desktop only)
-                if (!isMobile) {
-                    setTimeout(() => {
-                        const achievement = document.getElementById('achievement');
-                        if (achievement) {
-                            achievement.style.right = '20px';
-                            
-                            // Hide after 4 seconds
-                            setTimeout(() => {
-                                achievement.style.right = '-400px';
-                            }, 4000);
-                        }
-                    }, 2000);
-                }
-                
-                // Trigger stat counter manually on mobile after load
-                if (isMobile) {
-                    setTimeout(() => {
-                        const statsSection = document.querySelector('.stats-grid');
-                        if (statsSection) {
-                            const statNumbers = statsSection.querySelectorAll('.stat-number');
-                            statNumbers.forEach(num => {
-                                if (!num.classList.contains('animated')) {
-                                    num.classList.add('animated');
-                                    animateCounter(num);
-                                }
-                            });
-                        }
-                    }, 1500);
-                }
-            } catch (error) {
-                console.log('Initialization error:', error);
-            }
-        });
+    <div class="rail">
 
-        // Download Resume PDF functionality
-        document.addEventListener('DOMContentLoaded', () => {
-            const downloadBtn = document.getElementById('downloadCV');
-            if (downloadBtn) {
-                downloadBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    // Direct download link that works on GitHub Pages
-                    const pdfUrl = 'https://github.com/hakkache/my_resume/raw/refs/heads/main/HAKKACHE%20MOHAMED_RESU%20(1)%20(1).pdf';
-                    
-                    // Open in new window - browser handles download
-                    window.open(pdfUrl, '_blank');
-                });
-            }
-        });
+      <article class="role tier-gold">
+        <div class="role-card">
+          <div class="role-head">
+            <h3 class="role-title">Lead Data Engineer <span class="badge-now">Now</span></h3>
+            <span class="role-when">Sep 2025 — Present</span>
+          </div>
+          <div class="role-org">Allianz &middot; Freelance</div>
+          <div class="role-where">Mainframe &amp; SAS → Azure Databricks migration</div>
+          <ul>
+            <li><strong>Migrated</strong> legacy mainframe/SAS insurance portfolio processing onto a modern Azure Databricks lakehouse.</li>
+            <li><strong>Designed</strong> a multi-layer architecture with full traceability from source system to business-ready tables.</li>
+            <li><strong>Built</strong> a data quality framework with automated validation, anomaly detection and quarantine handling.</li>
+            <li><strong>Orchestrated</strong> end-to-end pipelines with PySpark notebooks, DLT and Databricks Lakeflow.</li>
+            <li><strong>Set up</strong> automated testing, continuous integration and infrastructure-as-code deployment across dev and prod.</li>
+            <li><strong>Governed</strong> lineage and access through Unity Catalog; monitored runs, investigated incidents, added alerting.</li>
+            <li><strong>Led</strong> data engineers on pipeline design, development standards and technical direction for the platform roadmap.</li>
+          </ul>
+          <div class="role-stack tags">
+            <span class="tag">Azure Databricks</span><span class="tag">Delta Lake</span><span class="tag">DLT</span>
+            <span class="tag">Unity Catalog</span><span class="tag">PySpark</span><span class="tag">dbt</span>
+            <span class="tag">pytest</span><span class="tag">Jira / Zephyr</span>
+          </div>
+        </div>
+      </article>
 
-        // Typing Animation
-        const texts = [
-            'Data Engineer & Cloud Architect',
-            'Pipeline Automation Specialist',
-            'Big Data & Analytics Expert',
-            'Multi-Cloud Solutions Developer'
-        ];
-        let textIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        const typingElement = document.getElementById('typingText');
+      <article class="role">
+        <div class="role-card">
+          <div class="role-head">
+            <h3 class="role-title">Data Engineer</h3>
+            <span class="role-when">Apr 2025 — Sep 2025</span>
+          </div>
+          <div class="role-org">Expleo Group &middot; client: Renault Group</div>
+          <div class="role-where">Romania · France · Spain — Firmware Over-The-Air testing</div>
+          <ul>
+            <li><strong>Designed and automated</strong> pipelines in Google Cloud Data Fusion and Dataflow for large-scale vehicle test and anomaly datasets.</li>
+            <li><strong>Built</strong> BigQuery transformations tracking campaign performance, defect rates and system reliability.</li>
+            <li><strong>Delivered</strong> Looker Studio dashboards for test coverage, campaign efficiency and anomaly resolution.</li>
+            <li><strong>Coordinated</strong> across three countries in Agile ceremonies, aligning data workflows with testing operations.</li>
+          </ul>
+          <div class="role-stack tags">
+            <span class="tag">BigQuery</span><span class="tag">Data Fusion</span><span class="tag">Dataflow</span>
+            <span class="tag">Looker Studio</span><span class="tag">Airflow</span><span class="tag">Python</span><span class="tag">GitLab</span>
+          </div>
+        </div>
+      </article>
 
-        function type() {
-            const currentText = texts[textIndex];
-            
-            if (isDeleting) {
-                typingElement.textContent = currentText.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typingElement.textContent = currentText.substring(0, charIndex + 1);
-                charIndex++;
-            }
+      <article class="role">
+        <div class="role-card">
+          <div class="role-head">
+            <h3 class="role-title">Data Engineer</h3>
+            <span class="role-when">Sep 2023 — Apr 2025</span>
+          </div>
+          <div class="role-org">Emirates Logistics</div>
+          <div class="role-where">Tangier, Morocco</div>
+          <ul>
+            <li><strong>Architected</strong> the company's business intelligence ecosystem on Microsoft Fabric and Power BI from scratch.</li>
+            <li><strong>Developed</strong> pipelines in Fabric Data Factory and Azure Data Factory, centralizing multiple business systems.</li>
+            <li><strong>Optimized</strong> transformation notebooks with PySpark across Databricks and Fabric Lakehouse.</li>
+            <li><strong>Managed</strong> roles, security and governance through Microsoft Entra ID and Purview.</li>
+            <li><strong>Trained</strong> end-users, driving self-service BI adoption across departments.</li>
+          </ul>
+          <div class="role-stack tags">
+            <span class="tag">Microsoft Fabric</span><span class="tag">Power BI</span><span class="tag">Azure Data Factory</span>
+            <span class="tag">PySpark</span><span class="tag">Azure SQL</span><span class="tag">Purview</span>
+          </div>
+        </div>
+      </article>
 
-            typingElement.innerHTML += '<span class="cursor"></span>';
+      <article class="role">
+        <div class="role-card">
+          <div class="role-head">
+            <h3 class="role-title">Data Engineer</h3>
+            <span class="role-when">Mar 2021 — Apr 2023</span>
+          </div>
+          <div class="role-org">APM Terminals MedPort Tangier</div>
+          <div class="role-where">Tangier, Morocco</div>
+          <ul>
+            <li><strong>Led</strong> the migration from on-premise BI to Azure — Synapse Analytics, Data Factory, Power BI Service.</li>
+            <li><strong>Built</strong> ETL pipelines integrating operational systems into Azure SQL and Data Lake Storage.</li>
+            <li><strong>Delivered</strong> standardized dashboards for global terminals in Los Angeles, Algeciras and Rotterdam.</li>
+            <li><strong>Established</strong> BI governance and data quality frameworks, reducing inconsistencies across business reporting.</li>
+          </ul>
+          <div class="role-stack tags">
+            <span class="tag">Azure Synapse</span><span class="tag">Azure Data Factory</span><span class="tag">Power BI</span>
+            <span class="tag">Scala</span><span class="tag">PySpark</span><span class="tag">MicroStrategy</span>
+          </div>
+        </div>
+      </article>
 
-            let typeSpeed = isDeleting ? 50 : 100;
+      <article class="role tier-bronze">
+        <div class="role-card">
+          <div class="role-head">
+            <h3 class="role-title">Data Analyst</h3>
+            <span class="role-when">Jan 2020 — Mar 2021</span>
+          </div>
+          <div class="role-org">APM Terminals MedPort Tangier</div>
+          <div class="role-where">Tangier, Morocco</div>
+          <ul>
+            <li><strong>Analyzed</strong> large operational datasets with Python and SQL for operations, maintenance and supply chain teams.</li>
+            <li><strong>Delivered</strong> automated MicroStrategy dashboards covering traffic flow, safety and productivity.</li>
+            <li><strong>Ran</strong> Lean/Kaizen process analysis to identify efficiency gaps and drive cost control.</li>
+          </ul>
+          <div class="role-stack tags">
+            <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">MicroStrategy</span>
+            <span class="tag">Excel / VBA</span><span class="tag">Statistics</span>
+          </div>
+        </div>
+      </article>
 
-            if (!isDeleting && charIndex === currentText.length) {
-                typeSpeed = 2000;
-                isDeleting = true;
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                textIndex = (textIndex + 1) % texts.length;
-                typeSpeed = 500;
-            }
+      <article class="role tier-bronze">
+        <div class="role-card">
+          <div class="role-head">
+            <h3 class="role-title">Product Engineer / Data Analyst</h3>
+            <span class="role-when">Sep 2018 — Jan 2020</span>
+          </div>
+          <div class="role-org">LEAR E-Systems</div>
+          <div class="role-where">Tangier, Morocco</div>
+          <ul>
+            <li><strong>Analyzed</strong> production data to evaluate material usage, process times and cost structures.</li>
+            <li><strong>Maintained</strong> technical documentation — BOMs, routing, APD times — with cross-system accuracy.</li>
+            <li><strong>Reported</strong> monthly project KPIs on cost, quality and timing to management.</li>
+          </ul>
+          <div class="role-stack tags">
+            <span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Power BI</span>
+            <span class="tag">BOM analysis</span><span class="tag">PFMEA</span><span class="tag">Six Sigma</span>
+          </div>
+        </div>
+      </article>
 
-            setTimeout(type, typeSpeed);
-        }
+    </div>
+  </div>
+</section>
 
-        type();
+<!-- ============ PROJECTS TEASER ============ -->
+<section id="projects">
+  <div class="wrap reveal">
+    <p class="eyebrow">Projects</p>
+    <h2 class="section-title">Built in the open</h2>
+    <p class="section-lede">
+      Side projects are where I test ideas that are too risky to try first on someone's production data.
+    </p>
 
-        // Animated Canvas Background
-        const canvas = document.getElementById('dataCanvas');
-        const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+    <div class="flagship">
+      <div class="flagship-body">
+        <p class="proj-kicker" style="color:var(--gold);">Flagship · 39 services · one docker compose up</p>
+        <h2>OpenLakehouse</h2>
+        <p class="lede">
+          A self-hosted, open-source data platform that does what a cloud lakehouse does — Spark writing
+          real Iceberg tables, Trino querying them, Kafka and Debezium streaming change data, Dagster
+          orchestrating, Superset visualizing, MLflow tracking models — all behind one sign-on, running
+          entirely on your own hardware for nothing.
+        </p>
+        <a href="projects.html" class="btn">See how it's built</a>
+      </div>
+      <div class="shot">
+        <img src="https://github.com/hakkache/openlakehouse/raw/master/docs/screenshots/home.jpg"
+             alt="OpenLakehouse platform home screen" loading="lazy">
+      </div>
+    </div>
 
-        class DataPoint {
-            constructor() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.vx = (Math.random() - 0.5) * 0.5;
-                this.vy = (Math.random() - 0.5) * 0.5;
-                this.radius = Math.random() * 2 + 1;
-            }
+    <div class="proj-grid">
+      <a class="proj" href="https://github.com/hakkache/Self-Healing-Agentic-Sentiment-Analysis-Pipeline" target="_blank" rel="noopener">
+        <div class="proj-kicker">Agentic pipeline</div>
+        <h3>Self-Healing Sentiment Pipeline</h3>
+        <p>A pipeline where a local LLM diagnoses its own failures and repairs them — automated recovery instead of a 3 a.m. page.</p>
+        <div class="tags"><span class="tag">Airflow</span><span class="tag">Ollama</span><span class="tag">Llama 3.2</span><span class="tag">Celery</span></div>
+      </a>
 
-            update() {
-                this.x += this.vx;
-                this.y += this.vy;
+      <a class="proj" href="https://github.com/hakkache/End-to-End-Modern-Distributed-Lakehouse" target="_blank" rel="noopener">
+        <div class="proj-kicker">Lakehouse architecture</div>
+        <h3>Distributed Lakehouse</h3>
+        <p>Iceberg tables with git-like branching through Nessie, federated queries via Trino, object storage on MinIO.</p>
+        <div class="tags"><span class="tag">Iceberg</span><span class="tag">Nessie</span><span class="tag">Trino</span><span class="tag">Polars</span></div>
+      </a>
 
-                if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-                if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-            }
+      <a class="proj" href="projects.html">
+        <div class="proj-kicker">Everything else</div>
+        <h3>Four more projects</h3>
+        <p>Modern data stack on AWS and Snowflake, real-time IoT monitoring for port cranes, Kafka streaming, and a game-data pipeline.</p>
+        <div class="tags"><span class="tag">View all →</span></div>
+      </a>
+    </div>
+  </div>
+</section>
 
-            draw() {
-                ctx.fillStyle = 'rgba(0, 245, 255, 0.5)';
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-                ctx.fill();
-            }
-        }
+<!-- ============ CERTIFICATIONS ============ -->
+<section id="certifications">
+  <div class="wrap reveal">
+    <p class="eyebrow">Certifications</p>
+    <h2 class="section-title">100+ credentials, 14 that matter</h2>
+    <p class="section-lede">
+      The full list is on LinkedIn. These are the ones I'd actually point to in an interview.
+    </p>
 
-        const dataPoints = [];
-        const particleCount = window.innerWidth <= 768 ? 30 : 80; // Reduce particles on mobile
-        for (let i = 0; i < particleCount; i++) {
-            dataPoints.push(new DataPoint());
-        }
+    <div class="cert-grid">
+      <a class="cert" href="https://www.udemy.com/certificate/UC-5a814ce6-7d4a-488b-a0af-1a94c96018f6/" target="_blank" rel="noopener">
+        <div class="cert-name">Microsoft DP-700: Fabric Data Engineer Associate</div>
+        <div class="cert-meta"><span class="org">Microsoft / Udemy</span><span>Nov 2025</span></div>
+      </a>
+      <a class="cert" href="https://credentials.databricks.com/e9118f3a-57f7-44ae-a3cd-3efc3ddb1311" target="_blank" rel="noopener">
+        <div class="cert-name">Academy Accreditation — Databricks Fundamentals</div>
+        <div class="cert-meta"><span class="org">Databricks</span><span>Oct 2025</span></div>
+      </a>
+      <a class="cert" href="https://www.udemy.com/certificate/UC-0acfc3b0-0333-4f07-b633-f550ece1d0dd/" target="_blank" rel="noopener">
+        <div class="cert-name">Databricks Certified Data Engineer Associate</div>
+        <div class="cert-meta"><span class="org">Bootcamp / Udemy</span><span>Oct 2025</span></div>
+      </a>
+      <a class="cert" href="https://www.coursera.org/account/accomplishments/specialization/0GG5JZESCU94" target="_blank" rel="noopener">
+        <div class="cert-name">Google Cloud Data Analytics Specialization</div>
+        <div class="cert-meta"><span class="org">Google Cloud</span><span>Oct 2025</span></div>
+      </a>
+      <a class="cert" href="https://www.coursera.org/account/accomplishments/specialization/WKRGBAERWO65" target="_blank" rel="noopener">
+        <div class="cert-name">Microsoft Azure Data Fundamentals DP-900</div>
+        <div class="cert-meta"><span class="org">Microsoft</span><span>Oct 2025</span></div>
+      </a>
+      <a class="cert" href="https://www.coursera.org/account/accomplishments/specialization/DOKNVFQACHMG" target="_blank" rel="noopener">
+        <div class="cert-name">Data Engineering, Big Data &amp; ML on Google Cloud</div>
+        <div class="cert-meta"><span class="org">Google Cloud</span><span>Sep 2025</span></div>
+      </a>
+      <a class="cert" href="https://www.coursera.org/account/accomplishments/specialization/7SR5OZH6ER5I" target="_blank" rel="noopener">
+        <div class="cert-name">Cloud Data Engineer Specialization</div>
+        <div class="cert-meta"><span class="org">Google Cloud</span><span>Sep 2025</span></div>
+      </a>
+      <a class="cert" href="https://www.coursera.org/account/accomplishments/specialization/SKGHFEYY7KW4" target="_blank" rel="noopener">
+        <div class="cert-name">Microsoft Power BI Data Analyst Specialization</div>
+        <div class="cert-meta"><span class="org">Microsoft</span><span>Dec 2023</span></div>
+      </a>
+      <a class="cert" href="https://www.coursera.org/account/accomplishments/specialization/certificate/KRF8YZL2UR99" target="_blank" rel="noopener">
+        <div class="cert-name">Natural Language Processing Specialization</div>
+        <div class="cert-meta"><span class="org">DeepLearning.AI</span><span>Jun 2023</span></div>
+      </a>
+      <a class="cert" href="https://www.coursera.org/account/accomplishments/specialization/certificate/WPGM4RJKFJYQ" target="_blank" rel="noopener">
+        <div class="cert-name">Google Business Intelligence Specialization</div>
+        <div class="cert-meta"><span class="org">Google</span><span>May 2023</span></div>
+      </a>
+      <a class="cert" href="https://www.coursera.org/account/accomplishments/specialization/certificate/L3C5MGKCY37A" target="_blank" rel="noopener">
+        <div class="cert-name">Google Project Management Specialization</div>
+        <div class="cert-meta"><span class="org">Google</span><span>Apr 2023</span></div>
+      </a>
+      <a class="cert" href="https://www.coursera.org/account/accomplishments/specialization/certificate/MSARE4DERMGD" target="_blank" rel="noopener">
+        <div class="cert-name">Google Data Analytics Specialization</div>
+        <div class="cert-meta"><span class="org">Google</span><span>Apr 2023</span></div>
+      </a>
+      <a class="cert" href="https://www.coursera.org/account/accomplishments/specialization/certificate/DG7HB99ZKMPH" target="_blank" rel="noopener">
+        <div class="cert-name">Deep Learning Specialization</div>
+        <div class="cert-meta"><span class="org">DeepLearning.AI</span><span>Jul 2018</span></div>
+      </a>
+      <a class="cert" href="https://iassc.org/contact/verify-a-certificate/" target="_blank" rel="noopener">
+        <div class="cert-name">IASSC ICCB — Six Sigma Certification</div>
+        <div class="cert-meta"><span class="org">IASSC</span><span>Oct 2016</span></div>
+      </a>
+    </div>
 
-        function animateCanvas() {
-            // Skip canvas animation on very small screens for performance
-            if (window.innerWidth <= 480) {
-                return;
-            }
-            
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+    <div style="margin-top:1.5rem;">
+      <a href="https://www.linkedin.com/in/hakkache-mohamed/details/certifications/" target="_blank" rel="noopener" class="btn btn-ghost">See all 100+ on LinkedIn</a>
+    </div>
 
-            dataPoints.forEach((point, index) => {
-                point.update();
-                point.draw();
+    <h3 style="margin:4rem 0 1.25rem; font-size:1.3rem;">Education</h3>
+    <div class="edu">
+      <div class="edu-row">
+        <div>
+          <h4>State Engineer in Industrial Engineering</h4>
+          <p>School of Textiles and Clothing Industries (ESITH) — Casablanca</p>
+        </div>
+        <span class="when">2011 — 2015</span>
+      </div>
+      <div class="edu-row">
+        <div>
+          <h4>Preparatory Classes (CPGE) — Mathematics &amp; Physics</h4>
+          <p>Two-year intensive program for national engineering school entrance — Taza</p>
+        </div>
+        <span class="when">2008 — 2011</span>
+      </div>
+      <div class="edu-row">
+        <div>
+          <h4>Baccalaureate in Mathematical Sciences</h4>
+          <p>Honors: Very Good — Taza</p>
+        </div>
+        <span class="when">2008</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-                // Connect nearby points
-                for (let j = index + 1; j < dataPoints.length; j++) {
-                    const dx = point.x - dataPoints[j].x;
-                    const dy = point.y - dataPoints[j].y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap reveal">
+    <p class="eyebrow">Contact</p>
+    <h2 class="section-title">Let's talk</h2>
+    <p class="section-lede">
+      Open to lead and senior data engineering roles — remote or Europe. Also happy to talk
+      lakehouse migrations with no agenda attached.
+    </p>
 
-                    if (distance < 150) {
-                        ctx.strokeStyle = `rgba(0, 245, 255, ${0.2 * (1 - distance / 150)})`;
-                        ctx.lineWidth = 1;
-                        ctx.beginPath();
-                        ctx.moveTo(point.x, point.y);
-                        ctx.lineTo(dataPoints[j].x, dataPoints[j].y);
-                        ctx.stroke();
-                    }
-                }
-            });
+    <div class="contact-grid">
+      <a class="contact-card" href="mailto:Hakkache.mohamed@gmail.com">
+        <div class="c-label">Email</div>
+        <div class="c-value">Hakkache.mohamed@gmail.com</div>
+      </a>
+      <a class="contact-card" href="tel:+212673189608">
+        <div class="c-label">Phone</div>
+        <div class="c-value">+212 6 73 18 96 08</div>
+      </a>
+      <a class="contact-card" href="https://www.linkedin.com/in/hakkache-mohamed/" target="_blank" rel="noopener">
+        <div class="c-label">LinkedIn</div>
+        <div class="c-value">in/hakkache-mohamed</div>
+      </a>
+      <a class="contact-card" href="https://github.com/hakkache" target="_blank" rel="noopener">
+        <div class="c-label">GitHub</div>
+        <div class="c-value">@hakkache</div>
+      </a>
+    </div>
+  </div>
+</section>
 
-            requestAnimationFrame(animateCanvas);
-        }
+</main>
 
-        animateCanvas();
+<footer>
+  <div class="wrap foot-inner">
+    <div>
+      <div class="foot-name">Mohamed Hakkache</div>
+      <div class="foot-meta">
+        Lead Data Engineer · Tangier, Morocco<br>
+        Arabic (native) · English (fluent) · French (fluent)
+      </div>
+    </div>
+    <div class="foot-meta" style="text-align:right;">
+      <span id="visits">—</span> visits<br>
+      &copy; <span id="year">2026</span> Mohamed Hakkache
+    </div>
+  </div>
+</footer>
 
-        let resizeTimeout;
-        window.addEventListener('resize', () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-            
-            // Debounce resize event for better performance
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(() => {
-                // Re-trigger stat counters if they become visible after resize
-                const statsSection = document.querySelector('.stats-grid');
-                if (statsSection) {
-                    const rect = statsSection.getBoundingClientRect();
-                    if (rect.top < window.innerHeight && rect.bottom > 0) {
-                        const statNumbers = statsSection.querySelectorAll('.stat-number');
-                        statNumbers.forEach(num => {
-                            if (!num.classList.contains('animated')) {
-                                num.classList.add('animated');
-                                animateCounter(num);
-                            }
-                        });
-                    }
-                }
-            }, 300);
-        });
+<script>
+(function () {
+  'use strict';
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-        // Smooth Scroll with mobile optimization
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();<br/>                const targetId = this.getAttribute('href');
-                const target = document.querySelector(targetId);
-                if (target) {
-                    // Adjust offset for mobile nav height
-                    const navHeight = document.querySelector('nav').offsetHeight;
-                    const targetPosition = target.offsetTop - navHeight - 20;
-                    
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open (for future hamburger menu)
-                    if (window.innerWidth <= 768) {
-                        // Add active class for visual feedback
-                        document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
-                        this.classList.add('active');
-                    }
-                }
-            });
-        });
+  /* ---- year ---- */
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Counter Animation for Stats
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '50px'
-        };
+  /* ---- rotating role line ---- */
+  var roles = [
+    'Lead Data Engineer',
+    'Lakehouse migration specialist',
+    'Databricks · Azure · GCP',
+    'Creator of OpenLakehouse'
+  ];
+  var el = document.getElementById('role');
+  if (el) {
+    if (reduced) {
+      el.textContent = roles[0];
+    } else {
+      var ri = 0, ci = 0, deleting = false;
+      (function tick() {
+        var word = roles[ri];
+        ci += deleting ? -1 : 1;
+        el.innerHTML = word.substring(0, ci).replace(/ /g, '&nbsp;') + '<span class="caret"></span>';
+        var wait = deleting ? 35 : 70;
+        if (!deleting && ci === word.length) { wait = 2200; deleting = true; }
+        else if (deleting && ci === 0) { deleting = false; ri = (ri + 1) % roles.length; wait = 350; }
+        setTimeout(tick, wait);
+      })();
+    }
+  }
 
-        const animateCounter = (element) => {
-            const target = parseInt(element.getAttribute('data-target'));
-            if (!target || isNaN(target)) return;
-            
-            const duration = 2000;
-            const step = target / (duration / 16);
-            let current = 0;
+  /* ---- nav shadow + active section ---- */
+  var nav = document.getElementById('nav');
+  var links = Array.prototype.slice.call(document.querySelectorAll('.nav-links a[href^="#"]'));
+  var sections = links.map(function (a) { return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
 
-            const updateCounter = () => {
-                current += step;
-                if (current < target) {
-                    element.textContent = Math.floor(current) + '+';
-                    requestAnimationFrame(updateCounter);
-                } else {
-                    element.textContent = target + '+';
-                }
-            };
+  function onScroll() {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+    var pos = window.scrollY + 140, current = null;
+    sections.forEach(function (s) { if (s.offsetTop <= pos) current = s.id; });
+    links.forEach(function (a) {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 
-            updateCounter();
-        };
+  /* ---- counters ---- */
+  function count(node) {
+    var target = parseInt(node.getAttribute('data-target'), 10);
+    var suffix = node.getAttribute('data-suffix') || '';
+    if (isNaN(target)) return;
+    if (reduced) { node.innerHTML = target + '<span class="suffix">' + suffix + '</span>'; return; }
+    var start = performance.now(), dur = 1400;
+    (function step(now) {
+      var p = Math.min((now - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      node.innerHTML = Math.round(target * eased) + '<span class="suffix">' + suffix + '</span>';
+      if (p < 1) requestAnimationFrame(step);
+    })(start);
+  }
 
-        const statsObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const statNumbers = entry.target.querySelectorAll('.stat-number');
-                    statNumbers.forEach(num => {
-                        if (!num.classList.contains('animated')) {
-                            num.classList.add('animated');
-                            animateCounter(num);
-                        }
-                    });
-                }
-            });
-        }, observerOptions);
+  /* ---- reveal + counter triggers ---- */
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function (n) { io.observe(n); });
 
-        const statsSection = document.querySelector('.stats-grid');
-        if (statsSection) {
-            statsObserver.observe(statsSection.parentElement);
-            
-            // Fallback for mobile - trigger after a delay if not already triggered
-            setTimeout(() => {
-                const statNumbers = statsSection.querySelectorAll('.stat-number');
-                statNumbers.forEach(num => {
-                    if (!num.classList.contains('animated')) {
-                        num.classList.add('animated');
-                        animateCounter(num);
-                    }
-                });
-            }, 3000);
-        }
+    var co = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        count(e.target);
+        co.unobserve(e.target);
+      });
+    }, { threshold: 0.4 });
+    document.querySelectorAll('.stat-num').forEach(function (n) { co.observe(n); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (n) { n.classList.add('in'); });
+    document.querySelectorAll('.stat-num').forEach(count);
+  }
 
-        // Intersection Observer for Fade-in Animations
-        const fadeObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, { threshold: 0.05, rootMargin: '50px' });
-
-        document.querySelectorAll('.timeline-item, .skill-box, .cert-card').forEach(el => {
-            // Only apply fade effect on larger screens
-            if (window.innerWidth > 768) {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-                el.style.transition = 'opacity 0.6s, transform 0.6s';
-                fadeObserver.observe(el);
-            } else {
-                // On mobile, show immediately
-                el.style.opacity = '1';
-                el.style.transform = 'translateY(0)';
-            }
-        });
-
-        // Active Nav Link & Navbar Scroll Effect
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('nav a');
-            
-            // Add scrolled class to nav
-            if (window.scrollY > 100) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.style.color = '';
-                if (link.getAttribute('href').slice(1) === current) {
-                    link.style.color = 'var(--primary)';
-                }
-            });
-        });
-    </script>
+  /* ---- visit counter (fails quietly) ---- */
+  var v = document.getElementById('visits');
+  fetch('https://api.counterapi.dev/v1/hakkache-portfolio/visits/up')
+    .then(function (r) { return r.json(); })
+    .then(function (d) { if (d && typeof d.count === 'number') v.textContent = d.count.toLocaleString(); })
+    .catch(function () { v.parentNode.style.display = 'none'; });
+})();
+</script>
 </body>
 </html>
