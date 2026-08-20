@@ -22,7 +22,7 @@
 <meta name="twitter:description" content="OpenLakehouse and other data engineering builds.">
 <meta name="twitter:image" content="https://github.com/hakkache/openlakehouse/raw/master/docs/screenshots/home.jpg">
 
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2304060C'/><text x='50' y='68' font-size='50' font-family='monospace' font-weight='bold' fill='%2322E1FF' text-anchor='middle'>MH</text></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2040%2040%27%3E%3Crect%20width%3D%2740%27%20height%3D%2740%27%20rx%3D%279%27%20fill%3D%27%2304060C%27%2F%3E%3Cpolygon%20points%3D%2720%2C5%2033%2C12.5%2033%2C27.5%2020%2C35%207%2C27.5%207%2C12.5%27%20fill%3D%27none%27%20stroke%3D%27%2322E1FF%27%20stroke-width%3D%272%27%2F%3E%3Crect%20x%3D%2712.5%27%20y%3D%2713%27%20width%3D%2715%27%20height%3D%272.8%27%20rx%3D%271.4%27%20fill%3D%27%23B4713C%27%2F%3E%3Crect%20x%3D%2714.5%27%20y%3D%2718.6%27%20width%3D%2711%27%20height%3D%272.8%27%20rx%3D%271.4%27%20fill%3D%27%23B9C9DC%27%2F%3E%3Crect%20x%3D%2716.5%27%20y%3D%2724.2%27%20width%3D%277%27%20height%3D%272.8%27%20rx%3D%271.4%27%20fill%3D%27%23FFB43D%27%2F%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%2720%27%20r%3D%272.4%27%20fill%3D%27%233DFFC0%27%2F%3E%3C%2Fsvg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -624,6 +624,89 @@ footer { border-top: 1px solid var(--edge); padding: 3rem 0 2.5rem; position: re
   #net { display: none; }
 }
 
+/* ============================================================
+   LAYER 3 — identity: logo mark + avatar
+   ============================================================ */
+
+/* --- logo --- */
+.brand { text-decoration: none; }
+.logo { width: 30px; height: 30px; flex: none; display: block; overflow: visible; }
+.logo .hex { transform-origin: 20px 20px; animation: hexTurn 18s linear infinite; }
+@keyframes hexTurn { to { transform: rotate(360deg); } }
+.logo .pulse { animation: corePulse 2.4s ease-in-out infinite; transform-origin: 20px 20px; }
+@keyframes corePulse { 0%,100% { opacity: 1; r: 2.2px; } 50% { opacity: .45; r: 3.1px; } }
+.brand:hover .logo .hex { animation-duration: 4s; }
+
+.brand-txt {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: .96rem;
+  letter-spacing: .04em;
+  color: var(--text);
+  line-height: 1;
+}
+.brand-txt i {
+  font-style: normal;
+  font-family: var(--mono);
+  font-weight: 400;
+  font-size: .82em;
+  background: var(--grad);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- hero identity block --- */
+.id-block { display: flex; align-items: center; gap: 1.1rem; margin-bottom: 1.6rem; flex-wrap: wrap; }
+.id-block .status-pill { margin-bottom: 0; }
+
+.avatar {
+  position: relative;
+  width: 104px; height: 104px;
+  flex: none;
+  border-radius: 50%;
+  padding: 3px;
+  background: conic-gradient(from var(--beam-angle), var(--cyan), var(--violet), var(--mint), var(--cyan));
+  animation: spinBeam 8s linear infinite;
+  box-shadow: 0 0 34px rgba(34,225,255,.35), 0 0 70px rgba(124,92,255,.22);
+}
+.avatar img {
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  background: var(--deep);
+  border: 3px solid var(--void);
+}
+.avatar::after {
+  content: '';
+  position: absolute; right: 5px; bottom: 5px;
+  width: 15px; height: 15px; border-radius: 50%;
+  background: var(--mint);
+  border: 3px solid var(--void);
+  box-shadow: 0 0 12px var(--mint);
+  animation: breathe 2.4s ease-in-out infinite;
+}
+
+/* --- footer avatar --- */
+.foot-id { display: flex; align-items: center; gap: .9rem; }
+.foot-avatar {
+  width: 46px; height: 46px; border-radius: 50%;
+  object-fit: cover; object-position: center top;
+  border: 1px solid var(--edge-lit);
+  flex: none;
+}
+
+@media (max-width: 720px) {
+  .avatar { width: 82px; height: 82px; }
+  .avatar::after { width: 12px; height: 12px; }
+  .brand-txt { font-size: .88rem; }
+  .logo { width: 26px; height: 26px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .avatar, .logo .hex, .logo .pulse { animation: none; }
+}
+
 </style>
 
 <script type="application/ld+json">
@@ -653,7 +736,24 @@ footer { border-top: 1px solid var(--edge); padding: 3rem 0 2.5rem; position: re
 
 <nav id="nav">
   <div class="nav-inner">
-    <a class="brand" href="index.html"><span class="orb"></span>hakkache.dev</a>
+    <a class="brand" href="index.html">
+      <svg class="logo" viewBox="0 0 40 40" role="img" aria-label="Hakkache logo" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="lgEdge" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#22E1FF"/><stop offset="100%" stop-color="#7C5CFF"/>
+          </linearGradient>
+        </defs>
+        <g class="hex">
+          <polygon points="20,2.5 35.2,11.2 35.2,28.8 20,37.5 4.8,28.8 4.8,11.2"
+                   fill="none" stroke="url(#lgEdge)" stroke-width="2" stroke-linejoin="round"/>
+        </g>
+        <rect x="11.5" y="12" width="17" height="3.2" rx="1.6" fill="#B4713C"/>
+        <rect x="13.5" y="18.4" width="13" height="3.2" rx="1.6" fill="#B9C9DC"/>
+        <rect x="15.5" y="24.8" width="9" height="3.2" rx="1.6" fill="#FFB43D"/>
+        <circle class="pulse" cx="20" cy="20" r="2.2" fill="#3DFFC0"/>
+      </svg>
+      <span class="brand-txt">HAKKACHE<i>.dev</i></span>
+    </a>
     <ul class="nav-links">
       <li><a href="index.html#about">About</a></li>
       <li><a href="index.html#stack">Stack</a></li>
@@ -840,11 +940,14 @@ docker compose <span class="k">--profile</span> full up -d --build   <span class
 
 <footer>
   <div class="wrap foot-inner">
-    <div>
+    <div class="foot-id">
+      <img class="foot-avatar" src="https://raw.githubusercontent.com/hakkache/my_resume/main/profil.png" alt="Mohamed Hakkache" loading="lazy">
+      <div>
       <div class="foot-name">Mohamed Hakkache</div>
       <div class="foot-meta">
         Lead Data Engineer · Tangier, Morocco<br>
         <a href="index.html">Back to profile</a> · <a href="https://github.com/hakkache" target="_blank" rel="noopener">GitHub</a>
+      </div>
       </div>
     </div>
     <div class="foot-meta" style="text-align:right;">&copy; <span id="year">2026</span> Mohamed Hakkache</div>
